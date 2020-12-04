@@ -31,7 +31,7 @@
       <PropertyRef Name="MANXB" />
     </Key>
     <Property Name="MANXB" Type="Int32" Nullable="false" />
-    <Property Name="TENNXB" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="TENNXB" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
     <Property Name="SDT" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
     <NavigationProperty Name="SACHes" Relationship="Self.FK__SACH__MANXB__4F7CD00D" FromRole="NXB" ToRole="SACH" />
   </EntityType>
@@ -76,8 +76,8 @@
       <PropertyRef Name="MAUSER" />
     </Key>
     <Property Name="MAUSER" Type="Int32" Nullable="false" />
-    <Property Name="USERNAME" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
-    <Property Name="MATKHAU" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="USERNAME" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="MATKHAU" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
     <Property Name="DIACHI" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
     <Property Name="SDT" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
     <Property Name="MACARD" Type="Int32" />
@@ -86,15 +86,41 @@
     <NavigationProperty Name="CARD" Relationship="Self.FK__USERS__MACARD__2E1BDC42" FromRole="USERS" ToRole="CARDS" />
     <NavigationProperty Name="MUONSACHes" Relationship="Self.FK__MUONSACH__MAUSER__5441852A" FromRole="USERS" ToRole="MUONSACH" />
   </EntityType>
-  <EntityType Name="Book_Detail">
+  <EntityType Name="Authenticate_User">
+    <Key>
+      <PropertyRef Name="USERNAME" />
+      <PropertyRef Name="MATKHAU" />
+    </Key>
+    <Property Name="USERNAME" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="MATKHAU" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Book_Info">
     <Key>
       <PropertyRef Name="TENSACH" />
     </Key>
     <Property Name="TENSACH" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
-    <Property Name="VITRI" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
     <Property Name="LINHVUC" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
     <Property Name="GIA" Type="Int32" />
+    <Property Name="VITRI" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="DANGDUOCMUON" Type="Int32" />
+    <Property Name="SOLUONGSACHBIMAT" Type="Int32" />
     <Property Name="TONGSOLUONG" Type="Int32" />
+  </EntityType>
+  <EntityType Name="Borrower_Info">
+    <Key>
+      <PropertyRef Name="MAUSER" />
+    </Key>
+    <Property Name="MAUSER" Type="Int32" Nullable="false" />
+    <Property Name="TEN" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="DIACHI" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="SDT" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="Publisher_Info">
+    <Key>
+      <PropertyRef Name="TENNXB" />
+    </Key>
+    <Property Name="TENNXB" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="SDT" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
   </EntityType>
   <Association Name="FK__USERS__MACARD__2E1BDC42">
     <End Role="CARDS" Type="Self.CARD" Multiplicity="0..1" />
@@ -164,7 +190,10 @@
     <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagram" />
     <EntitySet Name="TACGIAs" EntityType="Self.TACGIA" />
     <EntitySet Name="USERS" EntityType="Self.USER" />
-    <EntitySet Name="Book_Detail" EntityType="Self.Book_Detail" />
+    <EntitySet Name="Authenticate_User" EntityType="Self.Authenticate_User" />
+    <EntitySet Name="Book_Info" EntityType="Self.Book_Info" />
+    <EntitySet Name="Borrower_Info" EntityType="Self.Borrower_Info" />
+    <EntitySet Name="Publisher_Info" EntityType="Self.Publisher_Info" />
     <AssociationSet Name="FK__USERS__MACARD__2E1BDC42" Association="Self.FK__USERS__MACARD__2E1BDC42">
       <End Role="CARDS" EntitySet="CARDS" />
       <End Role="USERS" EntitySet="USERS" />

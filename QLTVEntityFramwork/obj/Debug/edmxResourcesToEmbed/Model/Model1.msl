@@ -83,14 +83,42 @@
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
-    <EntitySetMapping Name="Book_Detail">
-      <EntityTypeMapping TypeName="QLThuVienModel.Book_Detail">
-        <MappingFragment StoreEntitySet="Book_Detail">
+    <EntitySetMapping Name="Authenticate_User">
+      <EntityTypeMapping TypeName="QLThuVienModel.Authenticate_User">
+        <MappingFragment StoreEntitySet="Authenticate_User">
+          <ScalarProperty Name="USERNAME" ColumnName="USERNAME" />
+          <ScalarProperty Name="MATKHAU" ColumnName="MATKHAU" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Book_Info">
+      <EntityTypeMapping TypeName="QLThuVienModel.Book_Info">
+        <MappingFragment StoreEntitySet="Book_Info">
           <ScalarProperty Name="TENSACH" ColumnName="TENSACH" />
-          <ScalarProperty Name="VITRI" ColumnName="VITRI" />
           <ScalarProperty Name="LINHVUC" ColumnName="LINHVUC" />
           <ScalarProperty Name="GIA" ColumnName="GIA" />
+          <ScalarProperty Name="VITRI" ColumnName="VITRI" />
+          <ScalarProperty Name="DANGDUOCMUON" ColumnName="DANGDUOCMUON" />
+          <ScalarProperty Name="SOLUONGSACHBIMAT" ColumnName="SOLUONGSACHBIMAT" />
           <ScalarProperty Name="TONGSOLUONG" ColumnName="TONGSOLUONG" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Borrower_Info">
+      <EntityTypeMapping TypeName="QLThuVienModel.Borrower_Info">
+        <MappingFragment StoreEntitySet="Borrower_Info">
+          <ScalarProperty Name="MAUSER" ColumnName="MAUSER" />
+          <ScalarProperty Name="TEN" ColumnName="TEN" />
+          <ScalarProperty Name="DIACHI" ColumnName="DIACHI" />
+          <ScalarProperty Name="SDT" ColumnName="SDT" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Publisher_Info">
+      <EntityTypeMapping TypeName="QLThuVienModel.Publisher_Info">
+        <MappingFragment StoreEntitySet="Publisher_Info">
+          <ScalarProperty Name="TENNXB" ColumnName="TENNXB" />
+          <ScalarProperty Name="SDT" ColumnName="SDT" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>

@@ -22,18 +22,18 @@ namespace QLTVEntityFramwork
             LoadData();
             
 
-            //btnHuy.Enabled = false;
-            //btnLuu.Enabled = false;
-            //DisableComponent();
+            btnHuy.Enabled = false;
+            btnLuu.Enabled = false;
+            DisableComponent();
             //PutDataInComboBox();
         }
         public void DisableComponent()
         {
-            //txtMaSach.Enabled = false;
-            //txtTenSach.Enabled = false;
-            //cbMaNXB.Enabled = false;
-            //cbMTG.Enabled = false;
-            //cbViTri.Enabled = false;
+            txtMaSach.Enabled = false;
+            txtTenSach.Enabled = false;
+            cbMaNXB.Enabled = false;
+            cbMTG.Enabled = false;
+            cbViTri.Enabled = false;
         }
         public void EnableComponent()
         {
@@ -45,35 +45,30 @@ namespace QLTVEntityFramwork
         }
         public void LoadData()
         {
-            var data = db.SACHes.ToList();
+            //User thi xai query nay
+            var data = db.Book_Info.ToList();
+            //Neu la admin thi
+            // var data = db.Books.ToList();
             dgvQLSach.DataSource = data;
             dgvQLSach.AutoResizeColumns();
             dgvQLSach.AutoResizeRows();
-            //ClearClickedData();
-            //using (var db = new Model1())
-            //{
-            //    db.Configuration.LazyLoadingEnabled = false;
-            //    var query = (from d in db.SACHes
-            //                 select d).ToList();
-            //    dgvQLSach.DataSource = query;
-
-            //    dgvQLSach.AutoResizeColumns();
-            //    dgvQLSach.AutoResizeRows();
-            //}
-            //dgvQLSach.Columns[0].HeaderText = "Mã Sách";
-            //dgvQLSach.Columns[1].HeaderText = "Mã NXB";
-            //dgvQLSach.Columns[2].HeaderText = "Mã Tác Giả";
-            //dgvQLSach.Columns[3].HeaderText = "Vị Trí";
-            //dgvQLSach.Columns[4].HeaderText = "Tên Sách";
-            //dgvQLSach.Columns[5].HeaderText = "Đang Được Mượn";
+            ClearClickedData();
+            dgvQLSach.AutoResizeColumns();
+            dgvQLSach.Columns[0].HeaderText = "Tên Sách";
+            dgvQLSach.Columns[1].HeaderText = "Lĩnh Vực";
+            dgvQLSach.Columns[2].HeaderText = "Giá";
+            dgvQLSach.Columns[3].HeaderText = "Vị Trí";
+            dgvQLSach.Columns[4].HeaderText = "Tình Trạng Mượn";
+            dgvQLSach.Columns[5].HeaderText = "Số Lượng Bị Mất";
+            dgvQLSach.Columns[6].HeaderText = "Tổng Số Lượng";
         }
         public void ClearClickedData()
         {
-            //txtMaSach.Text = "";
-            //cbViTri.Text = "";
-            //txtTenSach.Text = "";
-            //cbMaNXB.Text = "";
-            //cbMTG.Text = "";
+            txtMaSach.Text = "";
+            cbViTri.Text = "";
+            txtTenSach.Text = "";
+            cbMaNXB.Text = "";
+            cbMTG.Text = "";
         }
         public void PutDataInComboBox()
         {
@@ -120,13 +115,15 @@ namespace QLTVEntityFramwork
 
         private void dgvQLSach_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-            //int r = dgvQLSach.CurrentCell.RowIndex;
+            int r = dgvQLSach.CurrentCell.RowIndex;
 
+            //Neu user la admin thi hien textbox 
             //this.txtMaSach.Text = dgvQLSach.Rows[r].Cells[0].Value.ToString();
-            //this.cbMaNXB.Text = dgvQLSach.Rows[r].Cells[1].Value.ToString();
-            //this.cbMTG.Text = dgvQLSach.Rows[r].Cells[2].Value.ToString();
-            //this.cbViTri.Text = dgvQLSach.Rows[r].Cells[3].Value.ToString();
-            //this.txtTenSach.Text = dgvQLSach.Rows[r].Cells[4].Value.ToString();
+
+            this.cbMaNXB.Text = dgvQLSach.Rows[r].Cells[1].Value.ToString();
+            this.cbMTG.Text = dgvQLSach.Rows[r].Cells[2].Value.ToString();
+            this.cbViTri.Text = dgvQLSach.Rows[r].Cells[3].Value.ToString();
+            this.txtTenSach.Text = dgvQLSach.Rows[r].Cells[0].Value.ToString();
         }
 
         private void btnThem_Click(object sender, EventArgs e)
@@ -142,6 +139,10 @@ namespace QLTVEntityFramwork
 
         private void btnLuu_Click(object sender, EventArgs e)
         {
+            //Goi procedure ra o day tuong ung voi CREATE, READ, UPDATE, DELETE
+
+
+
             //if (!txtMaSach.Text.Trim().Equals(""))
             //{
             //    if (Them)

@@ -93,7 +93,7 @@ namespace QLTVEntityFramwork
         }
         public void LoadData()
         {
-            var data = db.Book_Detail.ToList();
+            var data = db.Book_Info.ToList();
             dgvInfo.DataSource = data;
             //using (var db = new Model1())
             //{
@@ -101,14 +101,15 @@ namespace QLTVEntityFramwork
             //                select d;
             //    dgvInfo.DataSource = query.ToList();
             //}
-            //dgvInfo.AutoResizeColumns();
-            //txtSearch.Focus();
-            //dgvInfo.Columns[0].HeaderText = "Mã Sách";
-            //dgvInfo.Columns[1].HeaderText = "Mã NXB";
-            //dgvInfo.Columns[2].HeaderText = "Mã Tác Giả";
-            //dgvInfo.Columns[3].HeaderText = "Vị Trí";
-            //dgvInfo.Columns[4].HeaderText = "Tên Sách";
-            //dgvInfo.Columns[5].HeaderText = "Đang Được Mượn";
+            dgvInfo.AutoResizeColumns();
+            txtSearch.Focus();
+            dgvInfo.Columns[0].HeaderText = "Tên Sách";
+            dgvInfo.Columns[1].HeaderText = "Lĩnh Vực";
+            dgvInfo.Columns[2].HeaderText = "Giá";
+            dgvInfo.Columns[3].HeaderText = "Vị Trí";
+            dgvInfo.Columns[4].HeaderText = "Tình Trạng Mượn";
+            dgvInfo.Columns[5].HeaderText = "Số Lượng Bị Mất";
+            dgvInfo.Columns[6].HeaderText = "Tổng Số Lượng";  
         }
     }
 }

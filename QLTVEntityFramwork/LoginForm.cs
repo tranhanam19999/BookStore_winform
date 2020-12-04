@@ -20,7 +20,7 @@ namespace QLTVEntityFramwork
 
         private void btnLogin_Click(object sender, EventArgs e)
         {
-            var user = db.USERS.Where(x => x.USERNAME == txtUsername.Text.ToString() && x.MATKHAU == txtPassword.Text.ToString()).ToList().FirstOrDefault();
+            var user = db.Authenticate_User.Where(x => x.USERNAME == txtUsername.Text.ToString() && x.MATKHAU == txtPassword.Text.ToString()).ToList().FirstOrDefault();
             if (txtUsername.Text.ToString() != "" && txtPassword.Text.ToString() != "")
             {
                 if (user != null)

@@ -12,12 +12,9 @@ namespace QLTVEntityFramwork.Model
     using System;
     using System.Collections.Generic;
     
-    public partial class Book_Detail
+    public partial class Authenticate_User
     {
-        public string TENSACH { get; set; }
-        public string VITRI { get; set; }
-        public string LINHVUC { get; set; }
-        public Nullable<int> GIA { get; set; }
-        public Nullable<int> TONGSOLUONG { get; set; }
+        public string USERNAME { get; set; }
+        public string MATKHAU { get; set; }
     }
 }

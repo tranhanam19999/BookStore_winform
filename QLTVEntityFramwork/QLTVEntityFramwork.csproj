@@ -123,7 +123,13 @@
     <Compile Include="ManageBorrower.Designer.cs">
       <DependentUpon>ManageBorrower.cs</DependentUpon>
     </Compile>
-    <Compile Include="Model\Book_Detail.cs">
+    <Compile Include="Model\Authenticate_User.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\Book_Info.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\Borrower_Info.cs">
       <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
     <Compile Include="Model\CARD.cs">
@@ -148,6 +154,9 @@
       <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
     <Compile Include="Model\NXB.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\Publisher_Info.cs">
       <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
     <Compile Include="Model\SACH.cs">

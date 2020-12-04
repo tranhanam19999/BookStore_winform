@@ -32,6 +32,9 @@ namespace QLTVEntityFramwork.Model
         public virtual DbSet<sysdiagram> sysdiagrams { get; set; }
         public virtual DbSet<TACGIA> TACGIAs { get; set; }
         public virtual DbSet<USER> USERS { get; set; }
-        public virtual DbSet<Book_Detail> Book_Detail { get; set; }
+        public virtual DbSet<Authenticate_User> Authenticate_User { get; set; }
+        public virtual DbSet<Book_Info> Book_Info { get; set; }
+        public virtual DbSet<Borrower_Info> Borrower_Info { get; set; }
+        public virtual DbSet<Publisher_Info> Publisher_Info { get; set; }
     }
 }

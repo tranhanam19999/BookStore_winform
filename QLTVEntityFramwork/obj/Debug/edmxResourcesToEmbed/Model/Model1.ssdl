@@ -28,7 +28,7 @@
       <PropertyRef Name="MANXB" />
     </Key>
     <Property Name="MANXB" Type="int" Nullable="false" />
-    <Property Name="TENNXB" Type="varchar" MaxLength="50" />
+    <Property Name="TENNXB" Type="varchar" MaxLength="50" Nullable="false" />
     <Property Name="SDT" Type="varchar" MaxLength="50" />
   </EntityType>
   <EntityType Name="SACH">
@@ -68,8 +68,8 @@
       <PropertyRef Name="MAUSER" />
     </Key>
     <Property Name="MAUSER" Type="int" Nullable="false" />
-    <Property Name="USERNAME" Type="varchar" MaxLength="50" />
-    <Property Name="MATKHAU" Type="varchar" MaxLength="50" />
+    <Property Name="USERNAME" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="MATKHAU" Type="varchar" MaxLength="50" Nullable="false" />
     <Property Name="DIACHI" Type="varchar" MaxLength="50" />
     <Property Name="SDT" Type="varchar" MaxLength="50" />
     <Property Name="MACARD" Type="int" />
@@ -77,16 +77,48 @@
     <Property Name="TEN" Type="varchar" MaxLength="50" />
   </EntityType>
   <!--Errors Found During Generation:
-warning 6002: The table/view 'QLThuVien.dbo.Book_Detail' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
-  <EntityType Name="Book_Detail">
+warning 6002: The table/view 'QLThuVien.dbo.Authenticate_User' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="Authenticate_User">
+    <Key>
+      <PropertyRef Name="USERNAME" />
+      <PropertyRef Name="MATKHAU" />
+    </Key>
+    <Property Name="USERNAME" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="MATKHAU" Type="varchar" MaxLength="50" Nullable="false" />
+  </EntityType>
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'QLThuVien.dbo.Book_Info' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="Book_Info">
     <Key>
       <PropertyRef Name="TENSACH" />
     </Key>
     <Property Name="TENSACH" Type="varchar" MaxLength="50" Nullable="false" />
-    <Property Name="VITRI" Type="varchar" MaxLength="50" />
     <Property Name="LINHVUC" Type="varchar" MaxLength="50" />
     <Property Name="GIA" Type="int" />
+    <Property Name="VITRI" Type="varchar" MaxLength="50" />
+    <Property Name="DANGDUOCMUON" Type="int" />
+    <Property Name="SOLUONGSACHBIMAT" Type="int" />
     <Property Name="TONGSOLUONG" Type="int" />
+  </EntityType>
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'QLThuVien.dbo.Borrower_Info' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="Borrower_Info">
+    <Key>
+      <PropertyRef Name="MAUSER" />
+    </Key>
+    <Property Name="MAUSER" Type="int" Nullable="false" />
+    <Property Name="TEN" Type="varchar" MaxLength="50" />
+    <Property Name="DIACHI" Type="varchar" MaxLength="50" />
+    <Property Name="SDT" Type="varchar" MaxLength="50" />
+  </EntityType>
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'QLThuVien.dbo.Publisher_Info' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="Publisher_Info">
+    <Key>
+      <PropertyRef Name="TENNXB" />
+    </Key>
+    <Property Name="TENNXB" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="SDT" Type="varchar" MaxLength="50" />
   </EntityType>
   <Association Name="FK__MUONSACH__MASACH__5535A963">
     <End Role="SACH" Type="Self.SACH" Multiplicity="1" />
@@ -156,14 +188,36 @@ warning 6002: The table/view 'QLThuVien.dbo.Book_Detail' does not have a primary
     <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagrams" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="TACGIA" EntityType="Self.TACGIA" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="USERS" EntityType="Self.USERS" Schema="dbo" store:Type="Tables" />
-    <EntitySet Name="Book_Detail" EntityType="Self.Book_Detail" store:Type="Views" store:Schema="dbo">
+    <EntitySet Name="Authenticate_User" EntityType="Self.Authenticate_User" store:Type="Views" store:Schema="dbo">
       <DefiningQuery>SELECT 
-    [Book_Detail].[TENSACH] AS [TENSACH], 
-    [Book_Detail].[VITRI] AS [VITRI], 
-    [Book_Detail].[LINHVUC] AS [LINHVUC], 
-    [Book_Detail].[GIA] AS [GIA], 
-    [Book_Detail].[TONGSOLUONG] AS [TONGSOLUONG]
-    FROM [dbo].[Book_Detail] AS [Book_Detail]</DefiningQuery>
+    [Authenticate_User].[USERNAME] AS [USERNAME], 
+    [Authenticate_User].[MATKHAU] AS [MATKHAU]
+    FROM [dbo].[Authenticate_User] AS [Authenticate_User]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="Book_Info" EntityType="Self.Book_Info" store:Type="Views" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+    [Book_Info].[TENSACH] AS [TENSACH], 
+    [Book_Info].[LINHVUC] AS [LINHVUC], 
+    [Book_Info].[GIA] AS [GIA], 
+    [Book_Info].[VITRI] AS [VITRI], 
+    [Book_Info].[DANGDUOCMUON] AS [DANGDUOCMUON], 
+    [Book_Info].[SOLUONGSACHBIMAT] AS [SOLUONGSACHBIMAT], 
+    [Book_Info].[TONGSOLUONG] AS [TONGSOLUONG]
+    FROM [dbo].[Book_Info] AS [Book_Info]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="Borrower_Info" EntityType="Self.Borrower_Info" store:Type="Views" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+    [Borrower_Info].[MAUSER] AS [MAUSER], 
+    [Borrower_Info].[TEN] AS [TEN], 
+    [Borrower_Info].[DIACHI] AS [DIACHI], 
+    [Borrower_Info].[SDT] AS [SDT]
+    FROM [dbo].[Borrower_Info] AS [Borrower_Info]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="Publisher_Info" EntityType="Self.Publisher_Info" store:Type="Views" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+    [Publisher_Info].[TENNXB] AS [TENNXB], 
+    [Publisher_Info].[SDT] AS [SDT]
+    FROM [dbo].[Publisher_Info] AS [Publisher_Info]</DefiningQuery>
     </EntitySet>
     <AssociationSet Name="FK__MUONSACH__MASACH__5535A963" Association="Self.FK__MUONSACH__MASACH__5535A963">
       <End Role="SACH" EntitySet="SACH" />

@@ -33,7 +33,7 @@
             <PropertyRef Name="MANXB" />
           </Key>
           <Property Name="MANXB" Type="int" Nullable="false" />
-          <Property Name="TENNXB" Type="varchar" MaxLength="50" />
+          <Property Name="TENNXB" Type="varchar" MaxLength="50" Nullable="false" />
           <Property Name="SDT" Type="varchar" MaxLength="50" />
         </EntityType>
         <EntityType Name="SACH">
@@ -73,8 +73,8 @@
             <PropertyRef Name="MAUSER" />
           </Key>
           <Property Name="MAUSER" Type="int" Nullable="false" />
-          <Property Name="USERNAME" Type="varchar" MaxLength="50" />
-          <Property Name="MATKHAU" Type="varchar" MaxLength="50" />
+          <Property Name="USERNAME" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="MATKHAU" Type="varchar" MaxLength="50" Nullable="false" />
           <Property Name="DIACHI" Type="varchar" MaxLength="50" />
           <Property Name="SDT" Type="varchar" MaxLength="50" />
           <Property Name="MACARD" Type="int" />
@@ -82,16 +82,48 @@
           <Property Name="TEN" Type="varchar" MaxLength="50" />
         </EntityType>
         <!--Errors Found During Generation:
-warning 6002: The table/view 'QLThuVien.dbo.Book_Detail' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
-        <EntityType Name="Book_Detail">
+warning 6002: The table/view 'QLThuVien.dbo.Authenticate_User' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+        <EntityType Name="Authenticate_User">
+          <Key>
+            <PropertyRef Name="USERNAME" />
+            <PropertyRef Name="MATKHAU" />
+          </Key>
+          <Property Name="USERNAME" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="MATKHAU" Type="varchar" MaxLength="50" Nullable="false" />
+        </EntityType>
+        <!--Errors Found During Generation:
+warning 6002: The table/view 'QLThuVien.dbo.Book_Info' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+        <EntityType Name="Book_Info">
           <Key>
             <PropertyRef Name="TENSACH" />
           </Key>
           <Property Name="TENSACH" Type="varchar" MaxLength="50" Nullable="false" />
-          <Property Name="VITRI" Type="varchar" MaxLength="50" />
           <Property Name="LINHVUC" Type="varchar" MaxLength="50" />
           <Property Name="GIA" Type="int" />
+          <Property Name="VITRI" Type="varchar" MaxLength="50" />
+          <Property Name="DANGDUOCMUON" Type="int" />
+          <Property Name="SOLUONGSACHBIMAT" Type="int" />
           <Property Name="TONGSOLUONG" Type="int" />
+        </EntityType>
+        <!--Errors Found During Generation:
+warning 6002: The table/view 'QLThuVien.dbo.Borrower_Info' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+        <EntityType Name="Borrower_Info">
+          <Key>
+            <PropertyRef Name="MAUSER" />
+          </Key>
+          <Property Name="MAUSER" Type="int" Nullable="false" />
+          <Property Name="TEN" Type="varchar" MaxLength="50" />
+          <Property Name="DIACHI" Type="varchar" MaxLength="50" />
+          <Property Name="SDT" Type="varchar" MaxLength="50" />
+        </EntityType>
+        <!--Errors Found During Generation:
+warning 6002: The table/view 'QLThuVien.dbo.Publisher_Info' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+        <EntityType Name="Publisher_Info">
+          <Key>
+            <PropertyRef Name="TENNXB" />
+          </Key>
+          <Property Name="TENNXB" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="SDT" Type="varchar" MaxLength="50" />
         </EntityType>
         <Association Name="FK__MUONSACH__MASACH__5535A963">
           <End Role="SACH" Type="Self.SACH" Multiplicity="1" />
@@ -161,14 +193,36 @@ warning 6002: The table/view 'QLThuVien.dbo.Book_Detail' does not have a primary
           <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagrams" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="TACGIA" EntityType="Self.TACGIA" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="USERS" EntityType="Self.USERS" Schema="dbo" store:Type="Tables" />
-          <EntitySet Name="Book_Detail" EntityType="Self.Book_Detail" store:Type="Views" store:Schema="dbo">
+          <EntitySet Name="Authenticate_User" EntityType="Self.Authenticate_User" store:Type="Views" store:Schema="dbo">
             <DefiningQuery>SELECT 
-    [Book_Detail].[TENSACH] AS [TENSACH], 
-    [Book_Detail].[VITRI] AS [VITRI], 
-    [Book_Detail].[LINHVUC] AS [LINHVUC], 
-    [Book_Detail].[GIA] AS [GIA], 
-    [Book_Detail].[TONGSOLUONG] AS [TONGSOLUONG]
-    FROM [dbo].[Book_Detail] AS [Book_Detail]</DefiningQuery>
+    [Authenticate_User].[USERNAME] AS [USERNAME], 
+    [Authenticate_User].[MATKHAU] AS [MATKHAU]
+    FROM [dbo].[Authenticate_User] AS [Authenticate_User]</DefiningQuery>
+          </EntitySet>
+          <EntitySet Name="Book_Info" EntityType="Self.Book_Info" store:Type="Views" store:Schema="dbo">
+            <DefiningQuery>SELECT 
+    [Book_Info].[TENSACH] AS [TENSACH], 
+    [Book_Info].[LINHVUC] AS [LINHVUC], 
+    [Book_Info].[GIA] AS [GIA], 
+    [Book_Info].[VITRI] AS [VITRI], 
+    [Book_Info].[DANGDUOCMUON] AS [DANGDUOCMUON], 
+    [Book_Info].[SOLUONGSACHBIMAT] AS [SOLUONGSACHBIMAT], 
+    [Book_Info].[TONGSOLUONG] AS [TONGSOLUONG]
+    FROM [dbo].[Book_Info] AS [Book_Info]</DefiningQuery>
+          </EntitySet>
+          <EntitySet Name="Borrower_Info" EntityType="Self.Borrower_Info" store:Type="Views" store:Schema="dbo">
+            <DefiningQuery>SELECT 
+    [Borrower_Info].[MAUSER] AS [MAUSER], 
+    [Borrower_Info].[TEN] AS [TEN], 
+    [Borrower_Info].[DIACHI] AS [DIACHI], 
+    [Borrower_Info].[SDT] AS [SDT]
+    FROM [dbo].[Borrower_Info] AS [Borrower_Info]</DefiningQuery>
+          </EntitySet>
+          <EntitySet Name="Publisher_Info" EntityType="Self.Publisher_Info" store:Type="Views" store:Schema="dbo">
+            <DefiningQuery>SELECT 
+    [Publisher_Info].[TENNXB] AS [TENNXB], 
+    [Publisher_Info].[SDT] AS [SDT]
+    FROM [dbo].[Publisher_Info] AS [Publisher_Info]</DefiningQuery>
           </EntitySet>
           <AssociationSet Name="FK__MUONSACH__MASACH__5535A963" Association="Self.FK__MUONSACH__MASACH__5535A963">
             <End Role="SACH" EntitySet="SACH" />
@@ -227,7 +281,7 @@ warning 6002: The table/view 'QLThuVien.dbo.Book_Detail' does not have a primary
             <PropertyRef Name="MANXB" />
           </Key>
           <Property Name="MANXB" Type="Int32" Nullable="false" />
-          <Property Name="TENNXB" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="TENNXB" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
           <Property Name="SDT" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
           <NavigationProperty Name="SACHes" Relationship="Self.FK__SACH__MANXB__4F7CD00D" FromRole="NXB" ToRole="SACH" />
         </EntityType>
@@ -272,8 +326,8 @@ warning 6002: The table/view 'QLThuVien.dbo.Book_Detail' does not have a primary
             <PropertyRef Name="MAUSER" />
           </Key>
           <Property Name="MAUSER" Type="Int32" Nullable="false" />
-          <Property Name="USERNAME" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
-          <Property Name="MATKHAU" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="USERNAME" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="MATKHAU" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
           <Property Name="DIACHI" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
           <Property Name="SDT" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
           <Property Name="MACARD" Type="Int32" />
@@ -282,15 +336,41 @@ warning 6002: The table/view 'QLThuVien.dbo.Book_Detail' does not have a primary
           <NavigationProperty Name="CARD" Relationship="Self.FK__USERS__MACARD__2E1BDC42" FromRole="USERS" ToRole="CARDS" />
           <NavigationProperty Name="MUONSACHes" Relationship="Self.FK__MUONSACH__MAUSER__5441852A" FromRole="USERS" ToRole="MUONSACH" />
         </EntityType>
-        <EntityType Name="Book_Detail">
+        <EntityType Name="Authenticate_User">
+          <Key>
+            <PropertyRef Name="USERNAME" />
+            <PropertyRef Name="MATKHAU" />
+          </Key>
+          <Property Name="USERNAME" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="MATKHAU" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Book_Info">
           <Key>
             <PropertyRef Name="TENSACH" />
           </Key>
           <Property Name="TENSACH" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
-          <Property Name="VITRI" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
           <Property Name="LINHVUC" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
           <Property Name="GIA" Type="Int32" />
+          <Property Name="VITRI" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="DANGDUOCMUON" Type="Int32" />
+          <Property Name="SOLUONGSACHBIMAT" Type="Int32" />
           <Property Name="TONGSOLUONG" Type="Int32" />
+        </EntityType>
+        <EntityType Name="Borrower_Info">
+          <Key>
+            <PropertyRef Name="MAUSER" />
+          </Key>
+          <Property Name="MAUSER" Type="Int32" Nullable="false" />
+          <Property Name="TEN" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="DIACHI" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="SDT" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <EntityType Name="Publisher_Info">
+          <Key>
+            <PropertyRef Name="TENNXB" />
+          </Key>
+          <Property Name="TENNXB" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="SDT" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
         </EntityType>
         <Association Name="FK__USERS__MACARD__2E1BDC42">
           <End Role="CARDS" Type="Self.CARD" Multiplicity="0..1" />
@@ -360,7 +440,10 @@ warning 6002: The table/view 'QLThuVien.dbo.Book_Detail' does not have a primary
           <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagram" />
           <EntitySet Name="TACGIAs" EntityType="Self.TACGIA" />
           <EntitySet Name="USERS" EntityType="Self.USER" />
-          <EntitySet Name="Book_Detail" EntityType="Self.Book_Detail" />
+          <EntitySet Name="Authenticate_User" EntityType="Self.Authenticate_User" />
+          <EntitySet Name="Book_Info" EntityType="Self.Book_Info" />
+          <EntitySet Name="Borrower_Info" EntityType="Self.Borrower_Info" />
+          <EntitySet Name="Publisher_Info" EntityType="Self.Publisher_Info" />
           <AssociationSet Name="FK__USERS__MACARD__2E1BDC42" Association="Self.FK__USERS__MACARD__2E1BDC42">
             <End Role="CARDS" EntitySet="CARDS" />
             <End Role="USERS" EntitySet="USERS" />
@@ -470,14 +553,42 @@ warning 6002: The table/view 'QLThuVien.dbo.Book_Detail' does not have a primary
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
-          <EntitySetMapping Name="Book_Detail">
-            <EntityTypeMapping TypeName="QLThuVienModel.Book_Detail">
-              <MappingFragment StoreEntitySet="Book_Detail">
+          <EntitySetMapping Name="Authenticate_User">
+            <EntityTypeMapping TypeName="QLThuVienModel.Authenticate_User">
+              <MappingFragment StoreEntitySet="Authenticate_User">
+                <ScalarProperty Name="USERNAME" ColumnName="USERNAME" />
+                <ScalarProperty Name="MATKHAU" ColumnName="MATKHAU" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Book_Info">
+            <EntityTypeMapping TypeName="QLThuVienModel.Book_Info">
+              <MappingFragment StoreEntitySet="Book_Info">
                 <ScalarProperty Name="TENSACH" ColumnName="TENSACH" />
-                <ScalarProperty Name="VITRI" ColumnName="VITRI" />
                 <ScalarProperty Name="LINHVUC" ColumnName="LINHVUC" />
                 <ScalarProperty Name="GIA" ColumnName="GIA" />
+                <ScalarProperty Name="VITRI" ColumnName="VITRI" />
+                <ScalarProperty Name="DANGDUOCMUON" ColumnName="DANGDUOCMUON" />
+                <ScalarProperty Name="SOLUONGSACHBIMAT" ColumnName="SOLUONGSACHBIMAT" />
                 <ScalarProperty Name="TONGSOLUONG" ColumnName="TONGSOLUONG" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Borrower_Info">
+            <EntityTypeMapping TypeName="QLThuVienModel.Borrower_Info">
+              <MappingFragment StoreEntitySet="Borrower_Info">
+                <ScalarProperty Name="MAUSER" ColumnName="MAUSER" />
+                <ScalarProperty Name="TEN" ColumnName="TEN" />
+                <ScalarProperty Name="DIACHI" ColumnName="DIACHI" />
+                <ScalarProperty Name="SDT" ColumnName="SDT" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Publisher_Info">
+            <EntityTypeMapping TypeName="QLThuVienModel.Publisher_Info">
+              <MappingFragment StoreEntitySet="Publisher_Info">
+                <ScalarProperty Name="TENNXB" ColumnName="TENNXB" />
+                <ScalarProperty Name="SDT" ColumnName="SDT" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
