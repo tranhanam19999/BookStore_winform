@@ -14,3 +14,162 @@ from dbo.USERS
 create view Book_Info as
 select TENSACH, VITRI, DANGDUOCMUON, TONGSOLUONG, SOLUONGSACHBIMAT, LINHVUC, GIA
 from dbo.SACH
+--------------------Trigger---------------------
+---------xoa uer
+go
+create proc Delete_User
+@mauser int
+as 
+begin
+	delete from USERS where USERS.MAUSER = @mauser
+end
+
+--- xoa card cua user
+go
+create proc Delete_Cards
+@macard int
+as 
+begin
+	delete from CARDS where CARDS.MACARD = @macard
+end
+---Xoa user da muon sach
+go
+create proc Delete_Muon
+@mauser int
+as 
+begin
+	delete from MUONSACH where MAUSER = @mauser
+end
+------xoa nha xuat ban
+go 
+create proc Delete_SACH
+@masach int
+as
+begin
+	delete from SACH where MASACH =@masach
+end
+-------------------------------
+-- xóa User đồng thời xóa cả thông tin User mượn sách và Card của user đó --- (dc)
+go
+alter trigger Xoa_User on USERS
+instead of delete
+as
+begin
+	Declare @mauser int = (select MAUSER from deleted);
+	Declare @macard int = (select MACARD from deleted);
+	
+	EXEC Delete_Muon @mauser= @mauser
+	DELETE FROM USERS WHERE MAUSER =  @mauser
+	EXEC Delete_Cards @macard = @macard	
+	
+end
+
+delete from USERS where MAUSER = 5
+----------------------------------------------------------------------
+
+
+
+---------------------------------------------------------------------
+--- kiểm tra ngày trả sách phải lớn hơn hoặc bằng ngày mượn ---(dc)
+go
+CREATE trigger KT_Ngay_Muon on MUONSACH
+FOR INSERT
+AS
+IF((Select NGAYTRA From inserted)<getdate())
+BEGIN
+PRINT 'Ngày trả không thể nhỏ hơn ngày mượn !'
+ROLLBACK TRAN
+END
+--------------------------------------------------------------------------
+
+
+-----------------------------------------------------------
+---kiểm tra user mới có trùng với user cũ đã tồn tại hay không ------(dc)
+GO
+CREATE TRIGGER Kiemtra_Them_User ON USERS
+FOR INSERT
+AS
+IF (Select TENUSER FROM INSERTED) 
+IN (Select TENUSER FROM USERS)
+BEGIN
+	Print 'Tên USER đã tồn tại'
+    ROLLBACK TRAN
+END
+
+insert into USERS values(9,'a','a','a','021',1,'dgfg')
+---------------------------------------------------------------------
+
+
+
+-------------------------------------------------------------------
+---- Xóa nhà xuất bản đòng thời xóa luôn sách của nhà xuất bản đó---(chua)
+--GO
+--alter TRIGGER DELETE_NXB on NXB
+--instead of DELETE
+--as
+--begin	
+--	Declare @maNXB int = (select MANXB from deleted)
+--	declare @masach int = (select MASACH from SACH where MANXB =1)	
+--	EXEC ('Delete_SACH' + @masach)
+--	delete from NXB where MANXB =  @maNXB
+--end
+
+--delete from NXB where MANXB = 3
+------------------------------------------------------------------------
+
+
+--------------------------------------
+-- Giới hạn số lượng sách của một người mượn (5 quyển) ---(dc)
+go
+CREATE trigger limit_borrow_book on MUONSACH
+FOR INSERT
+AS
+IF((Select SOLUONGSACHMUON From inserted)>5)
+BEGIN
+	PRINT 'Quá Số lượng sách có thể mượn'
+	ROLLBACK TRAN
+END
+
+insert into MUONSACH values (4,3,'2020-11-03','2020-12-06',6,1,0)
+---------------------------------------------------
+
+
+-------------------------------------------------
+--Thêm sách thì phải tồn tại NXB và tác giả trước đó---(dc)
+go
+ALTER TRIGGER Them_Sach ON SACH
+FOR INSERT, update as
+Begin
+	DECLARE @temp nchar(10) = (select MANXB from inserted)
+	if (@temp not in (select MANXB from NXB))
+	BEGIN 
+		Print 'Nhà xuất bản này không tồn tại'
+		ROLLBACK TRAN
+	END
+	ELSE
+		print N'Thành công'	
+END
+
+INSERT INTO SACH VALUES (9,5,1,'1','1',1,1,1,'1',1)
+--------------------------------------------
+
+
+--------------------------------
+--Cập nhật số lượng sách sau khi có người mượn ---(dc)
+go
+CREATE TRIGGER update_after_muon_sach ON MUONSACH 
+AFTER INSERT AS 
+BEGIN
+	UPDATE SACH
+	SET TONGSOLUONG = TONGSOLUONG - (
+		SELECT SOLUONGSACHMUON
+		FROM inserted
+		WHERE MASACH = SACH.MASACH
+	)
+	FROM SACH
+	JOIN inserted ON SACH.MASACH = inserted.MASACH
+END
+GO
+-------------------------------
+
+-------------------------------------------------
