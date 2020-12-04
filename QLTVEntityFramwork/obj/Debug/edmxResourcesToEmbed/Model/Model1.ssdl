@@ -1,0 +1,189 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="QLThuVienModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="CARDS">
+    <Key>
+      <PropertyRef Name="MACARD" />
+    </Key>
+    <Property Name="MACARD" Type="int" Nullable="false" />
+    <Property Name="TENUSER" Type="varchar" MaxLength="50" />
+    <Property Name="NUMBERCARD" Type="varchar" MaxLength="50" />
+    <Property Name="DATESTART" Type="date" />
+    <Property Name="DATEFINISH" Type="date" />
+  </EntityType>
+  <EntityType Name="MUONSACH">
+    <Key>
+      <PropertyRef Name="MAUSER" />
+      <PropertyRef Name="MASACH" />
+    </Key>
+    <Property Name="MAUSER" Type="int" Nullable="false" />
+    <Property Name="MASACH" Type="int" Nullable="false" />
+    <Property Name="NGAYMUON" Type="date" />
+    <Property Name="NGAYTRA" Type="date" />
+    <Property Name="SOLUONGSACHMUON" Type="int" />
+    <Property Name="SOLUONGSACHTRA" Type="int" />
+    <Property Name="SOLUONGSACHMAT" Type="int" />
+  </EntityType>
+  <EntityType Name="NXB">
+    <Key>
+      <PropertyRef Name="MANXB" />
+    </Key>
+    <Property Name="MANXB" Type="int" Nullable="false" />
+    <Property Name="TENNXB" Type="varchar" MaxLength="50" />
+    <Property Name="SDT" Type="varchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="SACH">
+    <Key>
+      <PropertyRef Name="MASACH" />
+    </Key>
+    <Property Name="MASACH" Type="int" Nullable="false" />
+    <Property Name="MANXB" Type="int" />
+    <Property Name="MATACGIA" Type="int" />
+    <Property Name="VITRI" Type="varchar" MaxLength="50" />
+    <Property Name="TENSACH" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="DANGDUOCMUON" Type="int" />
+    <Property Name="TONGSOLUONG" Type="int" />
+    <Property Name="SOLUONGSACHBIMAT" Type="int" />
+    <Property Name="LINHVUC" Type="varchar" MaxLength="50" />
+    <Property Name="GIA" Type="int" />
+  </EntityType>
+  <EntityType Name="sysdiagrams">
+    <Key>
+      <PropertyRef Name="diagram_id" />
+    </Key>
+    <Property Name="name" Type="nvarchar" MaxLength="128" Nullable="false" />
+    <Property Name="principal_id" Type="int" Nullable="false" />
+    <Property Name="diagram_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="version" Type="int" />
+    <Property Name="definition" Type="varbinary(max)" />
+  </EntityType>
+  <EntityType Name="TACGIA">
+    <Key>
+      <PropertyRef Name="MATACGIA" />
+    </Key>
+    <Property Name="MATACGIA" Type="int" Nullable="false" />
+    <Property Name="TENTACGIA" Type="varchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="USERS">
+    <Key>
+      <PropertyRef Name="MAUSER" />
+    </Key>
+    <Property Name="MAUSER" Type="int" Nullable="false" />
+    <Property Name="USERNAME" Type="varchar" MaxLength="50" />
+    <Property Name="MATKHAU" Type="varchar" MaxLength="50" />
+    <Property Name="DIACHI" Type="varchar" MaxLength="50" />
+    <Property Name="SDT" Type="varchar" MaxLength="50" />
+    <Property Name="MACARD" Type="int" />
+    <Property Name="CHUCVU" Type="varchar" MaxLength="50" />
+    <Property Name="TEN" Type="varchar" MaxLength="50" />
+  </EntityType>
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'QLThuVien.dbo.Book_Detail' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="Book_Detail">
+    <Key>
+      <PropertyRef Name="TENSACH" />
+    </Key>
+    <Property Name="TENSACH" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="VITRI" Type="varchar" MaxLength="50" />
+    <Property Name="LINHVUC" Type="varchar" MaxLength="50" />
+    <Property Name="GIA" Type="int" />
+    <Property Name="TONGSOLUONG" Type="int" />
+  </EntityType>
+  <Association Name="FK__MUONSACH__MASACH__5535A963">
+    <End Role="SACH" Type="Self.SACH" Multiplicity="1" />
+    <End Role="MUONSACH" Type="Self.MUONSACH" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="SACH">
+        <PropertyRef Name="MASACH" />
+      </Principal>
+      <Dependent Role="MUONSACH">
+        <PropertyRef Name="MASACH" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__MUONSACH__MAUSER__5441852A">
+    <End Role="USERS" Type="Self.USERS" Multiplicity="1" />
+    <End Role="MUONSACH" Type="Self.MUONSACH" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="USERS">
+        <PropertyRef Name="MAUSER" />
+      </Principal>
+      <Dependent Role="MUONSACH">
+        <PropertyRef Name="MAUSER" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__SACH__MANXB__4F7CD00D">
+    <End Role="NXB" Type="Self.NXB" Multiplicity="0..1" />
+    <End Role="SACH" Type="Self.SACH" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="NXB">
+        <PropertyRef Name="MANXB" />
+      </Principal>
+      <Dependent Role="SACH">
+        <PropertyRef Name="MANXB" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__SACH__MATACGIA__5070F446">
+    <End Role="TACGIA" Type="Self.TACGIA" Multiplicity="0..1" />
+    <End Role="SACH" Type="Self.SACH" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TACGIA">
+        <PropertyRef Name="MATACGIA" />
+      </Principal>
+      <Dependent Role="SACH">
+        <PropertyRef Name="MATACGIA" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__USERS__MACARD__2E1BDC42">
+    <End Role="CARDS" Type="Self.CARDS" Multiplicity="0..1" />
+    <End Role="USERS" Type="Self.USERS" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="CARDS">
+        <PropertyRef Name="MACARD" />
+      </Principal>
+      <Dependent Role="USERS">
+        <PropertyRef Name="MACARD" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="QLThuVienModelStoreContainer">
+    <EntitySet Name="CARDS" EntityType="Self.CARDS" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="MUONSACH" EntityType="Self.MUONSACH" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="NXB" EntityType="Self.NXB" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="SACH" EntityType="Self.SACH" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagrams" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="TACGIA" EntityType="Self.TACGIA" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="USERS" EntityType="Self.USERS" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Book_Detail" EntityType="Self.Book_Detail" store:Type="Views" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+    [Book_Detail].[TENSACH] AS [TENSACH], 
+    [Book_Detail].[VITRI] AS [VITRI], 
+    [Book_Detail].[LINHVUC] AS [LINHVUC], 
+    [Book_Detail].[GIA] AS [GIA], 
+    [Book_Detail].[TONGSOLUONG] AS [TONGSOLUONG]
+    FROM [dbo].[Book_Detail] AS [Book_Detail]</DefiningQuery>
+    </EntitySet>
+    <AssociationSet Name="FK__MUONSACH__MASACH__5535A963" Association="Self.FK__MUONSACH__MASACH__5535A963">
+      <End Role="SACH" EntitySet="SACH" />
+      <End Role="MUONSACH" EntitySet="MUONSACH" />
+    </AssociationSet>
+    <AssociationSet Name="FK__MUONSACH__MAUSER__5441852A" Association="Self.FK__MUONSACH__MAUSER__5441852A">
+      <End Role="USERS" EntitySet="USERS" />
+      <End Role="MUONSACH" EntitySet="MUONSACH" />
+    </AssociationSet>
+    <AssociationSet Name="FK__SACH__MANXB__4F7CD00D" Association="Self.FK__SACH__MANXB__4F7CD00D">
+      <End Role="NXB" EntitySet="NXB" />
+      <End Role="SACH" EntitySet="SACH" />
+    </AssociationSet>
+    <AssociationSet Name="FK__SACH__MATACGIA__5070F446" Association="Self.FK__SACH__MATACGIA__5070F446">
+      <End Role="TACGIA" EntitySet="TACGIA" />
+      <End Role="SACH" EntitySet="SACH" />
+    </AssociationSet>
+    <AssociationSet Name="FK__USERS__MACARD__2E1BDC42" Association="Self.FK__USERS__MACARD__2E1BDC42">
+      <End Role="CARDS" EntitySet="CARDS" />
+      <End Role="USERS" EntitySet="USERS" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>

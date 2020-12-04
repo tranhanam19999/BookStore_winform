@@ -1,0 +1,98 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="QLThuVienModelStoreContainer" CdmEntityContainer="QLThuVienEntities">
+    <EntitySetMapping Name="CARDS">
+      <EntityTypeMapping TypeName="QLThuVienModel.CARD">
+        <MappingFragment StoreEntitySet="CARDS">
+          <ScalarProperty Name="MACARD" ColumnName="MACARD" />
+          <ScalarProperty Name="TENUSER" ColumnName="TENUSER" />
+          <ScalarProperty Name="NUMBERCARD" ColumnName="NUMBERCARD" />
+          <ScalarProperty Name="DATESTART" ColumnName="DATESTART" />
+          <ScalarProperty Name="DATEFINISH" ColumnName="DATEFINISH" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="MUONSACHes">
+      <EntityTypeMapping TypeName="QLThuVienModel.MUONSACH">
+        <MappingFragment StoreEntitySet="MUONSACH">
+          <ScalarProperty Name="MAUSER" ColumnName="MAUSER" />
+          <ScalarProperty Name="MASACH" ColumnName="MASACH" />
+          <ScalarProperty Name="NGAYMUON" ColumnName="NGAYMUON" />
+          <ScalarProperty Name="NGAYTRA" ColumnName="NGAYTRA" />
+          <ScalarProperty Name="SOLUONGSACHMUON" ColumnName="SOLUONGSACHMUON" />
+          <ScalarProperty Name="SOLUONGSACHTRA" ColumnName="SOLUONGSACHTRA" />
+          <ScalarProperty Name="SOLUONGSACHMAT" ColumnName="SOLUONGSACHMAT" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="NXBs">
+      <EntityTypeMapping TypeName="QLThuVienModel.NXB">
+        <MappingFragment StoreEntitySet="NXB">
+          <ScalarProperty Name="MANXB" ColumnName="MANXB" />
+          <ScalarProperty Name="TENNXB" ColumnName="TENNXB" />
+          <ScalarProperty Name="SDT" ColumnName="SDT" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="SACHes">
+      <EntityTypeMapping TypeName="QLThuVienModel.SACH">
+        <MappingFragment StoreEntitySet="SACH">
+          <ScalarProperty Name="MASACH" ColumnName="MASACH" />
+          <ScalarProperty Name="MANXB" ColumnName="MANXB" />
+          <ScalarProperty Name="MATACGIA" ColumnName="MATACGIA" />
+          <ScalarProperty Name="VITRI" ColumnName="VITRI" />
+          <ScalarProperty Name="TENSACH" ColumnName="TENSACH" />
+          <ScalarProperty Name="DANGDUOCMUON" ColumnName="DANGDUOCMUON" />
+          <ScalarProperty Name="TONGSOLUONG" ColumnName="TONGSOLUONG" />
+          <ScalarProperty Name="SOLUONGSACHBIMAT" ColumnName="SOLUONGSACHBIMAT" />
+          <ScalarProperty Name="LINHVUC" ColumnName="LINHVUC" />
+          <ScalarProperty Name="GIA" ColumnName="GIA" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="sysdiagrams">
+      <EntityTypeMapping TypeName="QLThuVienModel.sysdiagram">
+        <MappingFragment StoreEntitySet="sysdiagrams">
+          <ScalarProperty Name="name" ColumnName="name" />
+          <ScalarProperty Name="principal_id" ColumnName="principal_id" />
+          <ScalarProperty Name="diagram_id" ColumnName="diagram_id" />
+          <ScalarProperty Name="version" ColumnName="version" />
+          <ScalarProperty Name="definition" ColumnName="definition" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TACGIAs">
+      <EntityTypeMapping TypeName="QLThuVienModel.TACGIA">
+        <MappingFragment StoreEntitySet="TACGIA">
+          <ScalarProperty Name="MATACGIA" ColumnName="MATACGIA" />
+          <ScalarProperty Name="TENTACGIA" ColumnName="TENTACGIA" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="USERS">
+      <EntityTypeMapping TypeName="QLThuVienModel.USER">
+        <MappingFragment StoreEntitySet="USERS">
+          <ScalarProperty Name="MAUSER" ColumnName="MAUSER" />
+          <ScalarProperty Name="USERNAME" ColumnName="USERNAME" />
+          <ScalarProperty Name="MATKHAU" ColumnName="MATKHAU" />
+          <ScalarProperty Name="DIACHI" ColumnName="DIACHI" />
+          <ScalarProperty Name="SDT" ColumnName="SDT" />
+          <ScalarProperty Name="MACARD" ColumnName="MACARD" />
+          <ScalarProperty Name="CHUCVU" ColumnName="CHUCVU" />
+          <ScalarProperty Name="TEN" ColumnName="TEN" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Book_Detail">
+      <EntityTypeMapping TypeName="QLThuVienModel.Book_Detail">
+        <MappingFragment StoreEntitySet="Book_Detail">
+          <ScalarProperty Name="TENSACH" ColumnName="TENSACH" />
+          <ScalarProperty Name="VITRI" ColumnName="VITRI" />
+          <ScalarProperty Name="LINHVUC" ColumnName="LINHVUC" />
+          <ScalarProperty Name="GIA" ColumnName="GIA" />
+          <ScalarProperty Name="TONGSOLUONG" ColumnName="TONGSOLUONG" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

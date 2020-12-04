@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="a0bc6a412ba6454482c3124c2f678625" Name="Diagram1">
+        <EntityTypeShape EntityType="QLThuVienModel.CARD" Width="1.5" PointX="0.75" PointY="9.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="QLThuVienModel.MUONSACH" Width="1.5" PointX="5.25" PointY="1.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="QLThuVienModel.NXB" Width="1.5" PointX="0.75" PointY="1.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="QLThuVienModel.SACH" Width="1.5" PointX="3" PointY="1" IsExpanded="true" />
+        <EntityTypeShape EntityType="QLThuVienModel.sysdiagram" Width="1.5" PointX="2.75" PointY="5.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="QLThuVienModel.TACGIA" Width="1.5" PointX="0.75" PointY="6" IsExpanded="true" />
+        <EntityTypeShape EntityType="QLThuVienModel.USER" Width="1.5" PointX="3" PointY="9.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="QLThuVienModel.Book_Detail" Width="1.5" PointX="4.75" PointY="5.75" IsExpanded="true" />
+        <AssociationConnector Association="QLThuVienModel.FK__USERS__MACARD__2E1BDC42" ManuallyRouted="false" />
+        <AssociationConnector Association="QLThuVienModel.FK__MUONSACH__MASACH__5535A963" ManuallyRouted="false" />
+        <AssociationConnector Association="QLThuVienModel.FK__MUONSACH__MAUSER__5441852A" ManuallyRouted="false" />
+        <AssociationConnector Association="QLThuVienModel.FK__SACH__MANXB__4F7CD00D" ManuallyRouted="false" />
+        <AssociationConnector Association="QLThuVienModel.FK__SACH__MATACGIA__5070F446" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

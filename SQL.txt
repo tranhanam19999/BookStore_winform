@@ -1,0 +1,16 @@
+-- View Publisher
+create view Book_Publisher as
+select TENNXB, SDT
+from dbo.NXB
+-- View Borrower: USER
+create view Book_Borrower as
+select MAUSER,TEN, DIACHI, SDT
+from dbo.USERS
+-- View Borrower: Mượn Sách
+create view Book_Borrower as
+select MAUSER, MASACH, NGAYMUON, NGAYTRA, SOLUONGSACHMUON, SOLUONGSACHTRA, SOLUONGSACHMAT
+from dbo.MUONSACH
+-- View ManagerBook
+create view Book_Manager as
+select TENSACH, VITRI, DANGDUOCMUON, TONGSOLUONG, SOLUONGSACHBIMAT, LINHVUC, GIA
+from dbo.SACH

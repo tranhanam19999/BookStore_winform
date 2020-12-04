@@ -1,0 +1,383 @@
+C:\Users\hp\source\repos\QLTVEntityFramwork\QLTVEntityFramwork\bin\Debug\QLTVEntityFramwork.exe.config
+C:\Users\hp\source\repos\QLTVEntityFramwork\QLTVEntityFramwork\bin\Debug\QLTVEntityFramwork.exe
+C:\Users\hp\source\repos\QLTVEntityFramwork\QLTVEntityFramwork\bin\Debug\QLTVEntityFramwork.pdb
+C:\Users\hp\source\repos\QLTVEntityFramwork\QLTVEntityFramwork\bin\Debug\EntityFramework.dll
+C:\Users\hp\source\repos\QLTVEntityFramwork\QLTVEntityFramwork\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\hp\source\repos\QLTVEntityFramwork\QLTVEntityFramwork\bin\Debug\EntityFramework.xml
+C:\Users\hp\source\repos\QLTVEntityFramwork\QLTVEntityFramwork\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\hp\source\repos\QLTVEntityFramwork\QLTVEntityFramwork\obj\Debug\QLTVEntityFramwork.csprojAssemblyReference.cache
+C:\Users\hp\source\repos\QLTVEntityFramwork\QLTVEntityFramwork\obj\Debug\QLTVEntityFramwork.FormMain.resources
+C:\Users\hp\source\repos\QLTVEntityFramwork\QLTVEntityFramwork\obj\Debug\QLTVEntityFramwork.csproj.GenerateResource.cache
+C:\Users\hp\source\repos\QLTVEntityFramwork\QLTVEntityFramwork\obj\Debug\QLTVEntityFramwork.csproj.CopyComplete
+C:\Users\hp\source\repos\QLTVEntityFramwork\QLTVEntityFramwork\obj\Debug\QLTVEntityFramwork.exe
+C:\Users\hp\source\repos\QLTVEntityFramwork\QLTVEntityFramwork\obj\Debug\QLTVEntityFramwork.pdb
+C:\Users\hp\source\repos\QLTVEntityFramwork\QLTVEntityFramwork\obj\Debug\QLTVEntityFramwork.AboutUs.resources
+C:\Users\hp\source\repos\QLTVEntityFramwork\QLTVEntityFramwork\obj\Debug\QLTVEntityFramwork.ManageBook.resources
+C:\Users\hp\source\repos\QLTVEntityFramwork\QLTVEntityFramwork\obj\Debug\QLTVEntityFramwork.ManageBorrower.resources
+C:\Users\hp\source\repos\QLTVEntityFramwork\QLTVEntityFramwork\obj\Debug\QLTVEntityFramwork.More.resources
+C:\Users\hp\source\repos\QLTVEntityFramwork\QLTVEntityFramwork\obj\Debug\QLTVEntityFramwork.Properties.Resources.resources
+C:\Users\hp\source\repos\QLTVEntityFramwork\QLTVEntityFramwork\obj\Debug\QLTVEntityFramwork.Publisher.resources
+C:\Users\hp\source\repos\QLTVEntityFramwork\QLTVEntityFramwork\obj\Debug\QLTVEntityFramwork.SearchInformation.resources
+C:\Users\hp\source\repos\QLTVEntityFramwork\QLTVEntityFramwork\obj\Debug\QLTVEntityFramwork.Writer.resources
+C:\Users\hp\source\repos\QLTVEntityFramwork\QLTVEntityFramwork\obj\Debug\QLTVEntityFramwork.FormControl.resources
+C:\Users\hp\source\repos\QLTVEntityFramwork\QLTVEntityFramwork\obj\Debug\QLTVEntityFramwork.csproj.CoreCompileInputs.cache
+C:\Users\MSI\Downloads\QLTVEntityFramwork (1)\QLTVEntityFramwork\QLTVEntityFramwork\bin\Debug\QLTVEntityFramwork.exe.config
+C:\Users\MSI\Downloads\QLTVEntityFramwork (1)\QLTVEntityFramwork\QLTVEntityFramwork\bin\Debug\QLTVEntityFramwork.exe
+C:\Users\MSI\Downloads\QLTVEntityFramwork (1)\QLTVEntityFramwork\QLTVEntityFramwork\bin\Debug\QLTVEntityFramwork.pdb
+C:\Users\MSI\Downloads\QLTVEntityFramwork (1)\QLTVEntityFramwork\QLTVEntityFramwork\bin\Debug\EntityFramework.dll
+C:\Users\MSI\Downloads\QLTVEntityFramwork (1)\QLTVEntityFramwork\QLTVEntityFramwork\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\MSI\Downloads\QLTVEntityFramwork (1)\QLTVEntityFramwork\QLTVEntityFramwork\bin\Debug\EntityFramework.xml
+C:\Users\MSI\Downloads\QLTVEntityFramwork (1)\QLTVEntityFramwork\QLTVEntityFramwork\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\MSI\Downloads\QLTVEntityFramwork (1)\QLTVEntityFramwork\QLTVEntityFramwork\obj\Debug\QLTVEntityFramwork.csprojAssemblyReference.cache
+C:\Users\MSI\Downloads\QLTVEntityFramwork (1)\QLTVEntityFramwork\QLTVEntityFramwork\obj\Debug\QLTVEntityFramwork.AboutUs.resources
+C:\Users\MSI\Downloads\QLTVEntityFramwork (1)\QLTVEntityFramwork\QLTVEntityFramwork\obj\Debug\QLTVEntityFramwork.FormControl.resources
+C:\Users\MSI\Downloads\QLTVEntityFramwork (1)\QLTVEntityFramwork\QLTVEntityFramwork\obj\Debug\QLTVEntityFramwork.FormMain.resources
+C:\Users\MSI\Downloads\QLTVEntityFramwork (1)\QLTVEntityFramwork\QLTVEntityFramwork\obj\Debug\QLTVEntityFramwork.ManageBook.resources
+C:\Users\MSI\Downloads\QLTVEntityFramwork (1)\QLTVEntityFramwork\QLTVEntityFramwork\obj\Debug\QLTVEntityFramwork.ManageBorrower.resources
+C:\Users\MSI\Downloads\QLTVEntityFramwork (1)\QLTVEntityFramwork\QLTVEntityFramwork\obj\Debug\QLTVEntityFramwork.More.resources
+C:\Users\MSI\Downloads\QLTVEntityFramwork (1)\QLTVEntityFramwork\QLTVEntityFramwork\obj\Debug\QLTVEntityFramwork.Properties.Resources.resources
+C:\Users\MSI\Downloads\QLTVEntityFramwork (1)\QLTVEntityFramwork\QLTVEntityFramwork\obj\Debug\QLTVEntityFramwork.Publisher.resources
+C:\Users\MSI\Downloads\QLTVEntityFramwork (1)\QLTVEntityFramwork\QLTVEntityFramwork\obj\Debug\QLTVEntityFramwork.SearchInformation.resources
+C:\Users\MSI\Downloads\QLTVEntityFramwork (1)\QLTVEntityFramwork\QLTVEntityFramwork\obj\Debug\QLTVEntityFramwork.Writer.resources
+C:\Users\MSI\Downloads\QLTVEntityFramwork (1)\QLTVEntityFramwork\QLTVEntityFramwork\obj\Debug\QLTVEntityFramwork.csproj.GenerateResource.cache
+C:\Users\MSI\Downloads\QLTVEntityFramwork (1)\QLTVEntityFramwork\QLTVEntityFramwork\obj\Debug\QLTVEntityFramwork.csproj.CoreCompileInputs.cache
+C:\Users\MSI\Downloads\QLTVEntityFramwork (1)\QLTVEntityFramwork\QLTVEntityFramwork\obj\Debug\QLTVEntityFramwork.csproj.CopyComplete
+C:\Users\MSI\Downloads\QLTVEntityFramwork (1)\QLTVEntityFramwork\QLTVEntityFramwork\obj\Debug\QLTVEntityFramwork.exe
+C:\Users\MSI\Downloads\QLTVEntityFramwork (1)\QLTVEntityFramwork\QLTVEntityFramwork\obj\Debug\QLTVEntityFramwork.pdb
+C:\Users\MSI\Downloads\QLTVEntityFramwork (1) - Copy\QLTVEntityFramwork\QLTVEntityFramwork\bin\Debug\QLTVEntityFramwork.exe.config
+C:\Users\MSI\Downloads\QLTVEntityFramwork (1) - Copy\QLTVEntityFramwork\QLTVEntityFramwork\bin\Debug\QLTVEntityFramwork.exe
+C:\Users\MSI\Downloads\QLTVEntityFramwork (1) - Copy\QLTVEntityFramwork\QLTVEntityFramwork\bin\Debug\QLTVEntityFramwork.pdb
+C:\Users\MSI\Downloads\QLTVEntityFramwork (1) - Copy\QLTVEntityFramwork\QLTVEntityFramwork\bin\Debug\EntityFramework.dll
+C:\Users\MSI\Downloads\QLTVEntityFramwork (1) - Copy\QLTVEntityFramwork\QLTVEntityFramwork\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\MSI\Downloads\QLTVEntityFramwork (1) - Copy\QLTVEntityFramwork\QLTVEntityFramwork\bin\Debug\EntityFramework.xml
+C:\Users\MSI\Downloads\QLTVEntityFramwork (1) - Copy\QLTVEntityFramwork\QLTVEntityFramwork\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\MSI\Downloads\QLTVEntityFramwork (1) - Copy\QLTVEntityFramwork\QLTVEntityFramwork\obj\Debug\QLTVEntityFramwork.csprojAssemblyReference.cache
+C:\Users\MSI\Downloads\QLTVEntityFramwork (1) - Copy\QLTVEntityFramwork\QLTVEntityFramwork\obj\Debug\QLTVEntityFramwork.AboutUs.resources
+C:\Users\MSI\Downloads\QLTVEntityFramwork (1) - Copy\QLTVEntityFramwork\QLTVEntityFramwork\obj\Debug\QLTVEntityFramwork.FormControl.resources
+C:\Users\MSI\Downloads\QLTVEntityFramwork (1) - Copy\QLTVEntityFramwork\QLTVEntityFramwork\obj\Debug\QLTVEntityFramwork.FormMain.resources
+C:\Users\MSI\Downloads\QLTVEntityFramwork (1) - Copy\QLTVEntityFramwork\QLTVEntityFramwork\obj\Debug\QLTVEntityFramwork.ManageBook.resources
+C:\Users\MSI\Downloads\QLTVEntityFramwork (1) - Copy\QLTVEntityFramwork\QLTVEntityFramwork\obj\Debug\QLTVEntityFramwork.ManageBorrower.resources
+C:\Users\MSI\Downloads\QLTVEntityFramwork (1) - Copy\QLTVEntityFramwork\QLTVEntityFramwork\obj\Debug\QLTVEntityFramwork.More.resources
+C:\Users\MSI\Downloads\QLTVEntityFramwork (1) - Copy\QLTVEntityFramwork\QLTVEntityFramwork\obj\Debug\QLTVEntityFramwork.Properties.Resources.resources
+C:\Users\MSI\Downloads\QLTVEntityFramwork (1) - Copy\QLTVEntityFramwork\QLTVEntityFramwork\obj\Debug\QLTVEntityFramwork.Publisher.resources
+C:\Users\MSI\Downloads\QLTVEntityFramwork (1) - Copy\QLTVEntityFramwork\QLTVEntityFramwork\obj\Debug\QLTVEntityFramwork.SearchInformation.resources
+C:\Users\MSI\Downloads\QLTVEntityFramwork (1) - Copy\QLTVEntityFramwork\QLTVEntityFramwork\obj\Debug\QLTVEntityFramwork.Writer.resources
+C:\Users\MSI\Downloads\QLTVEntityFramwork (1) - Copy\QLTVEntityFramwork\QLTVEntityFramwork\obj\Debug\QLTVEntityFramwork.csproj.GenerateResource.cache
+C:\Users\MSI\Downloads\QLTVEntityFramwork (1) - Copy\QLTVEntityFramwork\QLTVEntityFramwork\obj\Debug\QLTVEntityFramwork.csproj.CoreCompileInputs.cache
+C:\Users\MSI\Downloads\QLTVEntityFramwork (1) - Copy\QLTVEntityFramwork\QLTVEntityFramwork\obj\Debug\QLTVEntityFramwork.csproj.CopyComplete
+C:\Users\MSI\Downloads\QLTVEntityFramwork (1) - Copy\QLTVEntityFramwork\QLTVEntityFramwork\obj\Debug\QLTVEntityFramwork.exe
+C:\Users\MSI\Downloads\QLTVEntityFramwork (1) - Copy\QLTVEntityFramwork\QLTVEntityFramwork\obj\Debug\QLTVEntityFramwork.pdb
+C:\Users\MSI\Downloads\QLTVEntityFramwork (1) - Copy\QLTVEntityFramwork\QLTVEntityFramwork\bin\Debug\SqlServerTypes\x64\msvcr120.dll
+C:\Users\MSI\Downloads\QLTVEntityFramwork (1) - Copy\QLTVEntityFramwork\QLTVEntityFramwork\bin\Debug\SqlServerTypes\x64\SqlServerSpatial140.dll
+C:\Users\MSI\Downloads\QLTVEntityFramwork (1) - Copy\QLTVEntityFramwork\QLTVEntityFramwork\bin\Debug\SqlServerTypes\x86\msvcr120.dll
+C:\Users\MSI\Downloads\QLTVEntityFramwork (1) - Copy\QLTVEntityFramwork\QLTVEntityFramwork\bin\Debug\SqlServerTypes\x86\SqlServerSpatial140.dll
+C:\Users\MSI\Downloads\QLTVEntityFramwork (1) - Copy\QLTVEntityFramwork\QLTVEntityFramwork\bin\Debug\Microsoft.ReportViewer.Common.dll
+C:\Users\MSI\Downloads\QLTVEntityFramwork (1) - Copy\QLTVEntityFramwork\QLTVEntityFramwork\bin\Debug\Microsoft.ReportViewer.DataVisualization.dll
+C:\Users\MSI\Downloads\QLTVEntityFramwork (1) - Copy\QLTVEntityFramwork\QLTVEntityFramwork\bin\Debug\Microsoft.ReportViewer.Design.dll
+C:\Users\MSI\Downloads\QLTVEntityFramwork (1) - Copy\QLTVEntityFramwork\QLTVEntityFramwork\bin\Debug\Microsoft.ReportViewer.ProcessingObjectModel.dll
+C:\Users\MSI\Downloads\QLTVEntityFramwork (1) - Copy\QLTVEntityFramwork\QLTVEntityFramwork\bin\Debug\Microsoft.ReportViewer.WinForms.dll
+C:\Users\MSI\Downloads\QLTVEntityFramwork (1) - Copy\QLTVEntityFramwork\QLTVEntityFramwork\bin\Debug\Microsoft.SqlServer.Types.dll
+C:\Users\MSI\Downloads\QLTVEntityFramwork (1) - Copy\QLTVEntityFramwork\QLTVEntityFramwork\bin\Debug\EnvDTE.dll
+C:\Users\MSI\Downloads\QLTVEntityFramwork (1) - Copy\QLTVEntityFramwork\QLTVEntityFramwork\bin\Debug\Microsoft.VisualStudio.Shell.Interop.dll
+C:\Users\MSI\Downloads\QLTVEntityFramwork (1) - Copy\QLTVEntityFramwork\QLTVEntityFramwork\bin\Debug\Microsoft.VisualStudio.Shell.Interop.8.0.dll
+C:\Users\MSI\Downloads\QLTVEntityFramwork (1) - Copy\QLTVEntityFramwork\QLTVEntityFramwork\bin\Debug\stdole.dll
+C:\Users\MSI\Downloads\QLTVEntityFramwork (1) - Copy\QLTVEntityFramwork\QLTVEntityFramwork\bin\Debug\Microsoft.VisualStudio.OLE.Interop.dll
+C:\Users\MSI\Downloads\QLTVEntityFramwork (1) - Copy\QLTVEntityFramwork\QLTVEntityFramwork\bin\Debug\Microsoft.VisualStudio.TextManager.Interop.dll
+C:\Users\MSI\Downloads\QLTVEntityFramwork (1) - Copy\QLTVEntityFramwork\QLTVEntityFramwork\bin\Debug\Microsoft.VisualStudio.TextManager.Interop.8.0.dll
+C:\Users\MSI\Downloads\QLTVEntityFramwork (1) - Copy\QLTVEntityFramwork\QLTVEntityFramwork\bin\Debug\Microsoft.MSXML.dll
+C:\Users\MSI\Downloads\QLTVEntityFramwork (1) - Copy\QLTVEntityFramwork\QLTVEntityFramwork\bin\Debug\de\Microsoft.ReportViewer.Common.resources.dll
+C:\Users\MSI\Downloads\QLTVEntityFramwork (1) - Copy\QLTVEntityFramwork\QLTVEntityFramwork\bin\Debug\es\Microsoft.ReportViewer.Common.resources.dll
+C:\Users\MSI\Downloads\QLTVEntityFramwork (1) - Copy\QLTVEntityFramwork\QLTVEntityFramwork\bin\Debug\fr\Microsoft.ReportViewer.Common.resources.dll
+C:\Users\MSI\Downloads\QLTVEntityFramwork (1) - Copy\QLTVEntityFramwork\QLTVEntityFramwork\bin\Debug\it\Microsoft.ReportViewer.Common.resources.dll
+C:\Users\MSI\Downloads\QLTVEntityFramwork (1) - Copy\QLTVEntityFramwork\QLTVEntityFramwork\bin\Debug\ja\Microsoft.ReportViewer.Common.resources.dll
+C:\Users\MSI\Downloads\QLTVEntityFramwork (1) - Copy\QLTVEntityFramwork\QLTVEntityFramwork\bin\Debug\ko\Microsoft.ReportViewer.Common.resources.dll
+C:\Users\MSI\Downloads\QLTVEntityFramwork (1) - Copy\QLTVEntityFramwork\QLTVEntityFramwork\bin\Debug\pt\Microsoft.ReportViewer.Common.resources.dll
+C:\Users\MSI\Downloads\QLTVEntityFramwork (1) - Copy\QLTVEntityFramwork\QLTVEntityFramwork\bin\Debug\ru\Microsoft.ReportViewer.Common.resources.dll
+C:\Users\MSI\Downloads\QLTVEntityFramwork (1) - Copy\QLTVEntityFramwork\QLTVEntityFramwork\bin\Debug\zh-CHS\Microsoft.ReportViewer.Common.resources.dll
+C:\Users\MSI\Downloads\QLTVEntityFramwork (1) - Copy\QLTVEntityFramwork\QLTVEntityFramwork\bin\Debug\zh-CHT\Microsoft.ReportViewer.Common.resources.dll
+C:\Users\MSI\Downloads\QLTVEntityFramwork (1) - Copy\QLTVEntityFramwork\QLTVEntityFramwork\bin\Debug\de\Microsoft.ReportViewer.DataVisualization.resources.dll
+C:\Users\MSI\Downloads\QLTVEntityFramwork (1) - Copy\QLTVEntityFramwork\QLTVEntityFramwork\bin\Debug\es\Microsoft.ReportViewer.DataVisualization.resources.dll
+C:\Users\MSI\Downloads\QLTVEntityFramwork (1) - Copy\QLTVEntityFramwork\QLTVEntityFramwork\bin\Debug\fr\Microsoft.ReportViewer.DataVisualization.resources.dll
+C:\Users\MSI\Downloads\QLTVEntityFramwork (1) - Copy\QLTVEntityFramwork\QLTVEntityFramwork\bin\Debug\it\Microsoft.ReportViewer.DataVisualization.resources.dll
+C:\Users\MSI\Downloads\QLTVEntityFramwork (1) - Copy\QLTVEntityFramwork\QLTVEntityFramwork\bin\Debug\ja\Microsoft.ReportViewer.DataVisualization.resources.dll
+C:\Users\MSI\Downloads\QLTVEntityFramwork (1) - Copy\QLTVEntityFramwork\QLTVEntityFramwork\bin\Debug\ko\Microsoft.ReportViewer.DataVisualization.resources.dll
+C:\Users\MSI\Downloads\QLTVEntityFramwork (1) - Copy\QLTVEntityFramwork\QLTVEntityFramwork\bin\Debug\pt\Microsoft.ReportViewer.DataVisualization.resources.dll
+C:\Users\MSI\Downloads\QLTVEntityFramwork (1) - Copy\QLTVEntityFramwork\QLTVEntityFramwork\bin\Debug\ru\Microsoft.ReportViewer.DataVisualization.resources.dll
+C:\Users\MSI\Downloads\QLTVEntityFramwork (1) - Copy\QLTVEntityFramwork\QLTVEntityFramwork\bin\Debug\zh-CHS\Microsoft.ReportViewer.DataVisualization.resources.dll
+C:\Users\MSI\Downloads\QLTVEntityFramwork (1) - Copy\QLTVEntityFramwork\QLTVEntityFramwork\bin\Debug\zh-CHT\Microsoft.ReportViewer.DataVisualization.resources.dll
+C:\Users\MSI\Downloads\QLTVEntityFramwork (1) - Copy\QLTVEntityFramwork\QLTVEntityFramwork\bin\Debug\de\Microsoft.ReportViewer.Design.resources.dll
+C:\Users\MSI\Downloads\QLTVEntityFramwork (1) - Copy\QLTVEntityFramwork\QLTVEntityFramwork\bin\Debug\es\Microsoft.ReportViewer.Design.resources.dll
+C:\Users\MSI\Downloads\QLTVEntityFramwork (1) - Copy\QLTVEntityFramwork\QLTVEntityFramwork\bin\Debug\fr\Microsoft.ReportViewer.Design.resources.dll
+C:\Users\MSI\Downloads\QLTVEntityFramwork (1) - Copy\QLTVEntityFramwork\QLTVEntityFramwork\bin\Debug\it\Microsoft.ReportViewer.Design.resources.dll
+C:\Users\MSI\Downloads\QLTVEntityFramwork (1) - Copy\QLTVEntityFramwork\QLTVEntityFramwork\bin\Debug\ja\Microsoft.ReportViewer.Design.resources.dll
+C:\Users\MSI\Downloads\QLTVEntityFramwork (1) - Copy\QLTVEntityFramwork\QLTVEntityFramwork\bin\Debug\ko\Microsoft.ReportViewer.Design.resources.dll
+C:\Users\MSI\Downloads\QLTVEntityFramwork (1) - Copy\QLTVEntityFramwork\QLTVEntityFramwork\bin\Debug\pt\Microsoft.ReportViewer.Design.resources.dll
+C:\Users\MSI\Downloads\QLTVEntityFramwork (1) - Copy\QLTVEntityFramwork\QLTVEntityFramwork\bin\Debug\ru\Microsoft.ReportViewer.Design.resources.dll
+C:\Users\MSI\Downloads\QLTVEntityFramwork (1) - Copy\QLTVEntityFramwork\QLTVEntityFramwork\bin\Debug\zh-CHS\Microsoft.ReportViewer.Design.resources.dll
+C:\Users\MSI\Downloads\QLTVEntityFramwork (1) - Copy\QLTVEntityFramwork\QLTVEntityFramwork\bin\Debug\zh-CHT\Microsoft.ReportViewer.Design.resources.dll
+C:\Users\MSI\Downloads\QLTVEntityFramwork (1) - Copy\QLTVEntityFramwork\QLTVEntityFramwork\bin\Debug\de\Microsoft.ReportViewer.WinForms.resources.dll
+C:\Users\MSI\Downloads\QLTVEntityFramwork (1) - Copy\QLTVEntityFramwork\QLTVEntityFramwork\bin\Debug\es\Microsoft.ReportViewer.WinForms.resources.dll
+C:\Users\MSI\Downloads\QLTVEntityFramwork (1) - Copy\QLTVEntityFramwork\QLTVEntityFramwork\bin\Debug\fr\Microsoft.ReportViewer.WinForms.resources.dll
+C:\Users\MSI\Downloads\QLTVEntityFramwork (1) - Copy\QLTVEntityFramwork\QLTVEntityFramwork\bin\Debug\it\Microsoft.ReportViewer.WinForms.resources.dll
+C:\Users\MSI\Downloads\QLTVEntityFramwork (1) - Copy\QLTVEntityFramwork\QLTVEntityFramwork\bin\Debug\ja\Microsoft.ReportViewer.WinForms.resources.dll
+C:\Users\MSI\Downloads\QLTVEntityFramwork (1) - Copy\QLTVEntityFramwork\QLTVEntityFramwork\bin\Debug\ko\Microsoft.ReportViewer.WinForms.resources.dll
+C:\Users\MSI\Downloads\QLTVEntityFramwork (1) - Copy\QLTVEntityFramwork\QLTVEntityFramwork\bin\Debug\pt\Microsoft.ReportViewer.WinForms.resources.dll
+C:\Users\MSI\Downloads\QLTVEntityFramwork (1) - Copy\QLTVEntityFramwork\QLTVEntityFramwork\bin\Debug\ru\Microsoft.ReportViewer.WinForms.resources.dll
+C:\Users\MSI\Downloads\QLTVEntityFramwork (1) - Copy\QLTVEntityFramwork\QLTVEntityFramwork\bin\Debug\zh-CHS\Microsoft.ReportViewer.WinForms.resources.dll
+C:\Users\MSI\Downloads\QLTVEntityFramwork (1) - Copy\QLTVEntityFramwork\QLTVEntityFramwork\bin\Debug\zh-CHT\Microsoft.ReportViewer.WinForms.resources.dll
+C:\Users\MSI\Downloads\QLTVEntityFramwork (1) - Copy\QLTVEntityFramwork\QLTVEntityFramwork\obj\Debug\QLTVEntityFramwork.FormReport.resources
+C:\Users\MSI\Downloads\QLTVEntityFramwork (1) - Copy\QLTVEntityFramwork\QLTVEntityFramwork\obj\Debug\RdlCompile.cache
+C:\Users\MSI\Downloads\QLTVEntityFramwork (1) - Copy\QLTVEntityFramwork\QLTVEntityFramwork\obj\Debug\RdlCompile.compiled
+C:\Users\nam\Desktop\QLTVEntityFramwork\QLTVEntityFramwork\bin\Debug\SqlServerTypes\x64\msvcr120.dll
+C:\Users\nam\Desktop\QLTVEntityFramwork\QLTVEntityFramwork\bin\Debug\SqlServerTypes\x64\SqlServerSpatial140.dll
+C:\Users\nam\Desktop\QLTVEntityFramwork\QLTVEntityFramwork\bin\Debug\SqlServerTypes\x86\msvcr120.dll
+C:\Users\nam\Desktop\QLTVEntityFramwork\QLTVEntityFramwork\bin\Debug\SqlServerTypes\x86\SqlServerSpatial140.dll
+C:\Users\nam\Desktop\QLTVEntityFramwork\QLTVEntityFramwork\bin\Debug\QLTVEntityFramwork.exe.config
+C:\Users\nam\Desktop\QLTVEntityFramwork\QLTVEntityFramwork\bin\Debug\QLTVEntityFramwork.exe
+C:\Users\nam\Desktop\QLTVEntityFramwork\QLTVEntityFramwork\bin\Debug\QLTVEntityFramwork.pdb
+C:\Users\nam\Desktop\QLTVEntityFramwork\QLTVEntityFramwork\bin\Debug\EntityFramework.dll
+C:\Users\nam\Desktop\QLTVEntityFramwork\QLTVEntityFramwork\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\nam\Desktop\QLTVEntityFramwork\QLTVEntityFramwork\bin\Debug\Microsoft.ReportViewer.Common.dll
+C:\Users\nam\Desktop\QLTVEntityFramwork\QLTVEntityFramwork\bin\Debug\Microsoft.ReportViewer.DataVisualization.dll
+C:\Users\nam\Desktop\QLTVEntityFramwork\QLTVEntityFramwork\bin\Debug\Microsoft.ReportViewer.Design.dll
+C:\Users\nam\Desktop\QLTVEntityFramwork\QLTVEntityFramwork\bin\Debug\Microsoft.ReportViewer.ProcessingObjectModel.dll
+C:\Users\nam\Desktop\QLTVEntityFramwork\QLTVEntityFramwork\bin\Debug\Microsoft.ReportViewer.WinForms.dll
+C:\Users\nam\Desktop\QLTVEntityFramwork\QLTVEntityFramwork\bin\Debug\Microsoft.SqlServer.Types.dll
+C:\Users\nam\Desktop\QLTVEntityFramwork\QLTVEntityFramwork\bin\Debug\EnvDTE.dll
+C:\Users\nam\Desktop\QLTVEntityFramwork\QLTVEntityFramwork\bin\Debug\Microsoft.VisualStudio.Shell.Interop.dll
+C:\Users\nam\Desktop\QLTVEntityFramwork\QLTVEntityFramwork\bin\Debug\Microsoft.VisualStudio.Shell.Interop.8.0.dll
+C:\Users\nam\Desktop\QLTVEntityFramwork\QLTVEntityFramwork\bin\Debug\stdole.dll
+C:\Users\nam\Desktop\QLTVEntityFramwork\QLTVEntityFramwork\bin\Debug\Microsoft.VisualStudio.OLE.Interop.dll
+C:\Users\nam\Desktop\QLTVEntityFramwork\QLTVEntityFramwork\bin\Debug\Microsoft.VisualStudio.TextManager.Interop.dll
+C:\Users\nam\Desktop\QLTVEntityFramwork\QLTVEntityFramwork\bin\Debug\Microsoft.VisualStudio.TextManager.Interop.8.0.dll
+C:\Users\nam\Desktop\QLTVEntityFramwork\QLTVEntityFramwork\bin\Debug\Microsoft.MSXML.dll
+C:\Users\nam\Desktop\QLTVEntityFramwork\QLTVEntityFramwork\bin\Debug\EntityFramework.xml
+C:\Users\nam\Desktop\QLTVEntityFramwork\QLTVEntityFramwork\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\nam\Desktop\QLTVEntityFramwork\QLTVEntityFramwork\bin\Debug\de\Microsoft.ReportViewer.Common.resources.dll
+C:\Users\nam\Desktop\QLTVEntityFramwork\QLTVEntityFramwork\bin\Debug\es\Microsoft.ReportViewer.Common.resources.dll
+C:\Users\nam\Desktop\QLTVEntityFramwork\QLTVEntityFramwork\bin\Debug\fr\Microsoft.ReportViewer.Common.resources.dll
+C:\Users\nam\Desktop\QLTVEntityFramwork\QLTVEntityFramwork\bin\Debug\it\Microsoft.ReportViewer.Common.resources.dll
+C:\Users\nam\Desktop\QLTVEntityFramwork\QLTVEntityFramwork\bin\Debug\ja\Microsoft.ReportViewer.Common.resources.dll
+C:\Users\nam\Desktop\QLTVEntityFramwork\QLTVEntityFramwork\bin\Debug\ko\Microsoft.ReportViewer.Common.resources.dll
+C:\Users\nam\Desktop\QLTVEntityFramwork\QLTVEntityFramwork\bin\Debug\pt\Microsoft.ReportViewer.Common.resources.dll
+C:\Users\nam\Desktop\QLTVEntityFramwork\QLTVEntityFramwork\bin\Debug\ru\Microsoft.ReportViewer.Common.resources.dll
+C:\Users\nam\Desktop\QLTVEntityFramwork\QLTVEntityFramwork\bin\Debug\zh-CHS\Microsoft.ReportViewer.Common.resources.dll
+C:\Users\nam\Desktop\QLTVEntityFramwork\QLTVEntityFramwork\bin\Debug\zh-CHT\Microsoft.ReportViewer.Common.resources.dll
+C:\Users\nam\Desktop\QLTVEntityFramwork\QLTVEntityFramwork\bin\Debug\de\Microsoft.ReportViewer.DataVisualization.resources.dll
+C:\Users\nam\Desktop\QLTVEntityFramwork\QLTVEntityFramwork\bin\Debug\es\Microsoft.ReportViewer.DataVisualization.resources.dll
+C:\Users\nam\Desktop\QLTVEntityFramwork\QLTVEntityFramwork\bin\Debug\fr\Microsoft.ReportViewer.DataVisualization.resources.dll
+C:\Users\nam\Desktop\QLTVEntityFramwork\QLTVEntityFramwork\bin\Debug\it\Microsoft.ReportViewer.DataVisualization.resources.dll
+C:\Users\nam\Desktop\QLTVEntityFramwork\QLTVEntityFramwork\bin\Debug\ja\Microsoft.ReportViewer.DataVisualization.resources.dll
+C:\Users\nam\Desktop\QLTVEntityFramwork\QLTVEntityFramwork\bin\Debug\ko\Microsoft.ReportViewer.DataVisualization.resources.dll
+C:\Users\nam\Desktop\QLTVEntityFramwork\QLTVEntityFramwork\bin\Debug\pt\Microsoft.ReportViewer.DataVisualization.resources.dll
+C:\Users\nam\Desktop\QLTVEntityFramwork\QLTVEntityFramwork\bin\Debug\ru\Microsoft.ReportViewer.DataVisualization.resources.dll
+C:\Users\nam\Desktop\QLTVEntityFramwork\QLTVEntityFramwork\bin\Debug\zh-CHS\Microsoft.ReportViewer.DataVisualization.resources.dll
+C:\Users\nam\Desktop\QLTVEntityFramwork\QLTVEntityFramwork\bin\Debug\zh-CHT\Microsoft.ReportViewer.DataVisualization.resources.dll
+C:\Users\nam\Desktop\QLTVEntityFramwork\QLTVEntityFramwork\bin\Debug\de\Microsoft.ReportViewer.Design.resources.dll
+C:\Users\nam\Desktop\QLTVEntityFramwork\QLTVEntityFramwork\bin\Debug\es\Microsoft.ReportViewer.Design.resources.dll
+C:\Users\nam\Desktop\QLTVEntityFramwork\QLTVEntityFramwork\bin\Debug\fr\Microsoft.ReportViewer.Design.resources.dll
+C:\Users\nam\Desktop\QLTVEntityFramwork\QLTVEntityFramwork\bin\Debug\it\Microsoft.ReportViewer.Design.resources.dll
+C:\Users\nam\Desktop\QLTVEntityFramwork\QLTVEntityFramwork\bin\Debug\ja\Microsoft.ReportViewer.Design.resources.dll
+C:\Users\nam\Desktop\QLTVEntityFramwork\QLTVEntityFramwork\bin\Debug\ko\Microsoft.ReportViewer.Design.resources.dll
+C:\Users\nam\Desktop\QLTVEntityFramwork\QLTVEntityFramwork\bin\Debug\pt\Microsoft.ReportViewer.Design.resources.dll
+C:\Users\nam\Desktop\QLTVEntityFramwork\QLTVEntityFramwork\bin\Debug\ru\Microsoft.ReportViewer.Design.resources.dll
+C:\Users\nam\Desktop\QLTVEntityFramwork\QLTVEntityFramwork\bin\Debug\zh-CHS\Microsoft.ReportViewer.Design.resources.dll
+C:\Users\nam\Desktop\QLTVEntityFramwork\QLTVEntityFramwork\bin\Debug\zh-CHT\Microsoft.ReportViewer.Design.resources.dll
+C:\Users\nam\Desktop\QLTVEntityFramwork\QLTVEntityFramwork\bin\Debug\de\Microsoft.ReportViewer.WinForms.resources.dll
+C:\Users\nam\Desktop\QLTVEntityFramwork\QLTVEntityFramwork\bin\Debug\es\Microsoft.ReportViewer.WinForms.resources.dll
+C:\Users\nam\Desktop\QLTVEntityFramwork\QLTVEntityFramwork\bin\Debug\fr\Microsoft.ReportViewer.WinForms.resources.dll
+C:\Users\nam\Desktop\QLTVEntityFramwork\QLTVEntityFramwork\bin\Debug\it\Microsoft.ReportViewer.WinForms.resources.dll
+C:\Users\nam\Desktop\QLTVEntityFramwork\QLTVEntityFramwork\bin\Debug\ja\Microsoft.ReportViewer.WinForms.resources.dll
+C:\Users\nam\Desktop\QLTVEntityFramwork\QLTVEntityFramwork\bin\Debug\ko\Microsoft.ReportViewer.WinForms.resources.dll
+C:\Users\nam\Desktop\QLTVEntityFramwork\QLTVEntityFramwork\bin\Debug\pt\Microsoft.ReportViewer.WinForms.resources.dll
+C:\Users\nam\Desktop\QLTVEntityFramwork\QLTVEntityFramwork\bin\Debug\ru\Microsoft.ReportViewer.WinForms.resources.dll
+C:\Users\nam\Desktop\QLTVEntityFramwork\QLTVEntityFramwork\bin\Debug\zh-CHS\Microsoft.ReportViewer.WinForms.resources.dll
+C:\Users\nam\Desktop\QLTVEntityFramwork\QLTVEntityFramwork\bin\Debug\zh-CHT\Microsoft.ReportViewer.WinForms.resources.dll
+C:\Users\nam\Desktop\QLTVEntityFramwork\QLTVEntityFramwork\obj\Debug\QLTVEntityFramwork.csprojAssemblyReference.cache
+C:\Users\nam\Desktop\QLTVEntityFramwork\QLTVEntityFramwork\obj\Debug\QLTVEntityFramwork.AboutUs.resources
+C:\Users\nam\Desktop\QLTVEntityFramwork\QLTVEntityFramwork\obj\Debug\QLTVEntityFramwork.FormControl.resources
+C:\Users\nam\Desktop\QLTVEntityFramwork\QLTVEntityFramwork\obj\Debug\QLTVEntityFramwork.FormMain.resources
+C:\Users\nam\Desktop\QLTVEntityFramwork\QLTVEntityFramwork\obj\Debug\QLTVEntityFramwork.FormReport.resources
+C:\Users\nam\Desktop\QLTVEntityFramwork\QLTVEntityFramwork\obj\Debug\QLTVEntityFramwork.ManageBook.resources
+C:\Users\nam\Desktop\QLTVEntityFramwork\QLTVEntityFramwork\obj\Debug\QLTVEntityFramwork.ManageBorrower.resources
+C:\Users\nam\Desktop\QLTVEntityFramwork\QLTVEntityFramwork\obj\Debug\QLTVEntityFramwork.More.resources
+C:\Users\nam\Desktop\QLTVEntityFramwork\QLTVEntityFramwork\obj\Debug\QLTVEntityFramwork.Properties.Resources.resources
+C:\Users\nam\Desktop\QLTVEntityFramwork\QLTVEntityFramwork\obj\Debug\QLTVEntityFramwork.Publisher.resources
+C:\Users\nam\Desktop\QLTVEntityFramwork\QLTVEntityFramwork\obj\Debug\QLTVEntityFramwork.SearchInformation.resources
+C:\Users\nam\Desktop\QLTVEntityFramwork\QLTVEntityFramwork\obj\Debug\QLTVEntityFramwork.Writer.resources
+C:\Users\nam\Desktop\QLTVEntityFramwork\QLTVEntityFramwork\obj\Debug\QLTVEntityFramwork.csproj.GenerateResource.cache
+C:\Users\nam\Desktop\QLTVEntityFramwork\QLTVEntityFramwork\obj\Debug\QLTVEntityFramwork.csproj.CoreCompileInputs.cache
+C:\Users\nam\Desktop\QLTVEntityFramwork\QLTVEntityFramwork\obj\Debug\QLTVEntityFramwork.csproj.CopyComplete
+C:\Users\nam\Desktop\QLTVEntityFramwork\QLTVEntityFramwork\obj\Debug\QLTVEntityFramwork.exe
+C:\Users\nam\Desktop\QLTVEntityFramwork\QLTVEntityFramwork\obj\Debug\QLTVEntityFramwork.pdb
+C:\Users\nam\Desktop\QLTVEntityFramwork\QLTVEntityFramwork\obj\Debug\QLTVEntityFramwork.LoginForm.resources
+E:\DoAn\Vjpper\QLTVEntityFramwork\QLTVEntityFramwork\bin\Debug\SqlServerTypes\x64\msvcr120.dll
+E:\DoAn\Vjpper\QLTVEntityFramwork\QLTVEntityFramwork\bin\Debug\SqlServerTypes\x64\SqlServerSpatial140.dll
+E:\DoAn\Vjpper\QLTVEntityFramwork\QLTVEntityFramwork\bin\Debug\SqlServerTypes\x86\msvcr120.dll
+E:\DoAn\Vjpper\QLTVEntityFramwork\QLTVEntityFramwork\bin\Debug\SqlServerTypes\x86\SqlServerSpatial140.dll
+E:\DoAn\Vjpper\QLTVEntityFramwork\QLTVEntityFramwork\bin\Debug\QLTVEntityFramwork.exe.config
+E:\DoAn\Vjpper\QLTVEntityFramwork\QLTVEntityFramwork\bin\Debug\QLTVEntityFramwork.exe
+E:\DoAn\Vjpper\QLTVEntityFramwork\QLTVEntityFramwork\bin\Debug\QLTVEntityFramwork.pdb
+E:\DoAn\Vjpper\QLTVEntityFramwork\QLTVEntityFramwork\bin\Debug\EntityFramework.dll
+E:\DoAn\Vjpper\QLTVEntityFramwork\QLTVEntityFramwork\bin\Debug\EntityFramework.SqlServer.dll
+E:\DoAn\Vjpper\QLTVEntityFramwork\QLTVEntityFramwork\bin\Debug\Microsoft.ReportViewer.Common.dll
+E:\DoAn\Vjpper\QLTVEntityFramwork\QLTVEntityFramwork\bin\Debug\Microsoft.ReportViewer.DataVisualization.dll
+E:\DoAn\Vjpper\QLTVEntityFramwork\QLTVEntityFramwork\bin\Debug\Microsoft.ReportViewer.Design.dll
+E:\DoAn\Vjpper\QLTVEntityFramwork\QLTVEntityFramwork\bin\Debug\Microsoft.ReportViewer.ProcessingObjectModel.dll
+E:\DoAn\Vjpper\QLTVEntityFramwork\QLTVEntityFramwork\bin\Debug\Microsoft.ReportViewer.WinForms.dll
+E:\DoAn\Vjpper\QLTVEntityFramwork\QLTVEntityFramwork\bin\Debug\Microsoft.SqlServer.Types.dll
+E:\DoAn\Vjpper\QLTVEntityFramwork\QLTVEntityFramwork\bin\Debug\EnvDTE.dll
+E:\DoAn\Vjpper\QLTVEntityFramwork\QLTVEntityFramwork\bin\Debug\Microsoft.VisualStudio.Shell.Interop.dll
+E:\DoAn\Vjpper\QLTVEntityFramwork\QLTVEntityFramwork\bin\Debug\Microsoft.VisualStudio.Shell.Interop.8.0.dll
+E:\DoAn\Vjpper\QLTVEntityFramwork\QLTVEntityFramwork\bin\Debug\stdole.dll
+E:\DoAn\Vjpper\QLTVEntityFramwork\QLTVEntityFramwork\bin\Debug\Microsoft.VisualStudio.OLE.Interop.dll
+E:\DoAn\Vjpper\QLTVEntityFramwork\QLTVEntityFramwork\bin\Debug\Microsoft.VisualStudio.TextManager.Interop.dll
+E:\DoAn\Vjpper\QLTVEntityFramwork\QLTVEntityFramwork\bin\Debug\Microsoft.VisualStudio.TextManager.Interop.8.0.dll
+E:\DoAn\Vjpper\QLTVEntityFramwork\QLTVEntityFramwork\bin\Debug\Microsoft.MSXML.dll
+E:\DoAn\Vjpper\QLTVEntityFramwork\QLTVEntityFramwork\bin\Debug\EntityFramework.xml
+E:\DoAn\Vjpper\QLTVEntityFramwork\QLTVEntityFramwork\bin\Debug\EntityFramework.SqlServer.xml
+E:\DoAn\Vjpper\QLTVEntityFramwork\QLTVEntityFramwork\bin\Debug\de\Microsoft.ReportViewer.Common.resources.dll
+E:\DoAn\Vjpper\QLTVEntityFramwork\QLTVEntityFramwork\bin\Debug\es\Microsoft.ReportViewer.Common.resources.dll
+E:\DoAn\Vjpper\QLTVEntityFramwork\QLTVEntityFramwork\bin\Debug\fr\Microsoft.ReportViewer.Common.resources.dll
+E:\DoAn\Vjpper\QLTVEntityFramwork\QLTVEntityFramwork\bin\Debug\it\Microsoft.ReportViewer.Common.resources.dll
+E:\DoAn\Vjpper\QLTVEntityFramwork\QLTVEntityFramwork\bin\Debug\ja\Microsoft.ReportViewer.Common.resources.dll
+E:\DoAn\Vjpper\QLTVEntityFramwork\QLTVEntityFramwork\bin\Debug\ko\Microsoft.ReportViewer.Common.resources.dll
+E:\DoAn\Vjpper\QLTVEntityFramwork\QLTVEntityFramwork\bin\Debug\pt\Microsoft.ReportViewer.Common.resources.dll
+E:\DoAn\Vjpper\QLTVEntityFramwork\QLTVEntityFramwork\bin\Debug\ru\Microsoft.ReportViewer.Common.resources.dll
+E:\DoAn\Vjpper\QLTVEntityFramwork\QLTVEntityFramwork\bin\Debug\zh-CHS\Microsoft.ReportViewer.Common.resources.dll
+E:\DoAn\Vjpper\QLTVEntityFramwork\QLTVEntityFramwork\bin\Debug\zh-CHT\Microsoft.ReportViewer.Common.resources.dll
+E:\DoAn\Vjpper\QLTVEntityFramwork\QLTVEntityFramwork\bin\Debug\de\Microsoft.ReportViewer.DataVisualization.resources.dll
+E:\DoAn\Vjpper\QLTVEntityFramwork\QLTVEntityFramwork\bin\Debug\es\Microsoft.ReportViewer.DataVisualization.resources.dll
+E:\DoAn\Vjpper\QLTVEntityFramwork\QLTVEntityFramwork\bin\Debug\fr\Microsoft.ReportViewer.DataVisualization.resources.dll
+E:\DoAn\Vjpper\QLTVEntityFramwork\QLTVEntityFramwork\bin\Debug\it\Microsoft.ReportViewer.DataVisualization.resources.dll
+E:\DoAn\Vjpper\QLTVEntityFramwork\QLTVEntityFramwork\bin\Debug\ja\Microsoft.ReportViewer.DataVisualization.resources.dll
+E:\DoAn\Vjpper\QLTVEntityFramwork\QLTVEntityFramwork\bin\Debug\ko\Microsoft.ReportViewer.DataVisualization.resources.dll
+E:\DoAn\Vjpper\QLTVEntityFramwork\QLTVEntityFramwork\bin\Debug\pt\Microsoft.ReportViewer.DataVisualization.resources.dll
+E:\DoAn\Vjpper\QLTVEntityFramwork\QLTVEntityFramwork\bin\Debug\ru\Microsoft.ReportViewer.DataVisualization.resources.dll
+E:\DoAn\Vjpper\QLTVEntityFramwork\QLTVEntityFramwork\bin\Debug\zh-CHS\Microsoft.ReportViewer.DataVisualization.resources.dll
+E:\DoAn\Vjpper\QLTVEntityFramwork\QLTVEntityFramwork\bin\Debug\zh-CHT\Microsoft.ReportViewer.DataVisualization.resources.dll
+E:\DoAn\Vjpper\QLTVEntityFramwork\QLTVEntityFramwork\bin\Debug\de\Microsoft.ReportViewer.Design.resources.dll
+E:\DoAn\Vjpper\QLTVEntityFramwork\QLTVEntityFramwork\bin\Debug\es\Microsoft.ReportViewer.Design.resources.dll
+E:\DoAn\Vjpper\QLTVEntityFramwork\QLTVEntityFramwork\bin\Debug\fr\Microsoft.ReportViewer.Design.resources.dll
+E:\DoAn\Vjpper\QLTVEntityFramwork\QLTVEntityFramwork\bin\Debug\it\Microsoft.ReportViewer.Design.resources.dll
+E:\DoAn\Vjpper\QLTVEntityFramwork\QLTVEntityFramwork\bin\Debug\ja\Microsoft.ReportViewer.Design.resources.dll
+E:\DoAn\Vjpper\QLTVEntityFramwork\QLTVEntityFramwork\bin\Debug\ko\Microsoft.ReportViewer.Design.resources.dll
+E:\DoAn\Vjpper\QLTVEntityFramwork\QLTVEntityFramwork\bin\Debug\pt\Microsoft.ReportViewer.Design.resources.dll
+E:\DoAn\Vjpper\QLTVEntityFramwork\QLTVEntityFramwork\bin\Debug\ru\Microsoft.ReportViewer.Design.resources.dll
+E:\DoAn\Vjpper\QLTVEntityFramwork\QLTVEntityFramwork\bin\Debug\zh-CHS\Microsoft.ReportViewer.Design.resources.dll
+E:\DoAn\Vjpper\QLTVEntityFramwork\QLTVEntityFramwork\bin\Debug\zh-CHT\Microsoft.ReportViewer.Design.resources.dll
+E:\DoAn\Vjpper\QLTVEntityFramwork\QLTVEntityFramwork\bin\Debug\de\Microsoft.ReportViewer.WinForms.resources.dll
+E:\DoAn\Vjpper\QLTVEntityFramwork\QLTVEntityFramwork\bin\Debug\es\Microsoft.ReportViewer.WinForms.resources.dll
+E:\DoAn\Vjpper\QLTVEntityFramwork\QLTVEntityFramwork\bin\Debug\fr\Microsoft.ReportViewer.WinForms.resources.dll
+E:\DoAn\Vjpper\QLTVEntityFramwork\QLTVEntityFramwork\bin\Debug\it\Microsoft.ReportViewer.WinForms.resources.dll
+E:\DoAn\Vjpper\QLTVEntityFramwork\QLTVEntityFramwork\bin\Debug\ja\Microsoft.ReportViewer.WinForms.resources.dll
+E:\DoAn\Vjpper\QLTVEntityFramwork\QLTVEntityFramwork\bin\Debug\ko\Microsoft.ReportViewer.WinForms.resources.dll
+E:\DoAn\Vjpper\QLTVEntityFramwork\QLTVEntityFramwork\bin\Debug\pt\Microsoft.ReportViewer.WinForms.resources.dll
+E:\DoAn\Vjpper\QLTVEntityFramwork\QLTVEntityFramwork\bin\Debug\ru\Microsoft.ReportViewer.WinForms.resources.dll
+E:\DoAn\Vjpper\QLTVEntityFramwork\QLTVEntityFramwork\bin\Debug\zh-CHS\Microsoft.ReportViewer.WinForms.resources.dll
+E:\DoAn\Vjpper\QLTVEntityFramwork\QLTVEntityFramwork\bin\Debug\zh-CHT\Microsoft.ReportViewer.WinForms.resources.dll
+E:\DoAn\Vjpper\QLTVEntityFramwork\QLTVEntityFramwork\obj\Debug\QLTVEntityFramwork.csprojAssemblyReference.cache
+E:\DoAn\Vjpper\QLTVEntityFramwork\QLTVEntityFramwork\obj\Debug\QLTVEntityFramwork.AboutUs.resources
+E:\DoAn\Vjpper\QLTVEntityFramwork\QLTVEntityFramwork\obj\Debug\QLTVEntityFramwork.FormControl.resources
+E:\DoAn\Vjpper\QLTVEntityFramwork\QLTVEntityFramwork\obj\Debug\QLTVEntityFramwork.FormMain.resources
+E:\DoAn\Vjpper\QLTVEntityFramwork\QLTVEntityFramwork\obj\Debug\QLTVEntityFramwork.FormReport.resources
+E:\DoAn\Vjpper\QLTVEntityFramwork\QLTVEntityFramwork\obj\Debug\QLTVEntityFramwork.LoginForm.resources
+E:\DoAn\Vjpper\QLTVEntityFramwork\QLTVEntityFramwork\obj\Debug\QLTVEntityFramwork.ManageBook.resources
+E:\DoAn\Vjpper\QLTVEntityFramwork\QLTVEntityFramwork\obj\Debug\QLTVEntityFramwork.ManageBorrower.resources
+E:\DoAn\Vjpper\QLTVEntityFramwork\QLTVEntityFramwork\obj\Debug\QLTVEntityFramwork.More.resources
+E:\DoAn\Vjpper\QLTVEntityFramwork\QLTVEntityFramwork\obj\Debug\QLTVEntityFramwork.Properties.Resources.resources
+E:\DoAn\Vjpper\QLTVEntityFramwork\QLTVEntityFramwork\obj\Debug\QLTVEntityFramwork.Publisher.resources
+E:\DoAn\Vjpper\QLTVEntityFramwork\QLTVEntityFramwork\obj\Debug\QLTVEntityFramwork.SearchInformation.resources
+E:\DoAn\Vjpper\QLTVEntityFramwork\QLTVEntityFramwork\obj\Debug\QLTVEntityFramwork.Writer.resources
+E:\DoAn\Vjpper\QLTVEntityFramwork\QLTVEntityFramwork\obj\Debug\QLTVEntityFramwork.csproj.GenerateResource.cache
+E:\DoAn\Vjpper\QLTVEntityFramwork\QLTVEntityFramwork\obj\Debug\RdlCompile.cache
+E:\DoAn\Vjpper\QLTVEntityFramwork\QLTVEntityFramwork\obj\Debug\RdlCompile.compiled
+E:\DoAn\Vjpper\QLTVEntityFramwork\QLTVEntityFramwork\obj\Debug\QLTVEntityFramwork.csproj.CoreCompileInputs.cache
+E:\DoAn\Vjpper\QLTVEntityFramwork\QLTVEntityFramwork\obj\Debug\QLTVEntityFramwork.csproj.CopyComplete
+E:\DoAn\Vjpper\QLTVEntityFramwork\QLTVEntityFramwork\obj\Debug\QLTVEntityFramwork.exe
+E:\DoAn\Vjpper\QLTVEntityFramwork\QLTVEntityFramwork\obj\Debug\QLTVEntityFramwork.pdb
+D:\QLTVEntityFramwork-20201202T053727Z-001\QLTVEntityFramwork\QLTVEntityFramwork\bin\Debug\SqlServerTypes\x64\msvcr120.dll
+D:\QLTVEntityFramwork-20201202T053727Z-001\QLTVEntityFramwork\QLTVEntityFramwork\bin\Debug\SqlServerTypes\x64\SqlServerSpatial140.dll
+D:\QLTVEntityFramwork-20201202T053727Z-001\QLTVEntityFramwork\QLTVEntityFramwork\bin\Debug\SqlServerTypes\x86\msvcr120.dll
+D:\QLTVEntityFramwork-20201202T053727Z-001\QLTVEntityFramwork\QLTVEntityFramwork\bin\Debug\SqlServerTypes\x86\SqlServerSpatial140.dll
+D:\QLTVEntityFramwork-20201202T053727Z-001\QLTVEntityFramwork\QLTVEntityFramwork\bin\Debug\QLTVEntityFramwork.exe.config
+D:\QLTVEntityFramwork-20201202T053727Z-001\QLTVEntityFramwork\QLTVEntityFramwork\bin\Debug\QLTVEntityFramwork.exe
+D:\QLTVEntityFramwork-20201202T053727Z-001\QLTVEntityFramwork\QLTVEntityFramwork\bin\Debug\QLTVEntityFramwork.pdb
+D:\QLTVEntityFramwork-20201202T053727Z-001\QLTVEntityFramwork\QLTVEntityFramwork\bin\Debug\EntityFramework.dll
+D:\QLTVEntityFramwork-20201202T053727Z-001\QLTVEntityFramwork\QLTVEntityFramwork\bin\Debug\EntityFramework.SqlServer.dll
+D:\QLTVEntityFramwork-20201202T053727Z-001\QLTVEntityFramwork\QLTVEntityFramwork\bin\Debug\Microsoft.ReportViewer.Common.dll
+D:\QLTVEntityFramwork-20201202T053727Z-001\QLTVEntityFramwork\QLTVEntityFramwork\bin\Debug\Microsoft.ReportViewer.DataVisualization.dll
+D:\QLTVEntityFramwork-20201202T053727Z-001\QLTVEntityFramwork\QLTVEntityFramwork\bin\Debug\Microsoft.ReportViewer.Design.dll
+D:\QLTVEntityFramwork-20201202T053727Z-001\QLTVEntityFramwork\QLTVEntityFramwork\bin\Debug\Microsoft.ReportViewer.ProcessingObjectModel.dll
+D:\QLTVEntityFramwork-20201202T053727Z-001\QLTVEntityFramwork\QLTVEntityFramwork\bin\Debug\Microsoft.ReportViewer.WinForms.dll
+D:\QLTVEntityFramwork-20201202T053727Z-001\QLTVEntityFramwork\QLTVEntityFramwork\bin\Debug\Microsoft.SqlServer.Types.dll
+D:\QLTVEntityFramwork-20201202T053727Z-001\QLTVEntityFramwork\QLTVEntityFramwork\bin\Debug\EnvDTE.dll
+D:\QLTVEntityFramwork-20201202T053727Z-001\QLTVEntityFramwork\QLTVEntityFramwork\bin\Debug\Microsoft.VisualStudio.Shell.Interop.dll
+D:\QLTVEntityFramwork-20201202T053727Z-001\QLTVEntityFramwork\QLTVEntityFramwork\bin\Debug\Microsoft.VisualStudio.Shell.Interop.8.0.dll
+D:\QLTVEntityFramwork-20201202T053727Z-001\QLTVEntityFramwork\QLTVEntityFramwork\bin\Debug\stdole.dll
+D:\QLTVEntityFramwork-20201202T053727Z-001\QLTVEntityFramwork\QLTVEntityFramwork\bin\Debug\Microsoft.VisualStudio.OLE.Interop.dll
+D:\QLTVEntityFramwork-20201202T053727Z-001\QLTVEntityFramwork\QLTVEntityFramwork\bin\Debug\Microsoft.VisualStudio.TextManager.Interop.dll
+D:\QLTVEntityFramwork-20201202T053727Z-001\QLTVEntityFramwork\QLTVEntityFramwork\bin\Debug\Microsoft.VisualStudio.TextManager.Interop.8.0.dll
+D:\QLTVEntityFramwork-20201202T053727Z-001\QLTVEntityFramwork\QLTVEntityFramwork\bin\Debug\Microsoft.MSXML.dll
+D:\QLTVEntityFramwork-20201202T053727Z-001\QLTVEntityFramwork\QLTVEntityFramwork\bin\Debug\EntityFramework.xml
+D:\QLTVEntityFramwork-20201202T053727Z-001\QLTVEntityFramwork\QLTVEntityFramwork\bin\Debug\EntityFramework.SqlServer.xml
+D:\QLTVEntityFramwork-20201202T053727Z-001\QLTVEntityFramwork\QLTVEntityFramwork\bin\Debug\de\Microsoft.ReportViewer.Common.resources.dll
+D:\QLTVEntityFramwork-20201202T053727Z-001\QLTVEntityFramwork\QLTVEntityFramwork\bin\Debug\es\Microsoft.ReportViewer.Common.resources.dll
+D:\QLTVEntityFramwork-20201202T053727Z-001\QLTVEntityFramwork\QLTVEntityFramwork\bin\Debug\fr\Microsoft.ReportViewer.Common.resources.dll
+D:\QLTVEntityFramwork-20201202T053727Z-001\QLTVEntityFramwork\QLTVEntityFramwork\bin\Debug\it\Microsoft.ReportViewer.Common.resources.dll
+D:\QLTVEntityFramwork-20201202T053727Z-001\QLTVEntityFramwork\QLTVEntityFramwork\bin\Debug\ja\Microsoft.ReportViewer.Common.resources.dll
+D:\QLTVEntityFramwork-20201202T053727Z-001\QLTVEntityFramwork\QLTVEntityFramwork\bin\Debug\ko\Microsoft.ReportViewer.Common.resources.dll
+D:\QLTVEntityFramwork-20201202T053727Z-001\QLTVEntityFramwork\QLTVEntityFramwork\bin\Debug\pt\Microsoft.ReportViewer.Common.resources.dll
+D:\QLTVEntityFramwork-20201202T053727Z-001\QLTVEntityFramwork\QLTVEntityFramwork\bin\Debug\ru\Microsoft.ReportViewer.Common.resources.dll
+D:\QLTVEntityFramwork-20201202T053727Z-001\QLTVEntityFramwork\QLTVEntityFramwork\bin\Debug\zh-CHS\Microsoft.ReportViewer.Common.resources.dll
+D:\QLTVEntityFramwork-20201202T053727Z-001\QLTVEntityFramwork\QLTVEntityFramwork\bin\Debug\zh-CHT\Microsoft.ReportViewer.Common.resources.dll
+D:\QLTVEntityFramwork-20201202T053727Z-001\QLTVEntityFramwork\QLTVEntityFramwork\bin\Debug\de\Microsoft.ReportViewer.DataVisualization.resources.dll
+D:\QLTVEntityFramwork-20201202T053727Z-001\QLTVEntityFramwork\QLTVEntityFramwork\bin\Debug\es\Microsoft.ReportViewer.DataVisualization.resources.dll
+D:\QLTVEntityFramwork-20201202T053727Z-001\QLTVEntityFramwork\QLTVEntityFramwork\bin\Debug\fr\Microsoft.ReportViewer.DataVisualization.resources.dll
+D:\QLTVEntityFramwork-20201202T053727Z-001\QLTVEntityFramwork\QLTVEntityFramwork\bin\Debug\it\Microsoft.ReportViewer.DataVisualization.resources.dll
+D:\QLTVEntityFramwork-20201202T053727Z-001\QLTVEntityFramwork\QLTVEntityFramwork\bin\Debug\ja\Microsoft.ReportViewer.DataVisualization.resources.dll
+D:\QLTVEntityFramwork-20201202T053727Z-001\QLTVEntityFramwork\QLTVEntityFramwork\bin\Debug\ko\Microsoft.ReportViewer.DataVisualization.resources.dll
+D:\QLTVEntityFramwork-20201202T053727Z-001\QLTVEntityFramwork\QLTVEntityFramwork\bin\Debug\pt\Microsoft.ReportViewer.DataVisualization.resources.dll
+D:\QLTVEntityFramwork-20201202T053727Z-001\QLTVEntityFramwork\QLTVEntityFramwork\bin\Debug\ru\Microsoft.ReportViewer.DataVisualization.resources.dll
+D:\QLTVEntityFramwork-20201202T053727Z-001\QLTVEntityFramwork\QLTVEntityFramwork\bin\Debug\zh-CHS\Microsoft.ReportViewer.DataVisualization.resources.dll
+D:\QLTVEntityFramwork-20201202T053727Z-001\QLTVEntityFramwork\QLTVEntityFramwork\bin\Debug\zh-CHT\Microsoft.ReportViewer.DataVisualization.resources.dll
+D:\QLTVEntityFramwork-20201202T053727Z-001\QLTVEntityFramwork\QLTVEntityFramwork\bin\Debug\de\Microsoft.ReportViewer.Design.resources.dll
+D:\QLTVEntityFramwork-20201202T053727Z-001\QLTVEntityFramwork\QLTVEntityFramwork\bin\Debug\es\Microsoft.ReportViewer.Design.resources.dll
+D:\QLTVEntityFramwork-20201202T053727Z-001\QLTVEntityFramwork\QLTVEntityFramwork\bin\Debug\fr\Microsoft.ReportViewer.Design.resources.dll
+D:\QLTVEntityFramwork-20201202T053727Z-001\QLTVEntityFramwork\QLTVEntityFramwork\bin\Debug\it\Microsoft.ReportViewer.Design.resources.dll
+D:\QLTVEntityFramwork-20201202T053727Z-001\QLTVEntityFramwork\QLTVEntityFramwork\bin\Debug\ja\Microsoft.ReportViewer.Design.resources.dll
+D:\QLTVEntityFramwork-20201202T053727Z-001\QLTVEntityFramwork\QLTVEntityFramwork\bin\Debug\ko\Microsoft.ReportViewer.Design.resources.dll
+D:\QLTVEntityFramwork-20201202T053727Z-001\QLTVEntityFramwork\QLTVEntityFramwork\bin\Debug\pt\Microsoft.ReportViewer.Design.resources.dll
+D:\QLTVEntityFramwork-20201202T053727Z-001\QLTVEntityFramwork\QLTVEntityFramwork\bin\Debug\ru\Microsoft.ReportViewer.Design.resources.dll
+D:\QLTVEntityFramwork-20201202T053727Z-001\QLTVEntityFramwork\QLTVEntityFramwork\bin\Debug\zh-CHS\Microsoft.ReportViewer.Design.resources.dll
+D:\QLTVEntityFramwork-20201202T053727Z-001\QLTVEntityFramwork\QLTVEntityFramwork\bin\Debug\zh-CHT\Microsoft.ReportViewer.Design.resources.dll
+D:\QLTVEntityFramwork-20201202T053727Z-001\QLTVEntityFramwork\QLTVEntityFramwork\bin\Debug\de\Microsoft.ReportViewer.WinForms.resources.dll
+D:\QLTVEntityFramwork-20201202T053727Z-001\QLTVEntityFramwork\QLTVEntityFramwork\bin\Debug\es\Microsoft.ReportViewer.WinForms.resources.dll
+D:\QLTVEntityFramwork-20201202T053727Z-001\QLTVEntityFramwork\QLTVEntityFramwork\bin\Debug\fr\Microsoft.ReportViewer.WinForms.resources.dll
+D:\QLTVEntityFramwork-20201202T053727Z-001\QLTVEntityFramwork\QLTVEntityFramwork\bin\Debug\it\Microsoft.ReportViewer.WinForms.resources.dll
+D:\QLTVEntityFramwork-20201202T053727Z-001\QLTVEntityFramwork\QLTVEntityFramwork\bin\Debug\ja\Microsoft.ReportViewer.WinForms.resources.dll
+D:\QLTVEntityFramwork-20201202T053727Z-001\QLTVEntityFramwork\QLTVEntityFramwork\bin\Debug\ko\Microsoft.ReportViewer.WinForms.resources.dll
+D:\QLTVEntityFramwork-20201202T053727Z-001\QLTVEntityFramwork\QLTVEntityFramwork\bin\Debug\pt\Microsoft.ReportViewer.WinForms.resources.dll
+D:\QLTVEntityFramwork-20201202T053727Z-001\QLTVEntityFramwork\QLTVEntityFramwork\bin\Debug\ru\Microsoft.ReportViewer.WinForms.resources.dll
+D:\QLTVEntityFramwork-20201202T053727Z-001\QLTVEntityFramwork\QLTVEntityFramwork\bin\Debug\zh-CHS\Microsoft.ReportViewer.WinForms.resources.dll
+D:\QLTVEntityFramwork-20201202T053727Z-001\QLTVEntityFramwork\QLTVEntityFramwork\bin\Debug\zh-CHT\Microsoft.ReportViewer.WinForms.resources.dll
+D:\QLTVEntityFramwork-20201202T053727Z-001\QLTVEntityFramwork\QLTVEntityFramwork\obj\Debug\QLTVEntityFramwork.csprojAssemblyReference.cache
+D:\QLTVEntityFramwork-20201202T053727Z-001\QLTVEntityFramwork\QLTVEntityFramwork\obj\Debug\QLTVEntityFramwork.AboutUs.resources
+D:\QLTVEntityFramwork-20201202T053727Z-001\QLTVEntityFramwork\QLTVEntityFramwork\obj\Debug\QLTVEntityFramwork.FormControl.resources
+D:\QLTVEntityFramwork-20201202T053727Z-001\QLTVEntityFramwork\QLTVEntityFramwork\obj\Debug\QLTVEntityFramwork.FormMain.resources
+D:\QLTVEntityFramwork-20201202T053727Z-001\QLTVEntityFramwork\QLTVEntityFramwork\obj\Debug\QLTVEntityFramwork.FormReport.resources
+D:\QLTVEntityFramwork-20201202T053727Z-001\QLTVEntityFramwork\QLTVEntityFramwork\obj\Debug\QLTVEntityFramwork.LoginForm.resources
+D:\QLTVEntityFramwork-20201202T053727Z-001\QLTVEntityFramwork\QLTVEntityFramwork\obj\Debug\QLTVEntityFramwork.ManageBook.resources
+D:\QLTVEntityFramwork-20201202T053727Z-001\QLTVEntityFramwork\QLTVEntityFramwork\obj\Debug\QLTVEntityFramwork.ManageBorrower.resources
+D:\QLTVEntityFramwork-20201202T053727Z-001\QLTVEntityFramwork\QLTVEntityFramwork\obj\Debug\QLTVEntityFramwork.More.resources
+D:\QLTVEntityFramwork-20201202T053727Z-001\QLTVEntityFramwork\QLTVEntityFramwork\obj\Debug\QLTVEntityFramwork.Properties.Resources.resources
+D:\QLTVEntityFramwork-20201202T053727Z-001\QLTVEntityFramwork\QLTVEntityFramwork\obj\Debug\QLTVEntityFramwork.Publisher.resources
+D:\QLTVEntityFramwork-20201202T053727Z-001\QLTVEntityFramwork\QLTVEntityFramwork\obj\Debug\QLTVEntityFramwork.SearchInformation.resources
+D:\QLTVEntityFramwork-20201202T053727Z-001\QLTVEntityFramwork\QLTVEntityFramwork\obj\Debug\QLTVEntityFramwork.Writer.resources
+D:\QLTVEntityFramwork-20201202T053727Z-001\QLTVEntityFramwork\QLTVEntityFramwork\obj\Debug\QLTVEntityFramwork.csproj.GenerateResource.cache
+D:\QLTVEntityFramwork-20201202T053727Z-001\QLTVEntityFramwork\QLTVEntityFramwork\obj\Debug\RdlCompile.cache
+D:\QLTVEntityFramwork-20201202T053727Z-001\QLTVEntityFramwork\QLTVEntityFramwork\obj\Debug\RdlCompile.compiled
+D:\QLTVEntityFramwork-20201202T053727Z-001\QLTVEntityFramwork\QLTVEntityFramwork\obj\Debug\QLTVEntityFramwork.csproj.CoreCompileInputs.cache
+D:\QLTVEntityFramwork-20201202T053727Z-001\QLTVEntityFramwork\QLTVEntityFramwork\obj\Debug\QLTVEntityFramwork.csproj.CopyComplete
+D:\QLTVEntityFramwork-20201202T053727Z-001\QLTVEntityFramwork\QLTVEntityFramwork\obj\Debug\QLTVEntityFramwork.exe
+D:\QLTVEntityFramwork-20201202T053727Z-001\QLTVEntityFramwork\QLTVEntityFramwork\obj\Debug\QLTVEntityFramwork.pdb
