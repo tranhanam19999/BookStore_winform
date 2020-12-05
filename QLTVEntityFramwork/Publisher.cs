@@ -32,6 +32,7 @@ namespace QLTVEntityFramwork
             dgvQLNXB.Columns[0].HeaderText = "Mã NXB";
             dgvQLNXB.Columns[1].HeaderText = "Tên NXB";
             dgvQLNXB.Columns[2].HeaderText = "SĐT";
+            dgvQLNXB.Columns[3].Visible = false;
 
 
             //btnLuu.Enabled = false;

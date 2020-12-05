@@ -13,9 +13,9 @@ namespace QLTVEntityFramwork
     public partial class ManageBook : Form
     {
         QLThuVienEntities db = new QLThuVienEntities();
-        //bool Them = false;
-        //bool checkThem = false;
-        //bool CapNhat = false;
+        bool Them = false;
+        bool checkThem = false;
+        bool CapNhat = false;
         public ManageBook()
         {
             InitializeComponent();
@@ -25,23 +25,27 @@ namespace QLTVEntityFramwork
             btnHuy.Enabled = false;
             btnLuu.Enabled = false;
             DisableComponent();
-            //PutDataInComboBox();
+            PutDataInComboBox();
         }
         public void DisableComponent()
         {
-            txtMaSach.Enabled = false;
             txtTenSach.Enabled = false;
-            cbMaNXB.Enabled = false;
-            cbMTG.Enabled = false;
+            txtLinhvuc.Enabled = false;
+            txtGia.Enabled = false;
             cbViTri.Enabled = false;
+            txtTinhTrangMuon.Enabled = false;
+            txtSoLuongBiMat.Enabled = false;
+            txtTongSoLuong.Enabled = false;
         }
         public void EnableComponent()
         {
-            //txtMaSach.Enabled = true;
-            //txtTenSach.Enabled = true;
-            //cbMaNXB.Enabled = true;
-            //cbMTG.Enabled = true;
-            //cbViTri.Enabled = true;
+            txtTenSach.Enabled = true;
+            txtLinhvuc.Enabled = true;
+            txtGia.Enabled = true;
+            cbViTri.Enabled = true;
+            txtTinhTrangMuon.Enabled = true;
+            txtSoLuongBiMat.Enabled = true;
+            txtTongSoLuong.Enabled = true;
         }
         public void LoadData()
         {
@@ -64,24 +68,27 @@ namespace QLTVEntityFramwork
         }
         public void ClearClickedData()
         {
-            txtMaSach.Text = "";
-            cbViTri.Text = "";
             txtTenSach.Text = "";
-            cbMaNXB.Text = "";
-            cbMTG.Text = "";
+            txtLinhvuc.Text = "";
+            txtGia.Text = "";
+            cbViTri.Text = "";
+            txtTinhTrangMuon.Text = "";
+            txtSoLuongBiMat.Text = "";
+            txtTongSoLuong.Text = "";
+            
         }
         public void PutDataInComboBox()
         {
-            //PutDataInComboViTri();
+            PutDataInComboViTri();
             //PutDataInComboMaNXB();
             //PutDataInComboMaTG();
         }
         public void PutDataInComboViTri()
         {
-            //cbViTri.Items.Add("C1");
-            //cbViTri.Items.Add("C2");
-            //cbViTri.Items.Add("C3");
-            //cbViTri.Items.Add("C4");
+            cbViTri.Items.Add("C1");
+            cbViTri.Items.Add("C2");
+            cbViTri.Items.Add("C3");
+            cbViTri.Items.Add("C4");
         }
         public void PutDataInComboMaNXB()
         {
@@ -105,12 +112,12 @@ namespace QLTVEntityFramwork
         }
         private void ManageBook_Load(object sender, EventArgs e)
         {
-            //LoadData();
+            LoadData();
         }
 
         private void btnReload_Click(object sender, EventArgs e)
         {
-            //LoadData();
+            LoadData();
         }
 
         private void dgvQLSach_CellClick(object sender, DataGridViewCellEventArgs e)
@@ -120,27 +127,91 @@ namespace QLTVEntityFramwork
             //Neu user la admin thi hien textbox 
             //this.txtMaSach.Text = dgvQLSach.Rows[r].Cells[0].Value.ToString();
 
-            this.cbMaNXB.Text = dgvQLSach.Rows[r].Cells[1].Value.ToString();
-            this.cbMTG.Text = dgvQLSach.Rows[r].Cells[2].Value.ToString();
-            this.cbViTri.Text = dgvQLSach.Rows[r].Cells[3].Value.ToString();
+            //this.cbMaNXB.Text = dgvQLSach.Rows[r].Cells[1].Value.ToString();
+            //this.cbMTG.Text = dgvQLSach.Rows[r].Cells[2].Value.ToString();
             this.txtTenSach.Text = dgvQLSach.Rows[r].Cells[0].Value.ToString();
+            this.txtLinhvuc.Text = dgvQLSach.Rows[r].Cells[1].Value.ToString();
+            this.txtGia.Text = dgvQLSach.Rows[r].Cells[2].Value.ToString();
+            this.cbViTri.Text = dgvQLSach.Rows[r].Cells[3].Value.ToString();
+            this.txtTinhTrangMuon.Text = dgvQLSach.Rows[r].Cells[4].Value.ToString();
+            this.txtSoLuongBiMat.Text = dgvQLSach.Rows[r].Cells[5].Value.ToString();
+            this.txtTongSoLuong.Text = dgvQLSach.Rows[r].Cells[6].Value.ToString();
         }
 
         private void btnThem_Click(object sender, EventArgs e)
         {
-            //btnLuu.Enabled = true;
-            //btnHuy.Enabled = true;
-            //btnCapNhat.Enabled = false;
-            //btnXoa.Enabled = false;
-            //EnableComponent();
-            //ClearClickedData();
-            //Them = true;
+            btnLuu.Enabled = true;
+            btnHuy.Enabled = true;
+            btnCapNhat.Enabled = false;
+            btnXoa.Enabled = false;
+            EnableComponent();
+            ClearClickedData();
+            Them = true;
         }
 
         private void btnLuu_Click(object sender, EventArgs e)
         {
             //Goi procedure ra o day tuong ung voi CREATE, READ, UPDATE, DELETE
+            if (Them)
+            {
+                try
+                {
+                    db.Configuration.LazyLoadingEnabled = false;
+                    int MaNXB = 1;
+                    int MaTG = 1;
+                    string Tensach = txtTenSach.Text;
+                    string Linhvuc = txtLinhvuc.Text;
+                    int Gia = int.Parse(txtGia.Text);
+                    string Vitri = cbViTri.SelectedItem.ToString();
+                    int Dangduocmuon = int.Parse(txtTinhTrangMuon.Text);
+                    int Soluongsachmat = int.Parse(txtSoLuongBiMat.Text);
+                    int Tongsoluong = int.Parse(txtTongSoLuong.Text);
+                    /*var data =*/ db.sp_Create_Book(MaNXB, MaTG, Tensach, Linhvuc, Gia, Vitri, Dangduocmuon, Soluongsachmat, Tongsoluong);
+                    //dgvQLSach.DataSource = data;
+                    db.SaveChanges();
+                    Them = false;
+                    LoadData();
+                    DisableComponent();
+                    MessageBox.Show("Đã thêm xong !!!");
+                }
+                catch
+                {
+                    MessageBox.Show("Không thêm được. Lỗi rồi!");
+                }
+            }
+            else if (CapNhat == true)
+            {
+                try
+                {
+                    db.Configuration.LazyLoadingEnabled = false;
+                    int MaNXB = 1;
+                    int MaTG = 1;
+                    string Tensach = txtTenSach.Text;
+                    string Linhvuc = txtLinhvuc.Text;
+                    int Gia = int.Parse(txtGia.Text);
+                    string Vitri = cbViTri.SelectedItem.ToString();
+                    int Dangduocmuon = int.Parse(txtTinhTrangMuon.Text);
+                    int Soluongsachmat = int.Parse(txtSoLuongBiMat.Text);
+                    int Tongsoluong = int.Parse(txtTongSoLuong.Text);
+                    /*var data =*/ db.sp_Update_Book(MaNXB, MaTG, Tensach, Linhvuc, Gia, Vitri, Dangduocmuon, Soluongsachmat, Tongsoluong);
+                    //dgvQLSach.DataSource = data;
+                    db.SaveChanges();
+                    LoadData();
+                    DisableComponent();
+                    MessageBox.Show("Đã cập nhật xong !!!");
 
+                }
+                catch
+                {
+                    MessageBox.Show("Không cập nhật được. Lỗi rồi!");
+                }
+                btnHuy.Enabled = false;
+                btnLuu.Enabled = false;
+                btnThem.Enabled = true;
+                btnXoa.Enabled = true;
+                btnCapNhat.Enabled = true;
+            }
+            ClearClickedData();
 
 
             //if (!txtMaSach.Text.Trim().Equals(""))
@@ -212,14 +283,13 @@ namespace QLTVEntityFramwork
 
         private void btnCapNhat_Click(object sender, EventArgs e)
         {
-            //btnLuu.Enabled = true;
-            //btnHuy.Enabled = true;
-            //EnableComponent();
-            //txtMaSach.Enabled = false;
-            //btnThem.Enabled = false;
-            //btnXoa.Enabled = false;
+            btnLuu.Enabled = true;
+            btnHuy.Enabled = true;
+            EnableComponent();
+            btnThem.Enabled = false;
+            btnXoa.Enabled = false;
 
-            //CapNhat = true;
+            CapNhat = true;
         }
 
         private void btnXoa_Click(object sender, EventArgs e)
@@ -255,14 +325,14 @@ namespace QLTVEntityFramwork
 
         private void btnHuy_Click(object sender, EventArgs e)
         {
-            //DisableComponent();
-            //ClearClickedData();
-            //btnLuu.Enabled = false;
-            //btnHuy.Enabled = true;
-            //btnXoa.Enabled = true;
-            //btnThem.Enabled = true;
-            //btnCapNhat.Enabled = true;
-            //btnHuy.Enabled = false;
+            DisableComponent();
+            ClearClickedData();
+            btnLuu.Enabled = false;
+            btnHuy.Enabled = true;
+            btnXoa.Enabled = true;
+            btnThem.Enabled = true;
+            btnCapNhat.Enabled = true;
+            btnHuy.Enabled = false;
         }
     }
 }
