@@ -7,17 +7,19 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using QLTVEntityFramwork.Model;
 
 namespace QLTVEntityFramwork
 {
     public partial class Writer : Form
     {
         int Max;
+        QLThuVienEntities db = new QLThuVienEntities();
         public Writer()
         {
             InitializeComponent();
 
-            //LoadData();
+            LoadData();
             //DisableComponent();
         }
         public void DisableComponent()
@@ -32,20 +34,18 @@ namespace QLTVEntityFramwork
         }
         public void LoadData()
         {
-            //using (var db = new Model1())
-            //{
-            //    db.Configuration.LazyLoadingEnabled = false;
-            //    var query = from d in db.TACGIAs
-            //                select d;
-            //    dgvTacGia.DataSource = query.ToList();
-            //    dgvTacGia.AutoResizeColumns();
-            //    dgvTacGia.Columns[1].AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
-            //    dgvTacGia.AutoResizeRows();
-            //}
-            //var MaxMATG = dgvTacGia.Rows.Count;
-            //Max = MaxMATG;
-            //dgvTacGia.Columns[0].HeaderText = "Mã Tác Giả";
-            //dgvTacGia.Columns[1].HeaderText = "Tên Tác Giả";
+            db.Configuration.LazyLoadingEnabled = false;
+            var data = db.TACGIAs.ToList();
+            dgvTacGia.DataSource = data;
+            dgvTacGia.AutoResizeColumns();
+            dgvTacGia.Columns[1].AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
+            dgvTacGia.AutoResizeRows();
+            
+            var MaxMATG = dgvTacGia.Rows.Count;
+            Max = MaxMATG;
+            dgvTacGia.Columns[0].HeaderText = "Mã Tác Giả";
+            dgvTacGia.Columns[1].HeaderText = "Tên Tác Giả";
+            dgvTacGia.Columns[2].Visible = false;
 
         }
 

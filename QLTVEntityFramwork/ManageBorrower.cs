@@ -36,9 +36,8 @@ namespace QLTVEntityFramwork
         void LoadData()
         {
             db.Configuration.LazyLoadingEnabled = false;
-            var query = from d in db.USERS
-                        select d;
-            dgvDocGia.DataSource = query.ToList();
+            var data = db.Borrower_Info.ToList();
+            dgvDocGia.DataSource = data;
             //using (var db = new Model1())
             //{
             //    db.Configuration.LazyLoadingEnabled = false;
@@ -51,15 +50,23 @@ namespace QLTVEntityFramwork
             //dgvDocGia.Columns[2].AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
             //dgvDocGia.Columns[3].AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
 
-            //dgvDocGia.Columns[0].HeaderText = "Mã Đọc Giả";
-            //dgvDocGia.Columns[1].HeaderText = "Tên Đọc Giả";
-            //dgvDocGia.Columns[2].HeaderText = "Địa Chỉ";
-            //dgvDocGia.Columns[3].HeaderText = "SĐT";
+            dgvDocGia.Columns[0].HeaderText = "Mã Đọc Giả";
+            dgvDocGia.Columns[1].HeaderText = "Tên Đọc Giả";
+            dgvDocGia.Columns[2].HeaderText = "Địa Chỉ";
+            dgvDocGia.Columns[3].HeaderText = "SĐT";
 
             db.Configuration.LazyLoadingEnabled = false;
-            var query1 = from d in db.MUONSACHes
-                        select d;
-            dgvMuonSach.DataSource = query1.ToList();
+            var data1 = db.MUONSACHes.ToList();
+            dgvMuonSach.DataSource = data1;
+            dgvMuonSach.Columns[0].HeaderText = "Mã Đọc Giả";
+            dgvMuonSach.Columns[1].HeaderText = "Mã Sách";
+            dgvMuonSach.Columns[2].HeaderText = "Ngày Mượn";
+            dgvMuonSach.Columns[3].HeaderText = "Ngày Trả";
+            dgvMuonSach.Columns[4].HeaderText = "Số Lượng Mượn";
+            dgvMuonSach.Columns[5].HeaderText = "Số Lượng Trả";
+            dgvMuonSach.Columns[6].HeaderText = "Số Lượng Mất";
+            dgvMuonSach.Columns[7].Visible = false;
+            dgvMuonSach.Columns[8].Visible = false;
             //using (var db = new Model1())
             //{
             //    btnCheck.Enabled = false;

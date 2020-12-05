@@ -35,7 +35,7 @@
     <Key>
       <PropertyRef Name="MASACH" />
     </Key>
-    <Property Name="MASACH" Type="int" Nullable="false" />
+    <Property Name="MASACH" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
     <Property Name="MANXB" Type="int" />
     <Property Name="MATACGIA" Type="int" />
     <Property Name="VITRI" Type="varchar" MaxLength="50" />
@@ -69,7 +69,7 @@
     </Key>
     <Property Name="MAUSER" Type="int" Nullable="false" />
     <Property Name="USERNAME" Type="varchar" MaxLength="50" Nullable="false" />
-    <Property Name="MATKHAU" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="MATKHAU" Type="varchar" MaxLength="50" />
     <Property Name="DIACHI" Type="varchar" MaxLength="50" />
     <Property Name="SDT" Type="varchar" MaxLength="50" />
     <Property Name="MACARD" Type="int" />
@@ -81,10 +81,9 @@ warning 6002: The table/view 'QLThuVien.dbo.Authenticate_User' does not have a p
   <EntityType Name="Authenticate_User">
     <Key>
       <PropertyRef Name="USERNAME" />
-      <PropertyRef Name="MATKHAU" />
     </Key>
     <Property Name="USERNAME" Type="varchar" MaxLength="50" Nullable="false" />
-    <Property Name="MATKHAU" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="MATKHAU" Type="varchar" MaxLength="50" />
   </EntityType>
   <!--Errors Found During Generation:
 warning 6002: The table/view 'QLThuVien.dbo.Book_Info' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
@@ -180,6 +179,74 @@ warning 6002: The table/view 'QLThuVien.dbo.Publisher_Info' does not have a prim
       </Dependent>
     </ReferentialConstraint>
   </Association>
+  <Function Name="Delete_Cards" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="macard" Type="int" Mode="In" />
+  </Function>
+  <Function Name="Delete_Muon" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="mauser" Type="int" Mode="In" />
+  </Function>
+  <Function Name="Delete_SACH" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="masach" Type="int" Mode="In" />
+  </Function>
+  <Function Name="Delete_User" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="mauser" Type="int" Mode="In" />
+  </Function>
+  <Function Name="fn_diagramobjects" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="true" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" ReturnType="int" />
+  <Function Name="sp_alterdiagram" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="diagramname" Type="nvarchar" Mode="In" />
+    <Parameter Name="owner_id" Type="int" Mode="In" />
+    <Parameter Name="version" Type="int" Mode="In" />
+    <Parameter Name="definition" Type="varbinary(max)" Mode="In" />
+  </Function>
+  <Function Name="sp_Create_Book" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="MaNXB" Type="int" Mode="In" />
+    <Parameter Name="MaTG" Type="int" Mode="In" />
+    <Parameter Name="Tensach" Type="varchar" Mode="In" />
+    <Parameter Name="Linhvuc" Type="varchar" Mode="In" />
+    <Parameter Name="Gia" Type="int" Mode="In" />
+    <Parameter Name="Vitri" Type="varchar" Mode="In" />
+    <Parameter Name="Dangduocmuon" Type="int" Mode="In" />
+    <Parameter Name="Soluongbimat" Type="int" Mode="In" />
+    <Parameter Name="Tongsoluong" Type="int" Mode="In" />
+  </Function>
+  <Function Name="sp_creatediagram" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="diagramname" Type="nvarchar" Mode="In" />
+    <Parameter Name="owner_id" Type="int" Mode="In" />
+    <Parameter Name="version" Type="int" Mode="In" />
+    <Parameter Name="definition" Type="varbinary(max)" Mode="In" />
+  </Function>
+  <Function Name="sp_Delete_Book" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="Tensach" Type="varchar" Mode="In" />
+  </Function>
+  <Function Name="sp_dropdiagram" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="diagramname" Type="nvarchar" Mode="In" />
+    <Parameter Name="owner_id" Type="int" Mode="In" />
+  </Function>
+  <Function Name="sp_helpdiagramdefinition" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="diagramname" Type="nvarchar" Mode="In" />
+    <Parameter Name="owner_id" Type="int" Mode="In" />
+  </Function>
+  <Function Name="sp_helpdiagrams" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="diagramname" Type="nvarchar" Mode="In" />
+    <Parameter Name="owner_id" Type="int" Mode="In" />
+  </Function>
+  <Function Name="sp_renamediagram" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="diagramname" Type="nvarchar" Mode="In" />
+    <Parameter Name="owner_id" Type="int" Mode="In" />
+    <Parameter Name="new_diagramname" Type="nvarchar" Mode="In" />
+  </Function>
+  <Function Name="sp_Update_Book" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="MaNXB" Type="int" Mode="In" />
+    <Parameter Name="MaTG" Type="int" Mode="In" />
+    <Parameter Name="Tensach" Type="varchar" Mode="In" />
+    <Parameter Name="Linhvuc" Type="varchar" Mode="In" />
+    <Parameter Name="Gia" Type="int" Mode="In" />
+    <Parameter Name="Vitri" Type="varchar" Mode="In" />
+    <Parameter Name="Dangduocmuon" Type="int" Mode="In" />
+    <Parameter Name="Soluongbimat" Type="int" Mode="In" />
+    <Parameter Name="Tongsoluong" Type="int" Mode="In" />
+  </Function>
+  <Function Name="sp_upgraddiagrams" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
   <EntityContainer Name="QLThuVienModelStoreContainer">
     <EntitySet Name="CARDS" EntityType="Self.CARDS" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="MUONSACH" EntityType="Self.MUONSACH" Schema="dbo" store:Type="Tables" />

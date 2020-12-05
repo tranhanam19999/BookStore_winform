@@ -1,0 +1,65 @@
+-- Proc Create Book
+create proc sp_Create_Book
+@MaNXB int,
+@MaTG int,
+@Tensach varchar(50),
+@Linhvuc varchar(50),
+@Gia int,
+@Vitri varchar(50),
+@Dangduocmuon int,
+@Soluongbimat int,
+@Tongsoluong int
+as
+begin
+	INSERT INTO dbo.SACH([MANXB], [MATACGIA], [TENSACH], [LINHVUC], [GIA], [VITRI],
+	[DANGDUOCMUON], [SOLUONGSACHBIMAT], [TONGSOLUONG])
+	VALUES(@MaNXB, @MaTG, @Tensach, @Linhvuc, @Gia, @Vitri, @Dangduocmuon, @Soluongbimat, @Tongsoluong)
+end
+go
+-- Proc Update Book
+alter proc sp_Update_Book
+@MaNXB int,
+@MaTG int,
+@Tensach varchar(50),
+@Linhvuc varchar(50),
+@Gia int,
+@Vitri varchar(50),
+@Dangduocmuon int,
+@Soluongbimat int,
+@Tongsoluong int
+as
+begin
+	UPDATE dbo.SACH
+	SET MANXB = @MaNXB,
+	MATACGIA = @MaTG,
+	TENSACH = @Tensach,
+	LINHVUC = @Linhvuc,
+	GIA = @Gia,
+	VITRI = @Vitri,
+	DANGDUOCMUON = @Dangduocmuon,
+	SOLUONGSACHBIMAT = @Soluongbimat,
+	TONGSOLUONG = @Tongsoluong
+	where TENSACH = @Tensach
+end
+go
+
+UPDATE dbo.SACH
+	SET MANXB = 1,
+	MATACGIA = 1,
+	TENSACH = 'Vat li abc',
+	LINHVUC = 'vat li',
+	GIA = 10000,
+	VITRI = 'C2',
+	DANGDUOCMUON = 0,
+	SOLUONGSACHBIMAT = 0,
+	TONGSOLUONG = 100
+	where TENSACH = 'Vat li 1'
+-- Proc Delete Book
+create proc sp_Delete_Book
+@Tensach varchar(50)
+as
+begin
+	DELETE FROM SACH
+	WHERE TENSACH = @Tensach
+end
+go
