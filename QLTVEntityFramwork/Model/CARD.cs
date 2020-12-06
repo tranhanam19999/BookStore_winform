@@ -14,19 +14,12 @@ namespace QLTVEntityFramwork.Model
     
     public partial class CARD
     {
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
-        public CARD()
-        {
-            this.USERS = new HashSet<USER>();
-        }
-    
         public int MACARD { get; set; }
-        public string TENUSER { get; set; }
+        public Nullable<int> MAUSER { get; set; }
         public string NUMBERCARD { get; set; }
         public string DATESTART { get; set; }
         public string DATEFINISH { get; set; }
     
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<USER> USERS { get; set; }
+        public virtual USER USER { get; set; }
     }
 }

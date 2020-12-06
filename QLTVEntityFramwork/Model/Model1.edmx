@@ -9,11 +9,11 @@
           <Key>
             <PropertyRef Name="MACARD" />
           </Key>
-          <Property Name="MACARD" Type="int" Nullable="false" />
-          <Property Name="TENUSER" Type="varchar" MaxLength="50" />
+          <Property Name="MACARD" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="MAUSER" Type="int" />
           <Property Name="NUMBERCARD" Type="varchar" MaxLength="50" />
-          <Property Name="DATESTART" Type="varchar" MaxLength="50" />
-          <Property Name="DATEFINISH" Type="varchar" MaxLength="50" />
+          <Property Name="DATESTART" Type="nchar" MaxLength="50" />
+          <Property Name="DATEFINISH" Type="nchar" MaxLength="50" />
         </EntityType>
         <EntityType Name="MUONSACH">
           <Key>
@@ -22,9 +22,9 @@
           </Key>
           <Property Name="MAUSER" Type="int" Nullable="false" />
           <Property Name="MASACH" Type="int" Nullable="false" />
-          <Property Name="NGAYMUON" Type="varchar" MaxLength="50" />
-          <Property Name="NGAYTRA" Type="varchar" MaxLength="50" />
-          <Property Name="TINHTRANG" Type="varchar" MaxLength="50" />
+          <Property Name="NGAYMUON" Type="nchar" MaxLength="50" />
+          <Property Name="NGAYTRA" Type="nchar" MaxLength="50" />
+          <Property Name="TINHTRANG" Type="nchar" MaxLength="50" />
         </EntityType>
         <EntityType Name="NXB">
           <Key>
@@ -70,12 +70,11 @@
           <Key>
             <PropertyRef Name="MAUSER" />
           </Key>
-          <Property Name="MAUSER" Type="int" Nullable="false" />
+          <Property Name="MAUSER" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
           <Property Name="USERNAME" Type="varchar" MaxLength="50" Nullable="false" />
-          <Property Name="MATKHAU" Type="varchar" MaxLength="50" />
+          <Property Name="MATKHAU" Type="varchar" MaxLength="50" Nullable="false" />
           <Property Name="DIACHI" Type="varchar" MaxLength="50" />
           <Property Name="SDT" Type="varchar" MaxLength="50" />
-          <Property Name="MACARD" Type="int" />
           <Property Name="CHUCVU" Type="varchar" MaxLength="50" />
           <Property Name="TEN" Type="varchar" MaxLength="50" />
         </EntityType>
@@ -84,9 +83,10 @@ warning 6002: The table/view 'QLThuVien.dbo.Authenticate_User' does not have a p
         <EntityType Name="Authenticate_User">
           <Key>
             <PropertyRef Name="USERNAME" />
+            <PropertyRef Name="MATKHAU" />
           </Key>
           <Property Name="USERNAME" Type="varchar" MaxLength="50" Nullable="false" />
-          <Property Name="MATKHAU" Type="varchar" MaxLength="50" />
+          <Property Name="MATKHAU" Type="varchar" MaxLength="50" Nullable="false" />
         </EntityType>
         <!--Errors Found During Generation:
 warning 6002: The table/view 'QLThuVien.dbo.Book_Info' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
@@ -121,9 +121,9 @@ warning 6002: The table/view 'QLThuVien.dbo.Borrowing_Details' does not have a p
           </Key>
           <Property Name="TenUser" Type="varchar" MaxLength="50" />
           <Property Name="TenSach" Type="varchar" MaxLength="50" Nullable="false" />
-          <Property Name="NGAYMUON" Type="varchar" MaxLength="50" />
-          <Property Name="NGAYTRA" Type="varchar" MaxLength="50" />
-          <Property Name="TINHTRANG" Type="varchar" MaxLength="50" />
+          <Property Name="NGAYMUON" Type="nchar" MaxLength="50" />
+          <Property Name="NGAYTRA" Type="nchar" MaxLength="50" />
+          <Property Name="TINHTRANG" Type="nchar" MaxLength="50" />
         </EntityType>
         <!--Errors Found During Generation:
 warning 6002: The table/view 'QLThuVien.dbo.Publisher_Info' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
@@ -182,30 +182,18 @@ warning 6002: The table/view 'QLThuVien.dbo.Publisher_Info' does not have a prim
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK__USERS__MACARD__2E1BDC42">
-          <End Role="CARDS" Type="Self.CARDS" Multiplicity="0..1" />
-          <End Role="USERS" Type="Self.USERS" Multiplicity="*" />
+        <Association Name="FK_CARDS_USERS">
+          <End Role="USERS" Type="Self.USERS" Multiplicity="0..1" />
+          <End Role="CARDS" Type="Self.CARDS" Multiplicity="*" />
           <ReferentialConstraint>
-            <Principal Role="CARDS">
-              <PropertyRef Name="MACARD" />
+            <Principal Role="USERS">
+              <PropertyRef Name="MAUSER" />
             </Principal>
-            <Dependent Role="USERS">
-              <PropertyRef Name="MACARD" />
+            <Dependent Role="CARDS">
+              <PropertyRef Name="MAUSER" />
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Function Name="Delete_Cards" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
-          <Parameter Name="macard" Type="int" Mode="In" />
-        </Function>
-        <Function Name="Delete_Muon" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
-          <Parameter Name="mauser" Type="int" Mode="In" />
-        </Function>
-        <Function Name="Delete_SACH" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
-          <Parameter Name="masach" Type="int" Mode="In" />
-        </Function>
-        <Function Name="Delete_User" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
-          <Parameter Name="mauser" Type="int" Mode="In" />
-        </Function>
         <Function Name="fn_diagramobjects" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="true" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" ReturnType="int" />
         <Function Name="SEARCH_TENSACH" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
           <Parameter Name="TENSACH" Type="varchar" Mode="In" />
@@ -230,6 +218,13 @@ warning 6002: The table/view 'QLThuVien.dbo.Publisher_Info' does not have a prim
           <Parameter Name="Soluongbimat" Type="int" Mode="In" />
           <Parameter Name="Tongsoluong" Type="int" Mode="In" />
         </Function>
+        <Function Name="sp_Create_User" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="Username" Type="varchar" Mode="In" />
+          <Parameter Name="Password" Type="varchar" Mode="In" />
+          <Parameter Name="Diachi" Type="varchar" Mode="In" />
+          <Parameter Name="SDT" Type="varchar" Mode="In" />
+          <Parameter Name="TenUser" Type="varchar" Mode="In" />
+        </Function>
         <Function Name="sp_creatediagram" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
           <Parameter Name="diagramname" Type="nvarchar" Mode="In" />
           <Parameter Name="owner_id" Type="int" Mode="In" />
@@ -238,6 +233,9 @@ warning 6002: The table/view 'QLThuVien.dbo.Publisher_Info' does not have a prim
         </Function>
         <Function Name="sp_Delete_Book" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
           <Parameter Name="Tensach" Type="varchar" Mode="In" />
+        </Function>
+        <Function Name="sp_Delete_User" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="MaUser" Type="int" Mode="In" />
         </Function>
         <Function Name="sp_dropdiagram" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
           <Parameter Name="diagramname" Type="nvarchar" Mode="In" />
@@ -332,9 +330,9 @@ warning 6002: The table/view 'QLThuVien.dbo.Publisher_Info' does not have a prim
             <End Role="TACGIA" EntitySet="TACGIA" />
             <End Role="SACH" EntitySet="SACH" />
           </AssociationSet>
-          <AssociationSet Name="FK__USERS__MACARD__2E1BDC42" Association="Self.FK__USERS__MACARD__2E1BDC42">
-            <End Role="CARDS" EntitySet="CARDS" />
+          <AssociationSet Name="FK_CARDS_USERS" Association="Self.FK_CARDS_USERS">
             <End Role="USERS" EntitySet="USERS" />
+            <End Role="CARDS" EntitySet="CARDS" />
           </AssociationSet>
         </EntityContainer>
       </Schema>
@@ -346,12 +344,12 @@ warning 6002: The table/view 'QLThuVien.dbo.Publisher_Info' does not have a prim
           <Key>
             <PropertyRef Name="MACARD" />
           </Key>
-          <Property Name="MACARD" Type="Int32" Nullable="false" />
-          <Property Name="TENUSER" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="MACARD" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="MAUSER" Type="Int32" />
           <Property Name="NUMBERCARD" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
-          <Property Name="DATESTART" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
-          <Property Name="DATEFINISH" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
-          <NavigationProperty Name="USERS" Relationship="Self.FK__USERS__MACARD__2E1BDC42" FromRole="CARDS" ToRole="USERS" />
+          <Property Name="DATESTART" Type="String" MaxLength="50" FixedLength="true" Unicode="true" />
+          <Property Name="DATEFINISH" Type="String" MaxLength="50" FixedLength="true" Unicode="true" />
+          <NavigationProperty Name="USER" Relationship="Self.FK_CARDS_USERS" FromRole="CARDS" ToRole="USERS" />
         </EntityType>
         <EntityType Name="MUONSACH">
           <Key>
@@ -360,9 +358,9 @@ warning 6002: The table/view 'QLThuVien.dbo.Publisher_Info' does not have a prim
           </Key>
           <Property Name="MAUSER" Type="Int32" Nullable="false" />
           <Property Name="MASACH" Type="Int32" Nullable="false" />
-          <Property Name="NGAYMUON" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
-          <Property Name="NGAYTRA" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
-          <Property Name="TINHTRANG" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="NGAYMUON" Type="String" MaxLength="50" FixedLength="true" Unicode="true" />
+          <Property Name="NGAYTRA" Type="String" MaxLength="50" FixedLength="true" Unicode="true" />
+          <Property Name="TINHTRANG" Type="String" MaxLength="50" FixedLength="true" Unicode="true" />
           <NavigationProperty Name="SACH" Relationship="Self.FK__MUONSACH__MASACH__5535A963" FromRole="MUONSACH" ToRole="SACH" />
           <NavigationProperty Name="USER" Relationship="Self.FK__MUONSACH__MAUSER__5441852A" FromRole="MUONSACH" ToRole="USERS" />
         </EntityType>
@@ -415,23 +413,23 @@ warning 6002: The table/view 'QLThuVien.dbo.Publisher_Info' does not have a prim
           <Key>
             <PropertyRef Name="MAUSER" />
           </Key>
-          <Property Name="MAUSER" Type="Int32" Nullable="false" />
+          <Property Name="MAUSER" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <Property Name="USERNAME" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
-          <Property Name="MATKHAU" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="MATKHAU" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
           <Property Name="DIACHI" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
           <Property Name="SDT" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
-          <Property Name="MACARD" Type="Int32" />
           <Property Name="CHUCVU" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
           <Property Name="TEN" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
-          <NavigationProperty Name="CARD" Relationship="Self.FK__USERS__MACARD__2E1BDC42" FromRole="USERS" ToRole="CARDS" />
+          <NavigationProperty Name="CARDS" Relationship="Self.FK_CARDS_USERS" FromRole="USERS" ToRole="CARDS" />
           <NavigationProperty Name="MUONSACHes" Relationship="Self.FK__MUONSACH__MAUSER__5441852A" FromRole="USERS" ToRole="MUONSACH" />
         </EntityType>
         <EntityType Name="Authenticate_User">
           <Key>
             <PropertyRef Name="USERNAME" />
+            <PropertyRef Name="MATKHAU" />
           </Key>
           <Property Name="USERNAME" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
-          <Property Name="MATKHAU" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="MATKHAU" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
         </EntityType>
         <EntityType Name="Book_Info">
           <Key>
@@ -460,9 +458,9 @@ warning 6002: The table/view 'QLThuVien.dbo.Publisher_Info' does not have a prim
           </Key>
           <Property Name="TenUser" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
           <Property Name="TenSach" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
-          <Property Name="NGAYMUON" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
-          <Property Name="NGAYTRA" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
-          <Property Name="TINHTRANG" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="NGAYMUON" Type="String" MaxLength="50" FixedLength="true" Unicode="true" />
+          <Property Name="NGAYTRA" Type="String" MaxLength="50" FixedLength="true" Unicode="true" />
+          <Property Name="TINHTRANG" Type="String" MaxLength="50" FixedLength="true" Unicode="true" />
         </EntityType>
         <EntityType Name="Publisher_Info">
           <Key>
@@ -471,15 +469,15 @@ warning 6002: The table/view 'QLThuVien.dbo.Publisher_Info' does not have a prim
           <Property Name="TENNXB" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
           <Property Name="SDT" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
         </EntityType>
-        <Association Name="FK__USERS__MACARD__2E1BDC42">
-          <End Role="CARDS" Type="Self.CARD" Multiplicity="0..1" />
-          <End Role="USERS" Type="Self.USER" Multiplicity="*" />
+        <Association Name="FK_CARDS_USERS">
+          <End Role="USERS" Type="Self.USER" Multiplicity="0..1" />
+          <End Role="CARDS" Type="Self.CARD" Multiplicity="*" />
           <ReferentialConstraint>
-            <Principal Role="CARDS">
-              <PropertyRef Name="MACARD" />
+            <Principal Role="USERS">
+              <PropertyRef Name="MAUSER" />
             </Principal>
-            <Dependent Role="USERS">
-              <PropertyRef Name="MACARD" />
+            <Dependent Role="CARDS">
+              <PropertyRef Name="MAUSER" />
             </Dependent>
           </ReferentialConstraint>
         </Association>
@@ -544,9 +542,9 @@ warning 6002: The table/view 'QLThuVien.dbo.Publisher_Info' does not have a prim
           <EntitySet Name="Borrower_Info" EntityType="Self.Borrower_Info" />
           <EntitySet Name="Borrowing_Details" EntityType="Self.Borrowing_Details" />
           <EntitySet Name="Publisher_Info" EntityType="Self.Publisher_Info" />
-          <AssociationSet Name="FK__USERS__MACARD__2E1BDC42" Association="Self.FK__USERS__MACARD__2E1BDC42">
-            <End Role="CARDS" EntitySet="CARDS" />
+          <AssociationSet Name="FK_CARDS_USERS" Association="Self.FK_CARDS_USERS">
             <End Role="USERS" EntitySet="USERS" />
+            <End Role="CARDS" EntitySet="CARDS" />
           </AssociationSet>
           <AssociationSet Name="FK__MUONSACH__MASACH__5535A963" Association="Self.FK__MUONSACH__MASACH__5535A963">
             <End Role="SACH" EntitySet="SACHes" />
@@ -564,18 +562,6 @@ warning 6002: The table/view 'QLThuVien.dbo.Publisher_Info' does not have a prim
             <End Role="TACGIA" EntitySet="TACGIAs" />
             <End Role="SACH" EntitySet="SACHes" />
           </AssociationSet>
-          <FunctionImport Name="Delete_Cards">
-            <Parameter Name="macard" Mode="In" Type="Int32" />
-          </FunctionImport>
-          <FunctionImport Name="Delete_Muon">
-            <Parameter Name="mauser" Mode="In" Type="Int32" />
-          </FunctionImport>
-          <FunctionImport Name="Delete_SACH">
-            <Parameter Name="masach" Mode="In" Type="Int32" />
-          </FunctionImport>
-          <FunctionImport Name="Delete_User">
-            <Parameter Name="mauser" Mode="In" Type="Int32" />
-          </FunctionImport>
           <FunctionImport Name="SEARCH_TENSACH" ReturnType="Collection(QLThuVienModel.SEARCH_TENSACH_Result)">
             <Parameter Name="TENSACH" Mode="In" Type="String" />
           </FunctionImport>
@@ -599,6 +585,13 @@ warning 6002: The table/view 'QLThuVien.dbo.Publisher_Info' does not have a prim
             <Parameter Name="Soluongbimat" Mode="In" Type="Int32" />
             <Parameter Name="Tongsoluong" Mode="In" Type="Int32" />
           </FunctionImport>
+          <FunctionImport Name="sp_Create_User">
+            <Parameter Name="Username" Mode="In" Type="String" />
+            <Parameter Name="Password" Mode="In" Type="String" />
+            <Parameter Name="Diachi" Mode="In" Type="String" />
+            <Parameter Name="SDT" Mode="In" Type="String" />
+            <Parameter Name="TenUser" Mode="In" Type="String" />
+          </FunctionImport>
           <FunctionImport Name="sp_creatediagram">
             <Parameter Name="diagramname" Mode="In" Type="String" />
             <Parameter Name="owner_id" Mode="In" Type="Int32" />
@@ -607,6 +600,9 @@ warning 6002: The table/view 'QLThuVien.dbo.Publisher_Info' does not have a prim
           </FunctionImport>
           <FunctionImport Name="sp_Delete_Book">
             <Parameter Name="Tensach" Mode="In" Type="String" />
+          </FunctionImport>
+          <FunctionImport Name="sp_Delete_User">
+            <Parameter Name="MaUser" Mode="In" Type="Int32" />
           </FunctionImport>
           <FunctionImport Name="sp_dropdiagram">
             <Parameter Name="diagramname" Mode="In" Type="String" />
@@ -677,7 +673,7 @@ warning 6002: The table/view 'QLThuVien.dbo.Publisher_Info' does not have a prim
             <EntityTypeMapping TypeName="QLThuVienModel.CARD">
               <MappingFragment StoreEntitySet="CARDS">
                 <ScalarProperty Name="MACARD" ColumnName="MACARD" />
-                <ScalarProperty Name="TENUSER" ColumnName="TENUSER" />
+                <ScalarProperty Name="MAUSER" ColumnName="MAUSER" />
                 <ScalarProperty Name="NUMBERCARD" ColumnName="NUMBERCARD" />
                 <ScalarProperty Name="DATESTART" ColumnName="DATESTART" />
                 <ScalarProperty Name="DATEFINISH" ColumnName="DATEFINISH" />
@@ -747,7 +743,6 @@ warning 6002: The table/view 'QLThuVien.dbo.Publisher_Info' does not have a prim
                 <ScalarProperty Name="MATKHAU" ColumnName="MATKHAU" />
                 <ScalarProperty Name="DIACHI" ColumnName="DIACHI" />
                 <ScalarProperty Name="SDT" ColumnName="SDT" />
-                <ScalarProperty Name="MACARD" ColumnName="MACARD" />
                 <ScalarProperty Name="CHUCVU" ColumnName="CHUCVU" />
                 <ScalarProperty Name="TEN" ColumnName="TEN" />
               </MappingFragment>
@@ -803,10 +798,6 @@ warning 6002: The table/view 'QLThuVien.dbo.Publisher_Info' does not have a prim
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
-          <FunctionImportMapping FunctionImportName="Delete_Cards" FunctionName="QLThuVienModel.Store.Delete_Cards" />
-          <FunctionImportMapping FunctionImportName="Delete_Muon" FunctionName="QLThuVienModel.Store.Delete_Muon" />
-          <FunctionImportMapping FunctionImportName="Delete_SACH" FunctionName="QLThuVienModel.Store.Delete_SACH" />
-          <FunctionImportMapping FunctionImportName="Delete_User" FunctionName="QLThuVienModel.Store.Delete_User" />
           <FunctionImportMapping FunctionImportName="SEARCH_TENSACH" FunctionName="QLThuVienModel.Store.SEARCH_TENSACH">
             <ResultMapping>
               <ComplexTypeMapping TypeName="QLThuVienModel.SEARCH_TENSACH_Result">
@@ -835,8 +826,10 @@ warning 6002: The table/view 'QLThuVien.dbo.Publisher_Info' does not have a prim
           </FunctionImportMapping>
           <FunctionImportMapping FunctionImportName="sp_alterdiagram" FunctionName="QLThuVienModel.Store.sp_alterdiagram" />
           <FunctionImportMapping FunctionImportName="sp_Create_Book" FunctionName="QLThuVienModel.Store.sp_Create_Book" />
+          <FunctionImportMapping FunctionImportName="sp_Create_User" FunctionName="QLThuVienModel.Store.sp_Create_User" />
           <FunctionImportMapping FunctionImportName="sp_creatediagram" FunctionName="QLThuVienModel.Store.sp_creatediagram" />
           <FunctionImportMapping FunctionImportName="sp_Delete_Book" FunctionName="QLThuVienModel.Store.sp_Delete_Book" />
+          <FunctionImportMapping FunctionImportName="sp_Delete_User" FunctionName="QLThuVienModel.Store.sp_Delete_User" />
           <FunctionImportMapping FunctionImportName="sp_dropdiagram" FunctionName="QLThuVienModel.Store.sp_dropdiagram" />
           <FunctionImportMapping FunctionImportName="sp_helpdiagramdefinition" FunctionName="QLThuVienModel.Store.sp_helpdiagramdefinition">
             <ResultMapping>

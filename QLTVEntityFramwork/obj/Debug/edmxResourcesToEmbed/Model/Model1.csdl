@@ -4,12 +4,12 @@
     <Key>
       <PropertyRef Name="MACARD" />
     </Key>
-    <Property Name="MACARD" Type="Int32" Nullable="false" />
-    <Property Name="TENUSER" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="MACARD" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="MAUSER" Type="Int32" />
     <Property Name="NUMBERCARD" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
-    <Property Name="DATESTART" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
-    <Property Name="DATEFINISH" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
-    <NavigationProperty Name="USERS" Relationship="Self.FK__USERS__MACARD__2E1BDC42" FromRole="CARDS" ToRole="USERS" />
+    <Property Name="DATESTART" Type="String" MaxLength="50" FixedLength="true" Unicode="true" />
+    <Property Name="DATEFINISH" Type="String" MaxLength="50" FixedLength="true" Unicode="true" />
+    <NavigationProperty Name="USER" Relationship="Self.FK_CARDS_USERS" FromRole="CARDS" ToRole="USERS" />
   </EntityType>
   <EntityType Name="MUONSACH">
     <Key>
@@ -18,9 +18,9 @@
     </Key>
     <Property Name="MAUSER" Type="Int32" Nullable="false" />
     <Property Name="MASACH" Type="Int32" Nullable="false" />
-    <Property Name="NGAYMUON" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
-    <Property Name="NGAYTRA" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
-    <Property Name="TINHTRANG" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="NGAYMUON" Type="String" MaxLength="50" FixedLength="true" Unicode="true" />
+    <Property Name="NGAYTRA" Type="String" MaxLength="50" FixedLength="true" Unicode="true" />
+    <Property Name="TINHTRANG" Type="String" MaxLength="50" FixedLength="true" Unicode="true" />
     <NavigationProperty Name="SACH" Relationship="Self.FK__MUONSACH__MASACH__5535A963" FromRole="MUONSACH" ToRole="SACH" />
     <NavigationProperty Name="USER" Relationship="Self.FK__MUONSACH__MAUSER__5441852A" FromRole="MUONSACH" ToRole="USERS" />
   </EntityType>
@@ -73,23 +73,23 @@
     <Key>
       <PropertyRef Name="MAUSER" />
     </Key>
-    <Property Name="MAUSER" Type="Int32" Nullable="false" />
+    <Property Name="MAUSER" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
     <Property Name="USERNAME" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
-    <Property Name="MATKHAU" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="MATKHAU" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
     <Property Name="DIACHI" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
     <Property Name="SDT" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
-    <Property Name="MACARD" Type="Int32" />
     <Property Name="CHUCVU" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
     <Property Name="TEN" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
-    <NavigationProperty Name="CARD" Relationship="Self.FK__USERS__MACARD__2E1BDC42" FromRole="USERS" ToRole="CARDS" />
+    <NavigationProperty Name="CARDS" Relationship="Self.FK_CARDS_USERS" FromRole="USERS" ToRole="CARDS" />
     <NavigationProperty Name="MUONSACHes" Relationship="Self.FK__MUONSACH__MAUSER__5441852A" FromRole="USERS" ToRole="MUONSACH" />
   </EntityType>
   <EntityType Name="Authenticate_User">
     <Key>
       <PropertyRef Name="USERNAME" />
+      <PropertyRef Name="MATKHAU" />
     </Key>
     <Property Name="USERNAME" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
-    <Property Name="MATKHAU" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="MATKHAU" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
   </EntityType>
   <EntityType Name="Book_Info">
     <Key>
@@ -118,9 +118,9 @@
     </Key>
     <Property Name="TenUser" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
     <Property Name="TenSach" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
-    <Property Name="NGAYMUON" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
-    <Property Name="NGAYTRA" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
-    <Property Name="TINHTRANG" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="NGAYMUON" Type="String" MaxLength="50" FixedLength="true" Unicode="true" />
+    <Property Name="NGAYTRA" Type="String" MaxLength="50" FixedLength="true" Unicode="true" />
+    <Property Name="TINHTRANG" Type="String" MaxLength="50" FixedLength="true" Unicode="true" />
   </EntityType>
   <EntityType Name="Publisher_Info">
     <Key>
@@ -129,15 +129,15 @@
     <Property Name="TENNXB" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
     <Property Name="SDT" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
   </EntityType>
-  <Association Name="FK__USERS__MACARD__2E1BDC42">
-    <End Role="CARDS" Type="Self.CARD" Multiplicity="0..1" />
-    <End Role="USERS" Type="Self.USER" Multiplicity="*" />
+  <Association Name="FK_CARDS_USERS">
+    <End Role="USERS" Type="Self.USER" Multiplicity="0..1" />
+    <End Role="CARDS" Type="Self.CARD" Multiplicity="*" />
     <ReferentialConstraint>
-      <Principal Role="CARDS">
-        <PropertyRef Name="MACARD" />
+      <Principal Role="USERS">
+        <PropertyRef Name="MAUSER" />
       </Principal>
-      <Dependent Role="USERS">
-        <PropertyRef Name="MACARD" />
+      <Dependent Role="CARDS">
+        <PropertyRef Name="MAUSER" />
       </Dependent>
     </ReferentialConstraint>
   </Association>
@@ -202,9 +202,9 @@
     <EntitySet Name="Borrower_Info" EntityType="Self.Borrower_Info" />
     <EntitySet Name="Borrowing_Details" EntityType="Self.Borrowing_Details" />
     <EntitySet Name="Publisher_Info" EntityType="Self.Publisher_Info" />
-    <AssociationSet Name="FK__USERS__MACARD__2E1BDC42" Association="Self.FK__USERS__MACARD__2E1BDC42">
-      <End Role="CARDS" EntitySet="CARDS" />
+    <AssociationSet Name="FK_CARDS_USERS" Association="Self.FK_CARDS_USERS">
       <End Role="USERS" EntitySet="USERS" />
+      <End Role="CARDS" EntitySet="CARDS" />
     </AssociationSet>
     <AssociationSet Name="FK__MUONSACH__MASACH__5535A963" Association="Self.FK__MUONSACH__MASACH__5535A963">
       <End Role="SACH" EntitySet="SACHes" />
@@ -222,18 +222,6 @@
       <End Role="TACGIA" EntitySet="TACGIAs" />
       <End Role="SACH" EntitySet="SACHes" />
     </AssociationSet>
-    <FunctionImport Name="Delete_Cards">
-      <Parameter Name="macard" Mode="In" Type="Int32" />
-    </FunctionImport>
-    <FunctionImport Name="Delete_Muon">
-      <Parameter Name="mauser" Mode="In" Type="Int32" />
-    </FunctionImport>
-    <FunctionImport Name="Delete_SACH">
-      <Parameter Name="masach" Mode="In" Type="Int32" />
-    </FunctionImport>
-    <FunctionImport Name="Delete_User">
-      <Parameter Name="mauser" Mode="In" Type="Int32" />
-    </FunctionImport>
     <FunctionImport Name="SEARCH_TENSACH" ReturnType="Collection(QLThuVienModel.SEARCH_TENSACH_Result)">
       <Parameter Name="TENSACH" Mode="In" Type="String" />
     </FunctionImport>
@@ -257,6 +245,13 @@
       <Parameter Name="Soluongbimat" Mode="In" Type="Int32" />
       <Parameter Name="Tongsoluong" Mode="In" Type="Int32" />
     </FunctionImport>
+    <FunctionImport Name="sp_Create_User">
+      <Parameter Name="Username" Mode="In" Type="String" />
+      <Parameter Name="Password" Mode="In" Type="String" />
+      <Parameter Name="Diachi" Mode="In" Type="String" />
+      <Parameter Name="SDT" Mode="In" Type="String" />
+      <Parameter Name="TenUser" Mode="In" Type="String" />
+    </FunctionImport>
     <FunctionImport Name="sp_creatediagram">
       <Parameter Name="diagramname" Mode="In" Type="String" />
       <Parameter Name="owner_id" Mode="In" Type="Int32" />
@@ -265,6 +260,9 @@
     </FunctionImport>
     <FunctionImport Name="sp_Delete_Book">
       <Parameter Name="Tensach" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="sp_Delete_User">
+      <Parameter Name="MaUser" Mode="In" Type="Int32" />
     </FunctionImport>
     <FunctionImport Name="sp_dropdiagram">
       <Parameter Name="diagramname" Mode="In" Type="String" />

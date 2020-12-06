@@ -5,7 +5,7 @@
       <EntityTypeMapping TypeName="QLThuVienModel.CARD">
         <MappingFragment StoreEntitySet="CARDS">
           <ScalarProperty Name="MACARD" ColumnName="MACARD" />
-          <ScalarProperty Name="TENUSER" ColumnName="TENUSER" />
+          <ScalarProperty Name="MAUSER" ColumnName="MAUSER" />
           <ScalarProperty Name="NUMBERCARD" ColumnName="NUMBERCARD" />
           <ScalarProperty Name="DATESTART" ColumnName="DATESTART" />
           <ScalarProperty Name="DATEFINISH" ColumnName="DATEFINISH" />
@@ -75,7 +75,6 @@
           <ScalarProperty Name="MATKHAU" ColumnName="MATKHAU" />
           <ScalarProperty Name="DIACHI" ColumnName="DIACHI" />
           <ScalarProperty Name="SDT" ColumnName="SDT" />
-          <ScalarProperty Name="MACARD" ColumnName="MACARD" />
           <ScalarProperty Name="CHUCVU" ColumnName="CHUCVU" />
           <ScalarProperty Name="TEN" ColumnName="TEN" />
         </MappingFragment>
@@ -131,10 +130,6 @@
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
-    <FunctionImportMapping FunctionImportName="Delete_Cards" FunctionName="QLThuVienModel.Store.Delete_Cards" />
-    <FunctionImportMapping FunctionImportName="Delete_Muon" FunctionName="QLThuVienModel.Store.Delete_Muon" />
-    <FunctionImportMapping FunctionImportName="Delete_SACH" FunctionName="QLThuVienModel.Store.Delete_SACH" />
-    <FunctionImportMapping FunctionImportName="Delete_User" FunctionName="QLThuVienModel.Store.Delete_User" />
     <FunctionImportMapping FunctionImportName="SEARCH_TENSACH" FunctionName="QLThuVienModel.Store.SEARCH_TENSACH">
       <ResultMapping>
         <ComplexTypeMapping TypeName="QLThuVienModel.SEARCH_TENSACH_Result">
@@ -163,8 +158,10 @@
     </FunctionImportMapping>
     <FunctionImportMapping FunctionImportName="sp_alterdiagram" FunctionName="QLThuVienModel.Store.sp_alterdiagram" />
     <FunctionImportMapping FunctionImportName="sp_Create_Book" FunctionName="QLThuVienModel.Store.sp_Create_Book" />
+    <FunctionImportMapping FunctionImportName="sp_Create_User" FunctionName="QLThuVienModel.Store.sp_Create_User" />
     <FunctionImportMapping FunctionImportName="sp_creatediagram" FunctionName="QLThuVienModel.Store.sp_creatediagram" />
     <FunctionImportMapping FunctionImportName="sp_Delete_Book" FunctionName="QLThuVienModel.Store.sp_Delete_Book" />
+    <FunctionImportMapping FunctionImportName="sp_Delete_User" FunctionName="QLThuVienModel.Store.sp_Delete_User" />
     <FunctionImportMapping FunctionImportName="sp_dropdiagram" FunctionName="QLThuVienModel.Store.sp_dropdiagram" />
     <FunctionImportMapping FunctionImportName="sp_helpdiagramdefinition" FunctionName="QLThuVienModel.Store.sp_helpdiagramdefinition">
       <ResultMapping>

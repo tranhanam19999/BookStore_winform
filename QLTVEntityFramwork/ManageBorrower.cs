@@ -20,175 +20,140 @@ namespace QLTVEntityFramwork
         {
             InitializeComponent();
 
-            //txtMaDG.Enabled = false;
-            //txtName.Enabled = false;
-            //txtDiaChi.Enabled = false;
-            //txtSDT.Enabled = false;
-            //btnLuu.Enabled = false;
-            //btnHuy.Enabled = false;
+            txtMaUser.Enabled = false;
+
             LoadData();
-            //AddItemNam(cbNamMuon, 1999, 2025);
-            //AddItemMouth(cbThangMuon);
-            //AddItemMouth(cbThangTra);
-            //SetDisableComboBox();
-            
+            AddItemNam(cbNamMuon, 1999, 2025);
+            AddItemMonth(cbThangMuon);
+            AddItemMonth(cbThangTra);
+            SetDisableComboBox();
+            DisableComponent();
+
+        }
+        public void AddItemNam(ComboBox a, int b, int c)
+        {
+            for (int i = c; i >= b; i--)
+                a.Items.Add(i);
+        }
+        public void AddItemMonth(ComboBox a)
+        {
+            for (int i = 1; i < 13; i++)
+                a.Items.Add(i);
+        }
+        public void AddItemDay(ComboBox a, int b)
+        {
+            for (int i = 1; i <= b; i++)
+                a.Items.Add(i);
         }
         void LoadData()
         {
             db.Configuration.LazyLoadingEnabled = false;
-            var data = db.USERS.ToList();
-            dgvDocGia.DataSource = data;
-            //using (var db = new Model1())
-            //{
-            //    db.Configuration.LazyLoadingEnabled = false;
-            //    var query = from d in db.DOCGIAs
-            //                select d;
-            //    dgvDocGia.DataSource = query.ToList();
-            //}
-            //dgvDocGia.Columns[0].AutoSizeMode = DataGridViewAutoSizeColumnMode.AllCells;
-            //dgvDocGia.Columns[1].AutoSizeMode = DataGridViewAutoSizeColumnMode.AllCells;
-            //dgvDocGia.Columns[2].AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
-            //dgvDocGia.Columns[3].AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
+
+            var listUser = db.USERS.ToList();
+            dgvDocGia.DataSource = listUser;
 
             dgvDocGia.Columns[0].HeaderText = "Mã Đọc Giả";
             dgvDocGia.Columns[1].HeaderText = "USERNAME";
-            dgvDocGia.Columns[3].HeaderText = "PASSWORD";
-            dgvDocGia.Columns[4].HeaderText = "Địa Chỉ";
-            dgvDocGia.Columns[5].HeaderText = "SĐT";
-            dgvDocGia.Columns[6].HeaderText = "Mã CARD";
-            dgvDocGia.Columns[7].HeaderText = "Chức vụ";
-            dgvDocGia.Columns[8].HeaderText = "Tên Đọc Giả";
-            dgvDocGia.Columns[9].Visible = false;
+            dgvDocGia.Columns[2].HeaderText = "PASSWORD";
+            dgvDocGia.Columns[3].HeaderText = "Địa Chỉ";
+            dgvDocGia.Columns[4].HeaderText = "SĐT";
+            dgvDocGia.Columns[5].HeaderText = "Chức Vụ";
+            dgvDocGia.Columns[6].HeaderText = "Tên Đọc Giả";
+            dgvDocGia.Columns[7].Visible = false;
+            dgvDocGia.Columns[8].Visible = false;
 
             db.Configuration.LazyLoadingEnabled = false;
-            var data1 = db.Borrowing_Details.ToList();
-            dgvMuonSach.DataSource = data1;
+
+            var listUserBorrowing = db.Borrowing_Details.ToList();
+            dgvMuonSach.DataSource = listUserBorrowing;
+
             dgvMuonSach.Columns[0].HeaderText = "Tên Đọc giả";
             dgvMuonSach.Columns[1].HeaderText = "Tên Sách";
             dgvMuonSach.Columns[2].HeaderText = "Ngày Mượn";
             dgvMuonSach.Columns[3].HeaderText = "Ngày Trả";
             dgvMuonSach.Columns[4].HeaderText = "Tình trạng";
-            //dgvMuonSach.Columns[5].HeaderText = "Số Lượng Trả";
-            //dgvMuonSach.Columns[6].HeaderText = "Số Lượng Mất";
-            //dgvMuonSach.Columns[7].Visible = false;
-            //dgvMuonSach.Columns[8].Visible = false;
-            //using (var db = new Model1())
-            //{
-            //    btnCheck.Enabled = false;
-            //    cbMaSach.Enabled = false;
-            //    db.Configuration.LazyLoadingEnabled = false;
-            //    var query = from d in db.MUONSACHes
-            //                select d;
-            //    dgvMuonSach.DataSource = query.ToList();
-            //}
-            //dgvMuonSach.Columns[0].AutoSizeMode = DataGridViewAutoSizeColumnMode.AllCells;
-            //dgvMuonSach.Columns[1].AutoSizeMode = DataGridViewAutoSizeColumnMode.AllCells;
-            //dgvMuonSach.Columns[2].AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
-            //dgvMuonSach.Columns[3].AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
 
-            //dgvMuonSach.Columns[0].HeaderText = "Mã Đọc Giả";
-            //dgvMuonSach.Columns[1].HeaderText = "Mã Sách";
-            //dgvMuonSach.Columns[2].HeaderText = "Ngày Mượn";
-            //dgvMuonSach.Columns[3].HeaderText = "Ngày Trả";
-
-            //using (var db = new Model1())
-            //{
-            //    var query = (from d in db.SACHes
-            //                 where d.DANGDUOCMUON == 0
-            //                 select d.MASACH).ToList();
-            //    cbMaSach.DataSource = query;
-            //}
-            //btnOK.Enabled = false;
+            btnOK.Enabled = false;
         }
         public void DisableComponent()
         {
-            //txtMaDG.Enabled = false;
-            //txtName.Enabled = false;
-            //txtDiaChi.Enabled = false;
-            //txtSDT.Enabled = false;
-            //btnLuu.Enabled = false;
-            //btnHuy.Enabled = false;
-            //cbMaSach.Enabled = false;
+            txtUsername.Enabled = false;
+            txtTenUser.Enabled = false;
+            txtPassword.Enabled = false;     
+            txtDiaChi.Enabled = false;
+            txtSDT.Enabled = false;
+            btnLuu.Enabled = false;
+            btnHuy.Enabled = false;
+            cbMaSach.Enabled = false;
         }
         public void EnableComponent()
         {
-            //txtMaDG.Enabled = true;
-            //txtName.Enabled = true;
-            //txtDiaChi.Enabled = true;
-            //txtSDT.Enabled = true;
-            //btnLuu.Enabled = true;
-            //btnHuy.Enabled = true;
+            txtUsername.Enabled = true;
+            txtTenUser.Enabled = true;
+            txtPassword.Enabled = true;
+            txtDiaChi.Enabled = true;
+            txtSDT.Enabled = true;
+            btnLuu.Enabled = true;
+            btnHuy.Enabled = true;
         }
         public void ClearClickedData()
         {
-            //txtMaDG.Text = "";
-            //txtDiaChi.Text = "";
-            //txtName.Text = "";
-            //txtSDT.Text = "";
-            //cbNamMuon.Text = "";
-            //cbThangMuon.Text = "";
-            //cbNgayMuon.Text = "";
-            //cbNamTra.Text = "";
-            //cbThangTra.Text = "";
-            //cbNgayTra.Text = "";
+            txtTenUser.Text = "";
+            txtMaUser.Text = "";
+            txtUsername.Text = "";
+            txtPassword.Text = "";
+            txtSDT.Text = "";
+            txtDiaChi.Text = "";
+
+            cbNamMuon.Text = "";
+            cbThangMuon.Text = "";
+            cbNgayMuon.Text = "";
+            cbNamTra.Text = "";
+            cbThangTra.Text = "";
+            cbNgayTra.Text = "";
         }
         public void SetDisableComboBox()
         {
-            //cbNamMuon.Enabled = false;
-            //cbThangMuon.Enabled = false;
-            //cbNgayMuon.Enabled = false;
-            //cbNamTra.Enabled = false;
-            //cbThangTra.Enabled = false;
-            //cbNgayTra.Enabled = false;
+            cbNamMuon.Enabled = false;
+            cbThangMuon.Enabled = false;
+            cbNgayMuon.Enabled = false;
+            cbNamTra.Enabled = false;
+            cbThangTra.Enabled = false;
+            cbNgayTra.Enabled = false;
         }
-        public void AddItemNam(ComboBox a, int b, int c)
-        {
-            //for (int i = c; i >= b; i--)
-            //    a.Items.Add(i);
-        }
-        public void AddItemMouth(ComboBox a)
-        {
-            //for (int i = 1; i < 13; i++)
-            //    a.Items.Add(i);
-        }
-        public void AddItemDay(ComboBox a, int b)
-        {
-            //for (int i = 1; i <= b; i++)
-            //    a.Items.Add(i);
-        }
-        //public bool checkYear(int year)
-        //{
-        //    //// Nếu số năm chia hết cho 400,
-        //    //// đó là 1 năm nhuận
-        //    //if (year % 400 == 0)
-        //    //    return true;
 
-        //    //// Nếu số năm chia hết cho 4 và không chia hết cho 100,
-        //    //// đó không là 1 năm nhuận
-        //    //if (year % 4 == 0 && year % 100 != 0)
-        //    //    return true;
+        public bool checkYear(int year)
+        {
+            // Nếu số năm chia hết cho 400,
+            // đó là 1 năm nhuận
+            if (year % 400 == 0)
+                return true;
 
-        //    //// trường hợp còn lại 
-        //    //// không phải năm nhuận
-        //    //return false;
-        //}
+            // Nếu số năm chia hết cho 4 và không chia hết cho 100,
+            // đó không là 1 năm nhuận
+            if (year % 4 == 0 && year % 100 != 0)
+                return true;
+
+            // trường hợp còn lại 
+            // không phải năm nhuận
+            return false;
+        }
         private void btnThem_Click(object sender, EventArgs e)
         {
-            //btnCapNhat.Enabled = false;
-            //btnXoa.Enabled = false;
-            //ClearClickedData();
-            //EnableComponent();
-            //Them = true;
+            btnCapNhat.Enabled = false;
+            btnXoa.Enabled = false;
+            ClearClickedData();
+            EnableComponent();
+            Them = true;
         }
 
         private void btnCapNhat_Click(object sender, EventArgs e)
         {
-            //EnableComponent();
-            //txtMaDG.Enabled = false;
-            //btnThem.Enabled = false;
-            //btnXoa.Enabled = false;
+            EnableComponent();
+            btnThem.Enabled = false;
+            btnXoa.Enabled = false;
 
-            //CapNhat = true;
+            CapNhat = true;
         }
 
         private void btnHuy_Click(object sender, EventArgs e)
@@ -207,80 +172,60 @@ namespace QLTVEntityFramwork
 
         private void btnLuu_Click(object sender, EventArgs e)
         {
-            //if (Them == true)
-            //{
-            //    foreach (DataGridViewRow row in dgvDocGia.Rows)
-            //    {
-            //        if (row.Cells[0].Value == null)
-            //        {
-            //            checkThem = true;
-            //            break;
-            //        }
-            //        if (Int32.Parse(row.Cells[0].Value.ToString()) == Int32.Parse(txtMaDG.Text))
-            //        {
-            //            MessageBox.Show("Trùng Mã Đọc Giả Rồi!");
-            //            btnLuu.Enabled = false;
-            //            btnCapNhat.Enabled = true;
-            //            btnXoa.Enabled = true;
-            //            Them = false;
-            //            DisableComponent();
-            //            ClearClickedData();
-            //            checkThem = false;
-            //            break;
-            //        }
-            //    }
-            //    if (checkThem == true)
-            //    {
-            //        using (var db = new Model1())
-            //        {
-            //            db.Configuration.LazyLoadingEnabled = false;
+            if (Them == true)
+            {
+                if (checkThem == true)
+                {
+                    //int MaUser = int.Parse(txtMaUser.Text.ToString());
 
-            //            DOCGIA docgia = new DOCGIA();
-            //            docgia.MADG = int.Parse(txtMaDG.Text);
-            //            docgia.TENDOCGIA = txtName.Text;
-            //            docgia.SDT = txtSDT.Text;
-            //            docgia.DIACHI = txtDiaChi.Text;
-            //            db.DOCGIAs.Add(docgia);
-            //            db.SaveChanges();
-            //        }
-            //        LoadData();
-            //        MessageBox.Show("Da them xong");
-            //        btnLuu.Enabled = false;
-            //        btnCapNhat.Enabled = true;
-            //        btnXoa.Enabled = true;
-            //        Them = false;
-            //        DisableComponent();
-            //        ClearClickedData();
-            //    }
+                    string TenUser = txtTenUser.Text.ToString();
+                    string Username = txtUsername.Text.ToString();
+                    string Password = txtPassword.Text.ToString();
+                    string Diachi = txtDiaChi.Text.ToString();
+                    string SDT = txtSDT.Text.ToString();
+                    MessageBox.Show(Username);
+                    db.sp_Create_User(Username, Password, Diachi, SDT, TenUser);
+                    db.SaveChanges();
+                    LoadData();
+                    MessageBox.Show("Da them xong");
+                    btnLuu.Enabled = false;
+                    btnCapNhat.Enabled = true;
+                    btnXoa.Enabled = true;
+                    Them = false;
+                    DisableComponent();
+                    ClearClickedData();
+                }
 
-            //}
-            //else if (CapNhat == true)
-            //{
-            //    using (var db = new Model1())
-            //    {
-            //        db.Configuration.LazyLoadingEnabled = false;
+            }
+            else if (CapNhat == true)
+            {
+                try
+                {
+                    db.Configuration.LazyLoadingEnabled = false;
 
-            //        int tmp = int.Parse(txtMaDG.Text);
-            //        var query = from d in db.DOCGIAs
-            //                    where d.MADG == tmp
-            //                    select d;
-            //        foreach (var Changes in query)
-            //        {
-            //            Changes.TENDOCGIA = txtName.Text;
-            //            Changes.SDT = txtSDT.Text;
-            //            Changes.DIACHI = txtDiaChi.Text;
-            //        }
-            //        db.SaveChanges();
-            //        LoadData();
-            //        MessageBox.Show("Da Cap Nhat Xong!");
-            //        btnLuu.Enabled = false;
-            //        btnThem.Enabled = true;
-            //        btnXoa.Enabled = true;
-            //        CapNhat = false;
-            //        DisableComponent();
-            //        ClearClickedData();
-            //    }
-            //}
+                    var userID = int.Parse(txtMaUser.Text); 
+                    var userFounded = db.USERS.Where(x => x.MAUSER == userID).ToList().FirstOrDefault();
+                    userFounded.USERNAME = txtUsername.Text.ToString();
+                    userFounded.MATKHAU = txtPassword.Text.ToString();
+                    userFounded.DIACHI = txtDiaChi.Text.ToString();
+                    userFounded.SDT = txtSDT.Text.ToString();
+                    userFounded.TEN = txtTenUser.Text.ToString();
+
+                    db.SaveChanges();
+                    LoadData();
+                    DisableComponent();
+                    MessageBox.Show("Đã cập nhật xong !!!");
+                }
+                catch
+                {
+                    MessageBox.Show("Không cập nhật được. Lỗi rồi!");
+                }
+                btnHuy.Enabled = false;
+                btnLuu.Enabled = false;
+                btnThem.Enabled = true;
+                btnXoa.Enabled = true;
+                btnCapNhat.Enabled = true;
+            }
         }
 
         private void btnReload_Click(object sender, EventArgs e)
@@ -299,12 +244,14 @@ namespace QLTVEntityFramwork
 
         private void dgvDocGia_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-            //int r = dgvDocGia.CurrentCell.RowIndex;
+            int r = dgvDocGia.CurrentCell.RowIndex;
 
-            //this.txtMaDG.Text = dgvDocGia.Rows[r].Cells[0].Value.ToString();
-            //this.txtName.Text = dgvDocGia.Rows[r].Cells[1].Value.ToString();
-            //this.txtDiaChi.Text = dgvDocGia.Rows[r].Cells[2].Value.ToString();
-            //this.txtSDT.Text = dgvDocGia.Rows[r].Cells[3].Value.ToString();
+            this.txtTenUser.Text = dgvDocGia.Rows[r].Cells[6].Value.ToString();
+            this.txtMaUser.Text = dgvDocGia.Rows[r].Cells[0].Value.ToString();
+            this.txtUsername.Text = dgvDocGia.Rows[r].Cells[1].Value.ToString();
+            this.txtPassword.Text = dgvDocGia.Rows[r].Cells[2].Value.ToString();
+            this.txtDiaChi.Text = dgvDocGia.Rows[r].Cells[3].Value.ToString();
+            this.txtSDT.Text = dgvDocGia.Rows[r].Cells[4].Value.ToString();
         }
 
         private void btnMuonSach_Click(object sender, EventArgs e)
@@ -517,35 +464,24 @@ namespace QLTVEntityFramwork
 
         private void btnXoa_Click(object sender, EventArgs e)
         {
-        //    int r = dgvDocGia.CurrentCell.RowIndex;
+            int r = dgvDocGia.CurrentCell.RowIndex;
 
-        //    int rSelected = (int)dgvDocGia.Rows[r].Cells[0].Value;
-        //    DialogResult traloi;
-        //    traloi = MessageBox.Show("Ban co muon xoa mau tin nay ko?", "Tra loi"
-        //        , MessageBoxButtons.YesNo, MessageBoxIcon.Question);
-        //    if (traloi == DialogResult.Yes)
-        //    {
-        //        using (var db = new Model1())
-        //        {
-        //            db.Configuration.LazyLoadingEnabled = false;
-        //            int tmp = int.Parse(txtMaDG.Text);
-        //            var query = from d in db.DOCGIAs
-        //                        where d.MADG == tmp
-        //                        select d;
-        //            foreach (var MADG in query)
-        //            {
-        //                db.DOCGIAs.Remove(MADG);
-        //            }
-        //            db.SaveChanges();
-        //        }
-        //        LoadData();
-        //        MessageBox.Show("Da Xoa Xong!");
-        //    }
-        //    else
-        //    {
-        //        MessageBox.Show("Ban Da Bam Khong!");
-        //    }
-        //    ClearClickedData();
+            int rSelected = (int)dgvDocGia.Rows[r].Cells[0].Value;
+            DialogResult traloi;
+            traloi = MessageBox.Show("Ban co muon xoa mau tin nay ko?", "Tra loi"
+                , MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+            if (traloi == DialogResult.Yes)
+            {
+                int MaUser = int.Parse(txtMaUser.Text);
+                db.sp_Delete_User(MaUser);
+                LoadData();
+                MessageBox.Show("Da Xoa Xong!");
+            }
+            else
+            {
+                MessageBox.Show("Ban Da Bam Khong!");
+            }
+            ClearClickedData();
         }
     }
 }

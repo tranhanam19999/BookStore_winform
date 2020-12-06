@@ -207,17 +207,18 @@ namespace QLTVEntityFramwork
                 try
                 {
                     db.Configuration.LazyLoadingEnabled = false;
-                    int MaNXB = int.Parse(cbMaNXB.SelectedItem.ToString());
-                    int MaTG = int.Parse(cbMaTG.SelectedItem.ToString());
-                    string Tensach = txtTenSach.Text;
-                    string Linhvuc = txtLinhvuc.Text;
-                    int Gia = int.Parse(txtGia.Text);
-                    string Vitri = cbViTri.SelectedItem.ToString();
-                    int Dangduocmuon = int.Parse(txtTinhTrangMuon.Text);
-                    int Soluongsachmat = int.Parse(txtSoLuongBiMat.Text);
-                    int Tongsoluong = int.Parse(txtTongSoLuong.Text);
-                    
-                    db.sp_Update_Book(MaNXB, MaTG, Tensach, Linhvuc, Gia, Vitri, Dangduocmuon, Soluongsachmat, Tongsoluong);
+
+                    var s = db.SACHes.Where(x => x.MASACH == 1).ToList().FirstOrDefault();
+                    s.MANXB = int.Parse(cbMaNXB.SelectedItem.ToString());
+                    s.MATACGIA = int.Parse(cbMaTG.SelectedItem.ToString());
+                    s.TENSACH = txtTenSach.Text;
+                    s.LINHVUC = txtLinhvuc.Text;
+                    s.GIA = int.Parse(txtGia.Text);
+                    s.VITRI = cbViTri.SelectedItem.ToString();
+                    s.DANGDUOCMUON = int.Parse(txtTinhTrangMuon.Text);
+                    s.SOLUONGSACHBIMAT = int.Parse(txtSoLuongBiMat.Text);
+                    s.TONGSOLUONG = int.Parse(txtTongSoLuong.Text);
+
                     db.SaveChanges();
                     LoadData();
                     DisableComponent();

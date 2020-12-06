@@ -81,7 +81,7 @@ BEGIN
 	WHERE VITRI LIKE '%' + replace(@VITRI, '%', '[%]') + '%' 
 		  
 END
--- Searcj theo Ten sach
+-- Search theo Ten sach
 CREATE PROC [dbo].[SEARCH_TENSACH] 
 @TENSACH VARCHAR(50)
 AS 
@@ -92,3 +92,25 @@ BEGIN
 	WHERE TENSACH LIKE '%' + replace(@TENSACH, '%', '[%]') + '%' 
 		  
 END
+-- Procedure Create User
+ALTER PROC sp_Create_User
+@Username varchar(50),
+@Password varchar(50),
+@Diachi varchar(50),
+@SDT varchar(50),
+@TenUser varchar(50)
+AS
+BEGIN
+	INSERT INTO dbo.USERS([USERNAME], [MATKHAU], [DIACHI], [SDT], [CHUCVU], [TEN])
+	VALUES				 (@Username,  @Password, @Diachi,  @SDT,  'USER',   @TenUser)
+END
+-- Procedure Delete User
+create proc sp_Delete_User
+@MaUser int
+as
+begin
+	DELETE FROM USERS
+	WHERE MAUSER = @MaUser
+end
+go
+---
