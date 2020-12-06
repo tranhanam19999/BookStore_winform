@@ -171,5 +171,13 @@ BEGIN
 END
 GO
 -------------------------------
-
--------------------------------------------------
+--Không cho phép cập nhật tên user đã tồn tại trước đó-----
+GO
+CREATE TRIGGER CHECK_UPDATE_USER ON USERS
+FOR UPDATE AS
+DECLARE @TENUSER NCHAR(50) = (SELECT TENUSER FROM inserted)
+IF (@TENUSER IN (SELECT TENUSER FROM USERS))
+BEGIN
+	PRINT 'TEN USER DA TON TAI'
+	ROLLBACK TRAN
+END
