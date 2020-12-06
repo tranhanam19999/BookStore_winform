@@ -33,6 +33,8 @@ namespace QLTVEntityFramwork
             txtLinhvuc.Enabled = false;
             txtGia.Enabled = false;
             cbViTri.Enabled = false;
+            cbMaNXB.Enabled = false;
+            cbMaTG.Enabled = false;
             txtTinhTrangMuon.Enabled = false;
             txtSoLuongBiMat.Enabled = false;
             txtTongSoLuong.Enabled = false;
@@ -43,6 +45,8 @@ namespace QLTVEntityFramwork
             txtLinhvuc.Enabled = true;
             txtGia.Enabled = true;
             cbViTri.Enabled = true;
+            cbMaNXB.Enabled = true;
+            cbMaTG.Enabled = true;
             txtTinhTrangMuon.Enabled = true;
             txtSoLuongBiMat.Enabled = true;
             txtTongSoLuong.Enabled = true;
@@ -50,21 +54,36 @@ namespace QLTVEntityFramwork
         public void LoadData()
         {
             //User thi xai query nay
-            var data = db.Book_Info.ToList();
+            var data = db.SACHes.ToList();
             //Neu la admin thi
             // var data = db.Books.ToList();
             dgvQLSach.DataSource = data;
             dgvQLSach.AutoResizeColumns();
             dgvQLSach.AutoResizeRows();
             ClearClickedData();
-            dgvQLSach.AutoResizeColumns();
-            dgvQLSach.Columns[0].HeaderText = "Tên Sách";
-            dgvQLSach.Columns[1].HeaderText = "Lĩnh Vực";
-            dgvQLSach.Columns[2].HeaderText = "Giá";
+            dgvQLSach.Columns[0].AutoSizeMode = DataGridViewAutoSizeColumnMode.AllCells;
+            dgvQLSach.Columns[1].AutoSizeMode = DataGridViewAutoSizeColumnMode.AllCells;
+            dgvQLSach.Columns[2].AutoSizeMode = DataGridViewAutoSizeColumnMode.AllCells;
+            dgvQLSach.Columns[3].AutoSizeMode = DataGridViewAutoSizeColumnMode.AllCells;
+            dgvQLSach.Columns[4].AutoSizeMode = DataGridViewAutoSizeColumnMode.AllCells;
+            dgvQLSach.Columns[5].AutoSizeMode = DataGridViewAutoSizeColumnMode.AllCells;
+            dgvQLSach.Columns[6].AutoSizeMode = DataGridViewAutoSizeColumnMode.AllCells;
+            dgvQLSach.Columns[7].AutoSizeMode = DataGridViewAutoSizeColumnMode.AllCells;
+            dgvQLSach.Columns[8].AutoSizeMode = DataGridViewAutoSizeColumnMode.AllCells;
+            dgvQLSach.Columns[9].AutoSizeMode = DataGridViewAutoSizeColumnMode.AllCells;
+
+
+            dgvQLSach.Columns[0].HeaderText = "Mã Sách";
+            dgvQLSach.Columns[1].HeaderText = "Mã NXB";
+            dgvQLSach.Columns[2].HeaderText = "Mã TG";
             dgvQLSach.Columns[3].HeaderText = "Vị Trí";
-            dgvQLSach.Columns[4].HeaderText = "Tình Trạng Mượn";
-            dgvQLSach.Columns[5].HeaderText = "Số Lượng Bị Mất";
+            dgvQLSach.Columns[4].HeaderText = "Tên sách";
+            dgvQLSach.Columns[5].HeaderText = "Đang được mượn";
             dgvQLSach.Columns[6].HeaderText = "Tổng Số Lượng";
+            dgvQLSach.Columns[7].HeaderText = "Số Lượng Bị Mất";
+            dgvQLSach.Columns[8].HeaderText = "Lĩnh Vực";
+            dgvQLSach.Columns[9].HeaderText = "Giá";
+            dgvQLSach.Columns[10].Visible = false;
         }
         public void ClearClickedData()
         {
@@ -72,6 +91,8 @@ namespace QLTVEntityFramwork
             txtLinhvuc.Text = "";
             txtGia.Text = "";
             cbViTri.Text = "";
+            cbMaNXB.Text = "";
+            cbMaTG.Text = "";
             txtTinhTrangMuon.Text = "";
             txtSoLuongBiMat.Text = "";
             txtTongSoLuong.Text = "";
@@ -80,8 +101,8 @@ namespace QLTVEntityFramwork
         public void PutDataInComboBox()
         {
             PutDataInComboViTri();
-            //PutDataInComboMaNXB();
-            //PutDataInComboMaTG();
+            PutDataInComboMaNXB();
+            PutDataInComboMaTG();
         }
         public void PutDataInComboViTri()
         {
@@ -92,6 +113,8 @@ namespace QLTVEntityFramwork
         }
         public void PutDataInComboMaNXB()
         {
+            var data = (from d in db.NXBs select d.MANXB).ToList();
+            cbMaNXB.DataSource = data;
             //using (var db = new Model1())
             //{
             //    db.Configuration.LazyLoadingEnabled = false;
@@ -102,6 +125,8 @@ namespace QLTVEntityFramwork
         }
         public void PutDataInComboMaTG()
         {
+            var data = (from d in db.TACGIAs select d.MATACGIA).ToList();
+            cbMaTG.DataSource = data;
             //using (var db = new Model1())
             //{
             //    db.Configuration.LazyLoadingEnabled = false;
@@ -126,16 +151,15 @@ namespace QLTVEntityFramwork
 
             //Neu user la admin thi hien textbox 
             //this.txtMaSach.Text = dgvQLSach.Rows[r].Cells[0].Value.ToString();
-
-            //this.cbMaNXB.Text = dgvQLSach.Rows[r].Cells[1].Value.ToString();
-            //this.cbMTG.Text = dgvQLSach.Rows[r].Cells[2].Value.ToString();
-            this.txtTenSach.Text = dgvQLSach.Rows[r].Cells[0].Value.ToString();
-            this.txtLinhvuc.Text = dgvQLSach.Rows[r].Cells[1].Value.ToString();
-            this.txtGia.Text = dgvQLSach.Rows[r].Cells[2].Value.ToString();
+            this.cbMaNXB.Text = dgvQLSach.Rows[r].Cells[1].Value.ToString();
+            this.cbMaTG.Text = dgvQLSach.Rows[r].Cells[2].Value.ToString();
             this.cbViTri.Text = dgvQLSach.Rows[r].Cells[3].Value.ToString();
-            this.txtTinhTrangMuon.Text = dgvQLSach.Rows[r].Cells[4].Value.ToString();
-            this.txtSoLuongBiMat.Text = dgvQLSach.Rows[r].Cells[5].Value.ToString();
+            this.txtTenSach.Text = dgvQLSach.Rows[r].Cells[4].Value.ToString();
+            this.txtTinhTrangMuon.Text = dgvQLSach.Rows[r].Cells[5].Value.ToString();
             this.txtTongSoLuong.Text = dgvQLSach.Rows[r].Cells[6].Value.ToString();
+            this.txtSoLuongBiMat.Text = dgvQLSach.Rows[r].Cells[7].Value.ToString();
+            this.txtLinhvuc.Text = dgvQLSach.Rows[r].Cells[8].Value.ToString();
+            this.txtGia.Text = dgvQLSach.Rows[r].Cells[9].Value.ToString();
         }
 
         private void btnThem_Click(object sender, EventArgs e)
@@ -157,8 +181,8 @@ namespace QLTVEntityFramwork
                 try
                 {
                     db.Configuration.LazyLoadingEnabled = false;
-                    int MaNXB = 1;
-                    int MaTG = 1;
+                    int MaNXB = int.Parse(cbMaNXB.SelectedItem.ToString());
+                    int MaTG = int.Parse(cbMaTG.SelectedItem.ToString());
                     string Tensach = txtTenSach.Text;
                     string Linhvuc = txtLinhvuc.Text;
                     int Gia = int.Parse(txtGia.Text);
@@ -166,10 +190,8 @@ namespace QLTVEntityFramwork
                     int Dangduocmuon = int.Parse(txtTinhTrangMuon.Text);
                     int Soluongsachmat = int.Parse(txtSoLuongBiMat.Text);
                     int Tongsoluong = int.Parse(txtTongSoLuong.Text);
-                    /*var data =*/ db.sp_Create_Book(MaNXB, MaTG, Tensach, Linhvuc, Gia, Vitri, Dangduocmuon, Soluongsachmat, Tongsoluong);
-                    //dgvQLSach.DataSource = data;
+                    db.sp_Create_Book(MaNXB, MaTG, Tensach, Linhvuc, Gia, Vitri, Dangduocmuon, Soluongsachmat, Tongsoluong);
                     db.SaveChanges();
-                    Them = false;
                     LoadData();
                     DisableComponent();
                     MessageBox.Show("Đã thêm xong !!!");
@@ -178,14 +200,15 @@ namespace QLTVEntityFramwork
                 {
                     MessageBox.Show("Không thêm được. Lỗi rồi!");
                 }
+                Them = false;
             }
             else if (CapNhat == true)
             {
                 try
                 {
                     db.Configuration.LazyLoadingEnabled = false;
-                    int MaNXB = 1;
-                    int MaTG = 1;
+                    int MaNXB = int.Parse(cbMaNXB.SelectedItem.ToString());
+                    int MaTG = int.Parse(cbMaTG.SelectedItem.ToString());
                     string Tensach = txtTenSach.Text;
                     string Linhvuc = txtLinhvuc.Text;
                     int Gia = int.Parse(txtGia.Text);
@@ -193,8 +216,8 @@ namespace QLTVEntityFramwork
                     int Dangduocmuon = int.Parse(txtTinhTrangMuon.Text);
                     int Soluongsachmat = int.Parse(txtSoLuongBiMat.Text);
                     int Tongsoluong = int.Parse(txtTongSoLuong.Text);
-                    /*var data =*/ db.sp_Update_Book(MaNXB, MaTG, Tensach, Linhvuc, Gia, Vitri, Dangduocmuon, Soluongsachmat, Tongsoluong);
-                    //dgvQLSach.DataSource = data;
+                    
+                    db.sp_Update_Book(MaNXB, MaTG, Tensach, Linhvuc, Gia, Vitri, Dangduocmuon, Soluongsachmat, Tongsoluong);
                     db.SaveChanges();
                     LoadData();
                     DisableComponent();
@@ -294,29 +317,33 @@ namespace QLTVEntityFramwork
 
         private void btnXoa_Click(object sender, EventArgs e)
         {
-            //int r = dgvQLSach.CurrentCell.RowIndex;
+            int r = dgvQLSach.CurrentCell.RowIndex;
 
-            //int rSelected = (int)dgvQLSach.Rows[r].Cells[0].Value;
-            //DialogResult traloi;
-            //traloi = MessageBox.Show("Ban co muon xoa mau tin nay ko?", "Tra loi"
-            //    , MessageBoxButtons.YesNo, MessageBoxIcon.Question);
-            //if (traloi == DialogResult.Yes)
-            //{
-            //    using (var db = new Model1())
-            //    {
-            //        db.Configuration.LazyLoadingEnabled = false;
-            //        var query = from d in db.SACHes
-            //                    where d.MASACH == rSelected
-            //                    select d;
-            //        foreach (var MASACH in query)
-            //        {
-            //            db.SACHes.Remove(MASACH);
-            //        }
-            //        db.SaveChanges();
-            //    }
-            //    LoadData();
-            //    MessageBox.Show("Da Xoa Xong!");
-            //}
+            int rSelected = (int)dgvQLSach.Rows[r].Cells[0].Value;
+            DialogResult traloi;
+            traloi = MessageBox.Show("Ban co muon xoa mau tin nay ko?", "Tra loi"
+                , MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+            if (traloi == DialogResult.Yes)
+            {
+                db.Configuration.LazyLoadingEnabled = false;
+                string Tensach = txtTenSach.Text;
+                db.sp_Delete_Book(Tensach);
+                //using (var db = new Model1())
+                //{
+                //    db.Configuration.LazyLoadingEnabled = false;
+                //    var query = from d in db.SACHes
+                //                where d.MASACH == rSelected
+                //                select d;
+                //    foreach (var MASACH in query)
+                //    {
+                //        db.SACHes.Remove(MASACH);
+                //    }
+                //    db.SaveChanges();
+                //}
+                db.SaveChanges();
+                LoadData();
+                MessageBox.Show("Da Xoa Xong!");
+            }
             //else
             //{
             //    MessageBox.Show("Ban Da Bam Khong!");

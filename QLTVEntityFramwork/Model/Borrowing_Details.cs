@@ -12,15 +12,12 @@ namespace QLTVEntityFramwork.Model
     using System;
     using System.Collections.Generic;
     
-    public partial class MUONSACH
+    public partial class Borrowing_Details
     {
-        public int MAUSER { get; set; }
-        public int MASACH { get; set; }
+        public string TenUser { get; set; }
+        public string TenSach { get; set; }
         public string NGAYMUON { get; set; }
         public string NGAYTRA { get; set; }
         public string TINHTRANG { get; set; }
-    
-        public virtual SACH SACH { get; set; }
-        public virtual USER USER { get; set; }
     }
 }

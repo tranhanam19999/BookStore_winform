@@ -19,9 +19,7 @@
           <ScalarProperty Name="MASACH" ColumnName="MASACH" />
           <ScalarProperty Name="NGAYMUON" ColumnName="NGAYMUON" />
           <ScalarProperty Name="NGAYTRA" ColumnName="NGAYTRA" />
-          <ScalarProperty Name="SOLUONGSACHMUON" ColumnName="SOLUONGSACHMUON" />
-          <ScalarProperty Name="SOLUONGSACHTRA" ColumnName="SOLUONGSACHTRA" />
-          <ScalarProperty Name="SOLUONGSACHMAT" ColumnName="SOLUONGSACHMAT" />
+          <ScalarProperty Name="TINHTRANG" ColumnName="TINHTRANG" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
@@ -114,6 +112,17 @@
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
+    <EntitySetMapping Name="Borrowing_Details">
+      <EntityTypeMapping TypeName="QLThuVienModel.Borrowing_Details">
+        <MappingFragment StoreEntitySet="Borrowing_Details">
+          <ScalarProperty Name="TenUser" ColumnName="TenUser" />
+          <ScalarProperty Name="TenSach" ColumnName="TenSach" />
+          <ScalarProperty Name="NGAYMUON" ColumnName="NGAYMUON" />
+          <ScalarProperty Name="NGAYTRA" ColumnName="NGAYTRA" />
+          <ScalarProperty Name="TINHTRANG" ColumnName="TINHTRANG" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
     <EntitySetMapping Name="Publisher_Info">
       <EntityTypeMapping TypeName="QLThuVienModel.Publisher_Info">
         <MappingFragment StoreEntitySet="Publisher_Info">
@@ -126,6 +135,32 @@
     <FunctionImportMapping FunctionImportName="Delete_Muon" FunctionName="QLThuVienModel.Store.Delete_Muon" />
     <FunctionImportMapping FunctionImportName="Delete_SACH" FunctionName="QLThuVienModel.Store.Delete_SACH" />
     <FunctionImportMapping FunctionImportName="Delete_User" FunctionName="QLThuVienModel.Store.Delete_User" />
+    <FunctionImportMapping FunctionImportName="SEARCH_TENSACH" FunctionName="QLThuVienModel.Store.SEARCH_TENSACH">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="QLThuVienModel.SEARCH_TENSACH_Result">
+          <ScalarProperty Name="TENSACH" ColumnName="TENSACH" />
+          <ScalarProperty Name="LINHVUC" ColumnName="LINHVUC" />
+          <ScalarProperty Name="GIA" ColumnName="GIA" />
+          <ScalarProperty Name="VITRI" ColumnName="VITRI" />
+          <ScalarProperty Name="DANGDUOCMUON" ColumnName="DANGDUOCMUON" />
+          <ScalarProperty Name="SOLUONGSACHBIMAT" ColumnName="SOLUONGSACHBIMAT" />
+          <ScalarProperty Name="TONGSOLUONG" ColumnName="TONGSOLUONG" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="SEARCH_VITRI" FunctionName="QLThuVienModel.Store.SEARCH_VITRI">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="QLThuVienModel.SEARCH_VITRI_Result">
+          <ScalarProperty Name="TENSACH" ColumnName="TENSACH" />
+          <ScalarProperty Name="LINHVUC" ColumnName="LINHVUC" />
+          <ScalarProperty Name="GIA" ColumnName="GIA" />
+          <ScalarProperty Name="VITRI" ColumnName="VITRI" />
+          <ScalarProperty Name="DANGDUOCMUON" ColumnName="DANGDUOCMUON" />
+          <ScalarProperty Name="SOLUONGSACHBIMAT" ColumnName="SOLUONGSACHBIMAT" />
+          <ScalarProperty Name="TONGSOLUONG" ColumnName="TONGSOLUONG" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
     <FunctionImportMapping FunctionImportName="sp_alterdiagram" FunctionName="QLThuVienModel.Store.sp_alterdiagram" />
     <FunctionImportMapping FunctionImportName="sp_Create_Book" FunctionName="QLThuVienModel.Store.sp_Create_Book" />
     <FunctionImportMapping FunctionImportName="sp_creatediagram" FunctionName="QLThuVienModel.Store.sp_creatediagram" />

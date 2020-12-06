@@ -10,17 +10,15 @@
 namespace QLTVEntityFramwork.Model
 {
     using System;
-    using System.Collections.Generic;
     
-    public partial class MUONSACH
+    public partial class SEARCH_VITRI_Result
     {
-        public int MAUSER { get; set; }
-        public int MASACH { get; set; }
-        public string NGAYMUON { get; set; }
-        public string NGAYTRA { get; set; }
-        public string TINHTRANG { get; set; }
-    
-        public virtual SACH SACH { get; set; }
-        public virtual USER USER { get; set; }
+        public string TENSACH { get; set; }
+        public string LINHVUC { get; set; }
+        public Nullable<int> GIA { get; set; }
+        public string VITRI { get; set; }
+        public Nullable<int> DANGDUOCMUON { get; set; }
+        public Nullable<int> SOLUONGSACHBIMAT { get; set; }
+        public Nullable<int> TONGSOLUONG { get; set; }
     }
 }
