@@ -7,8 +7,8 @@
     <Property Name="MACARD" Type="Int32" Nullable="false" />
     <Property Name="TENUSER" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
     <Property Name="NUMBERCARD" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
-    <Property Name="DATESTART" Type="DateTime" Precision="0" />
-    <Property Name="DATEFINISH" Type="DateTime" Precision="0" />
+    <Property Name="DATESTART" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="DATEFINISH" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
     <NavigationProperty Name="USERS" Relationship="Self.FK__USERS__MACARD__2E1BDC42" FromRole="CARDS" ToRole="USERS" />
   </EntityType>
   <EntityType Name="MUONSACH">
@@ -18,11 +18,9 @@
     </Key>
     <Property Name="MAUSER" Type="Int32" Nullable="false" />
     <Property Name="MASACH" Type="Int32" Nullable="false" />
-    <Property Name="NGAYMUON" Type="DateTime" Precision="0" />
-    <Property Name="NGAYTRA" Type="DateTime" Precision="0" />
-    <Property Name="SOLUONGSACHMUON" Type="Int32" />
-    <Property Name="SOLUONGSACHTRA" Type="Int32" />
-    <Property Name="SOLUONGSACHMAT" Type="Int32" />
+    <Property Name="NGAYMUON" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="NGAYTRA" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="TINHTRANG" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
     <NavigationProperty Name="SACH" Relationship="Self.FK__MUONSACH__MASACH__5535A963" FromRole="MUONSACH" ToRole="SACH" />
     <NavigationProperty Name="USER" Relationship="Self.FK__MUONSACH__MAUSER__5441852A" FromRole="MUONSACH" ToRole="USERS" />
   </EntityType>
@@ -114,6 +112,16 @@
     <Property Name="DIACHI" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
     <Property Name="SDT" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
   </EntityType>
+  <EntityType Name="Borrowing_Details">
+    <Key>
+      <PropertyRef Name="TenSach" />
+    </Key>
+    <Property Name="TenUser" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="TenSach" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="NGAYMUON" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="NGAYTRA" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="TINHTRANG" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+  </EntityType>
   <EntityType Name="Publisher_Info">
     <Key>
       <PropertyRef Name="TENNXB" />
@@ -192,6 +200,7 @@
     <EntitySet Name="Authenticate_User" EntityType="Self.Authenticate_User" />
     <EntitySet Name="Book_Info" EntityType="Self.Book_Info" />
     <EntitySet Name="Borrower_Info" EntityType="Self.Borrower_Info" />
+    <EntitySet Name="Borrowing_Details" EntityType="Self.Borrowing_Details" />
     <EntitySet Name="Publisher_Info" EntityType="Self.Publisher_Info" />
     <AssociationSet Name="FK__USERS__MACARD__2E1BDC42" Association="Self.FK__USERS__MACARD__2E1BDC42">
       <End Role="CARDS" EntitySet="CARDS" />
@@ -224,6 +233,12 @@
     </FunctionImport>
     <FunctionImport Name="Delete_User">
       <Parameter Name="mauser" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="SEARCH_TENSACH" ReturnType="Collection(QLThuVienModel.SEARCH_TENSACH_Result)">
+      <Parameter Name="TENSACH" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="SEARCH_VITRI" ReturnType="Collection(QLThuVienModel.SEARCH_VITRI_Result)">
+      <Parameter Name="VITRI" Mode="In" Type="String" />
     </FunctionImport>
     <FunctionImport Name="sp_alterdiagram">
       <Parameter Name="diagramname" Mode="In" Type="String" />
@@ -281,6 +296,24 @@
     </FunctionImport>
     <FunctionImport Name="sp_upgraddiagrams" />
   </EntityContainer>
+  <ComplexType Name="SEARCH_TENSACH_Result">
+    <Property Type="String" Name="TENSACH" Nullable="false" MaxLength="50" />
+    <Property Type="String" Name="LINHVUC" Nullable="true" MaxLength="50" />
+    <Property Type="Int32" Name="GIA" Nullable="true" />
+    <Property Type="String" Name="VITRI" Nullable="true" MaxLength="50" />
+    <Property Type="Int32" Name="DANGDUOCMUON" Nullable="true" />
+    <Property Type="Int32" Name="SOLUONGSACHBIMAT" Nullable="true" />
+    <Property Type="Int32" Name="TONGSOLUONG" Nullable="true" />
+  </ComplexType>
+  <ComplexType Name="SEARCH_VITRI_Result">
+    <Property Type="String" Name="TENSACH" Nullable="false" MaxLength="50" />
+    <Property Type="String" Name="LINHVUC" Nullable="true" MaxLength="50" />
+    <Property Type="Int32" Name="GIA" Nullable="true" />
+    <Property Type="String" Name="VITRI" Nullable="true" MaxLength="50" />
+    <Property Type="Int32" Name="DANGDUOCMUON" Nullable="true" />
+    <Property Type="Int32" Name="SOLUONGSACHBIMAT" Nullable="true" />
+    <Property Type="Int32" Name="TONGSOLUONG" Nullable="true" />
+  </ComplexType>
   <ComplexType Name="sp_helpdiagramdefinition_Result">
     <Property Type="Int32" Name="version" Nullable="true" />
     <Property Type="Binary" Name="definition" Nullable="true" />

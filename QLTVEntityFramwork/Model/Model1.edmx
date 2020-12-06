@@ -12,8 +12,8 @@
           <Property Name="MACARD" Type="int" Nullable="false" />
           <Property Name="TENUSER" Type="varchar" MaxLength="50" />
           <Property Name="NUMBERCARD" Type="varchar" MaxLength="50" />
-          <Property Name="DATESTART" Type="date" />
-          <Property Name="DATEFINISH" Type="date" />
+          <Property Name="DATESTART" Type="varchar" MaxLength="50" />
+          <Property Name="DATEFINISH" Type="varchar" MaxLength="50" />
         </EntityType>
         <EntityType Name="MUONSACH">
           <Key>
@@ -22,11 +22,9 @@
           </Key>
           <Property Name="MAUSER" Type="int" Nullable="false" />
           <Property Name="MASACH" Type="int" Nullable="false" />
-          <Property Name="NGAYMUON" Type="date" />
-          <Property Name="NGAYTRA" Type="date" />
-          <Property Name="SOLUONGSACHMUON" Type="int" />
-          <Property Name="SOLUONGSACHTRA" Type="int" />
-          <Property Name="SOLUONGSACHMAT" Type="int" />
+          <Property Name="NGAYMUON" Type="varchar" MaxLength="50" />
+          <Property Name="NGAYTRA" Type="varchar" MaxLength="50" />
+          <Property Name="TINHTRANG" Type="varchar" MaxLength="50" />
         </EntityType>
         <EntityType Name="NXB">
           <Key>
@@ -116,6 +114,18 @@ warning 6002: The table/view 'QLThuVien.dbo.Borrower_Info' does not have a prima
           <Property Name="SDT" Type="varchar" MaxLength="50" />
         </EntityType>
         <!--Errors Found During Generation:
+warning 6002: The table/view 'QLThuVien.dbo.Borrowing_Details' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+        <EntityType Name="Borrowing_Details">
+          <Key>
+            <PropertyRef Name="TenSach" />
+          </Key>
+          <Property Name="TenUser" Type="varchar" MaxLength="50" />
+          <Property Name="TenSach" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="NGAYMUON" Type="varchar" MaxLength="50" />
+          <Property Name="NGAYTRA" Type="varchar" MaxLength="50" />
+          <Property Name="TINHTRANG" Type="varchar" MaxLength="50" />
+        </EntityType>
+        <!--Errors Found During Generation:
 warning 6002: The table/view 'QLThuVien.dbo.Publisher_Info' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
         <EntityType Name="Publisher_Info">
           <Key>
@@ -197,6 +207,12 @@ warning 6002: The table/view 'QLThuVien.dbo.Publisher_Info' does not have a prim
           <Parameter Name="mauser" Type="int" Mode="In" />
         </Function>
         <Function Name="fn_diagramobjects" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="true" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" ReturnType="int" />
+        <Function Name="SEARCH_TENSACH" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="TENSACH" Type="varchar" Mode="In" />
+        </Function>
+        <Function Name="SEARCH_VITRI" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="VITRI" Type="varchar" Mode="In" />
+        </Function>
         <Function Name="sp_alterdiagram" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
           <Parameter Name="diagramname" Type="nvarchar" Mode="In" />
           <Parameter Name="owner_id" Type="int" Mode="In" />
@@ -285,6 +301,15 @@ warning 6002: The table/view 'QLThuVien.dbo.Publisher_Info' does not have a prim
     [Borrower_Info].[SDT] AS [SDT]
     FROM [dbo].[Borrower_Info] AS [Borrower_Info]</DefiningQuery>
           </EntitySet>
+          <EntitySet Name="Borrowing_Details" EntityType="Self.Borrowing_Details" store:Type="Views" store:Schema="dbo">
+            <DefiningQuery>SELECT 
+    [Borrowing_Details].[TenUser] AS [TenUser], 
+    [Borrowing_Details].[TenSach] AS [TenSach], 
+    [Borrowing_Details].[NGAYMUON] AS [NGAYMUON], 
+    [Borrowing_Details].[NGAYTRA] AS [NGAYTRA], 
+    [Borrowing_Details].[TINHTRANG] AS [TINHTRANG]
+    FROM [dbo].[Borrowing_Details] AS [Borrowing_Details]</DefiningQuery>
+          </EntitySet>
           <EntitySet Name="Publisher_Info" EntityType="Self.Publisher_Info" store:Type="Views" store:Schema="dbo">
             <DefiningQuery>SELECT 
     [Publisher_Info].[TENNXB] AS [TENNXB], 
@@ -324,8 +349,8 @@ warning 6002: The table/view 'QLThuVien.dbo.Publisher_Info' does not have a prim
           <Property Name="MACARD" Type="Int32" Nullable="false" />
           <Property Name="TENUSER" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
           <Property Name="NUMBERCARD" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
-          <Property Name="DATESTART" Type="DateTime" Precision="0" />
-          <Property Name="DATEFINISH" Type="DateTime" Precision="0" />
+          <Property Name="DATESTART" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="DATEFINISH" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
           <NavigationProperty Name="USERS" Relationship="Self.FK__USERS__MACARD__2E1BDC42" FromRole="CARDS" ToRole="USERS" />
         </EntityType>
         <EntityType Name="MUONSACH">
@@ -335,11 +360,9 @@ warning 6002: The table/view 'QLThuVien.dbo.Publisher_Info' does not have a prim
           </Key>
           <Property Name="MAUSER" Type="Int32" Nullable="false" />
           <Property Name="MASACH" Type="Int32" Nullable="false" />
-          <Property Name="NGAYMUON" Type="DateTime" Precision="0" />
-          <Property Name="NGAYTRA" Type="DateTime" Precision="0" />
-          <Property Name="SOLUONGSACHMUON" Type="Int32" />
-          <Property Name="SOLUONGSACHTRA" Type="Int32" />
-          <Property Name="SOLUONGSACHMAT" Type="Int32" />
+          <Property Name="NGAYMUON" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="NGAYTRA" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="TINHTRANG" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
           <NavigationProperty Name="SACH" Relationship="Self.FK__MUONSACH__MASACH__5535A963" FromRole="MUONSACH" ToRole="SACH" />
           <NavigationProperty Name="USER" Relationship="Self.FK__MUONSACH__MAUSER__5441852A" FromRole="MUONSACH" ToRole="USERS" />
         </EntityType>
@@ -431,6 +454,16 @@ warning 6002: The table/view 'QLThuVien.dbo.Publisher_Info' does not have a prim
           <Property Name="DIACHI" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
           <Property Name="SDT" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
         </EntityType>
+        <EntityType Name="Borrowing_Details">
+          <Key>
+            <PropertyRef Name="TenSach" />
+          </Key>
+          <Property Name="TenUser" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="TenSach" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="NGAYMUON" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="NGAYTRA" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="TINHTRANG" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+        </EntityType>
         <EntityType Name="Publisher_Info">
           <Key>
             <PropertyRef Name="TENNXB" />
@@ -509,6 +542,7 @@ warning 6002: The table/view 'QLThuVien.dbo.Publisher_Info' does not have a prim
           <EntitySet Name="Authenticate_User" EntityType="Self.Authenticate_User" />
           <EntitySet Name="Book_Info" EntityType="Self.Book_Info" />
           <EntitySet Name="Borrower_Info" EntityType="Self.Borrower_Info" />
+          <EntitySet Name="Borrowing_Details" EntityType="Self.Borrowing_Details" />
           <EntitySet Name="Publisher_Info" EntityType="Self.Publisher_Info" />
           <AssociationSet Name="FK__USERS__MACARD__2E1BDC42" Association="Self.FK__USERS__MACARD__2E1BDC42">
             <End Role="CARDS" EntitySet="CARDS" />
@@ -541,6 +575,12 @@ warning 6002: The table/view 'QLThuVien.dbo.Publisher_Info' does not have a prim
           </FunctionImport>
           <FunctionImport Name="Delete_User">
             <Parameter Name="mauser" Mode="In" Type="Int32" />
+          </FunctionImport>
+          <FunctionImport Name="SEARCH_TENSACH" ReturnType="Collection(QLThuVienModel.SEARCH_TENSACH_Result)">
+            <Parameter Name="TENSACH" Mode="In" Type="String" />
+          </FunctionImport>
+          <FunctionImport Name="SEARCH_VITRI" ReturnType="Collection(QLThuVienModel.SEARCH_VITRI_Result)">
+            <Parameter Name="VITRI" Mode="In" Type="String" />
           </FunctionImport>
           <FunctionImport Name="sp_alterdiagram">
             <Parameter Name="diagramname" Mode="In" Type="String" />
@@ -598,6 +638,24 @@ warning 6002: The table/view 'QLThuVien.dbo.Publisher_Info' does not have a prim
           </FunctionImport>
           <FunctionImport Name="sp_upgraddiagrams" />
         </EntityContainer>
+        <ComplexType Name="SEARCH_TENSACH_Result">
+          <Property Type="String" Name="TENSACH" Nullable="false" MaxLength="50" />
+          <Property Type="String" Name="LINHVUC" Nullable="true" MaxLength="50" />
+          <Property Type="Int32" Name="GIA" Nullable="true" />
+          <Property Type="String" Name="VITRI" Nullable="true" MaxLength="50" />
+          <Property Type="Int32" Name="DANGDUOCMUON" Nullable="true" />
+          <Property Type="Int32" Name="SOLUONGSACHBIMAT" Nullable="true" />
+          <Property Type="Int32" Name="TONGSOLUONG" Nullable="true" />
+        </ComplexType>
+        <ComplexType Name="SEARCH_VITRI_Result">
+          <Property Type="String" Name="TENSACH" Nullable="false" MaxLength="50" />
+          <Property Type="String" Name="LINHVUC" Nullable="true" MaxLength="50" />
+          <Property Type="Int32" Name="GIA" Nullable="true" />
+          <Property Type="String" Name="VITRI" Nullable="true" MaxLength="50" />
+          <Property Type="Int32" Name="DANGDUOCMUON" Nullable="true" />
+          <Property Type="Int32" Name="SOLUONGSACHBIMAT" Nullable="true" />
+          <Property Type="Int32" Name="TONGSOLUONG" Nullable="true" />
+        </ComplexType>
         <ComplexType Name="sp_helpdiagramdefinition_Result">
           <Property Type="Int32" Name="version" Nullable="true" />
           <Property Type="Binary" Name="definition" Nullable="true" />
@@ -633,9 +691,7 @@ warning 6002: The table/view 'QLThuVien.dbo.Publisher_Info' does not have a prim
                 <ScalarProperty Name="MASACH" ColumnName="MASACH" />
                 <ScalarProperty Name="NGAYMUON" ColumnName="NGAYMUON" />
                 <ScalarProperty Name="NGAYTRA" ColumnName="NGAYTRA" />
-                <ScalarProperty Name="SOLUONGSACHMUON" ColumnName="SOLUONGSACHMUON" />
-                <ScalarProperty Name="SOLUONGSACHTRA" ColumnName="SOLUONGSACHTRA" />
-                <ScalarProperty Name="SOLUONGSACHMAT" ColumnName="SOLUONGSACHMAT" />
+                <ScalarProperty Name="TINHTRANG" ColumnName="TINHTRANG" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
@@ -728,6 +784,17 @@ warning 6002: The table/view 'QLThuVien.dbo.Publisher_Info' does not have a prim
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
+          <EntitySetMapping Name="Borrowing_Details">
+            <EntityTypeMapping TypeName="QLThuVienModel.Borrowing_Details">
+              <MappingFragment StoreEntitySet="Borrowing_Details">
+                <ScalarProperty Name="TenUser" ColumnName="TenUser" />
+                <ScalarProperty Name="TenSach" ColumnName="TenSach" />
+                <ScalarProperty Name="NGAYMUON" ColumnName="NGAYMUON" />
+                <ScalarProperty Name="NGAYTRA" ColumnName="NGAYTRA" />
+                <ScalarProperty Name="TINHTRANG" ColumnName="TINHTRANG" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
           <EntitySetMapping Name="Publisher_Info">
             <EntityTypeMapping TypeName="QLThuVienModel.Publisher_Info">
               <MappingFragment StoreEntitySet="Publisher_Info">
@@ -740,6 +807,32 @@ warning 6002: The table/view 'QLThuVien.dbo.Publisher_Info' does not have a prim
           <FunctionImportMapping FunctionImportName="Delete_Muon" FunctionName="QLThuVienModel.Store.Delete_Muon" />
           <FunctionImportMapping FunctionImportName="Delete_SACH" FunctionName="QLThuVienModel.Store.Delete_SACH" />
           <FunctionImportMapping FunctionImportName="Delete_User" FunctionName="QLThuVienModel.Store.Delete_User" />
+          <FunctionImportMapping FunctionImportName="SEARCH_TENSACH" FunctionName="QLThuVienModel.Store.SEARCH_TENSACH">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="QLThuVienModel.SEARCH_TENSACH_Result">
+                <ScalarProperty Name="TENSACH" ColumnName="TENSACH" />
+                <ScalarProperty Name="LINHVUC" ColumnName="LINHVUC" />
+                <ScalarProperty Name="GIA" ColumnName="GIA" />
+                <ScalarProperty Name="VITRI" ColumnName="VITRI" />
+                <ScalarProperty Name="DANGDUOCMUON" ColumnName="DANGDUOCMUON" />
+                <ScalarProperty Name="SOLUONGSACHBIMAT" ColumnName="SOLUONGSACHBIMAT" />
+                <ScalarProperty Name="TONGSOLUONG" ColumnName="TONGSOLUONG" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="SEARCH_VITRI" FunctionName="QLThuVienModel.Store.SEARCH_VITRI">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="QLThuVienModel.SEARCH_VITRI_Result">
+                <ScalarProperty Name="TENSACH" ColumnName="TENSACH" />
+                <ScalarProperty Name="LINHVUC" ColumnName="LINHVUC" />
+                <ScalarProperty Name="GIA" ColumnName="GIA" />
+                <ScalarProperty Name="VITRI" ColumnName="VITRI" />
+                <ScalarProperty Name="DANGDUOCMUON" ColumnName="DANGDUOCMUON" />
+                <ScalarProperty Name="SOLUONGSACHBIMAT" ColumnName="SOLUONGSACHBIMAT" />
+                <ScalarProperty Name="TONGSOLUONG" ColumnName="TONGSOLUONG" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
           <FunctionImportMapping FunctionImportName="sp_alterdiagram" FunctionName="QLThuVienModel.Store.sp_alterdiagram" />
           <FunctionImportMapping FunctionImportName="sp_Create_Book" FunctionName="QLThuVienModel.Store.sp_Create_Book" />
           <FunctionImportMapping FunctionImportName="sp_creatediagram" FunctionName="QLThuVienModel.Store.sp_creatediagram" />

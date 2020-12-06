@@ -17,22 +17,22 @@ namespace QLTVEntityFramwork
         QLThuVienEntities db = new QLThuVienEntities();
         private void cbOptionSearch_SelectedValueChanged(object sender, EventArgs e)
         {
-            //txtSearch.Text = "";
-            //sByTenSach = false;
-            //sByMuon = false;
-            //sByViTri = false;
+            txtSearch.Text = "";
+            sByTenSach = false;
+            sByMuon = false;
+            sByViTri = false;
 
-            //dgvInfo.Enabled = true;
-            //txtSearch.Enabled = true;
-            //LoadData();
-            //if (cbOptionSearch.Text == "Ten Sach")
-            //{
-            //    sByTenSach = true;
-            //}
-            //else if (cbOptionSearch.Text == "Vi Tri")
-            //{
-            //    sByViTri = true;
-            //}
+            dgvInfo.Enabled = true;
+            txtSearch.Enabled = true;
+            LoadData();
+            if (cbOptionSearch.Text == "Ten Sach")
+            {
+                sByTenSach = true;
+            }
+            else if (cbOptionSearch.Text == "Vi Tri")
+            {
+                sByViTri = true;
+            }
             //else if (cbOptionSearch.Text == "Tinh Trang Sach")
             //{
             //    sByMuon = true;
@@ -43,26 +43,37 @@ namespace QLTVEntityFramwork
 
         private void txtSearch_TextChanged(object sender, EventArgs e)
         {
-            //if (sByTenSach == true)
-            //{
-            //    using (var db = new Model1())
-            //    {
-            //        var query = from d in db.SACHes
-            //                    where d.TENSACH.Contains(txtSearch.Text)
-            //                    select d;
-            //        dgvInfo.DataSource = query.ToList();
-            //    }
-            //}
-            //else if (sByViTri == true)
-            //{
-            //    using (var db = new Model1())
-            //    {
-            //        var query = from d in db.SACHes
-            //                    where d.VITRI.Contains(txtSearch.Text)
-            //                    select d;
-            //        dgvInfo.DataSource = query.ToList();
-            //    }
-            //}
+            if (sByTenSach == true)
+            {
+                string Tensach = txtSearch.Text;
+                var query = db.SEARCH_TENSACH(Tensach);
+                dgvInfo.DataSource = query.ToList();
+                //using (var db = new Model1())
+                //{
+                //    var query = from d in db.SACHes
+                //                where d.TENSACH.Contains(txtSearch.Text)
+                //                select d;
+                //    dgvInfo.DataSource = query.ToList();
+                //}
+            }
+            else if (sByViTri == true)
+            {
+                string Vitri = txtSearch.Text;
+                var query = db.SEARCH_VITRI(Vitri);
+
+                //var query = from d in db.Book_Info
+                //            where d.VITRI.Contains(txtSearch.Text)
+                //            select d;
+                dgvInfo.DataSource = query.ToList();
+
+                //using (var db = new Model1())
+                //{
+                //    var query = from d in db.SACHes
+                //                where d.VITRI.Contains(txtSearch.Text)
+                //                select d;
+                //    dgvInfo.DataSource = query.ToList();
+                //}
+            }
             //else if (sByMuon == true)
             //{
             //    try
@@ -85,11 +96,11 @@ namespace QLTVEntityFramwork
         {
             InitializeComponent();
             LoadData();
-            //cbOptionSearch.Items.Add("Ten Sach");
-            //cbOptionSearch.Items.Add("Vi Tri");
+            cbOptionSearch.Items.Add("Ten Sach");
+            cbOptionSearch.Items.Add("Vi Tri");
             //cbOptionSearch.Items.Add("Tinh Trang Sach");
-            //dgvInfo.Enabled = false;
-            //txtSearch.Enabled = false;
+            dgvInfo.Enabled = false;
+            txtSearch.Enabled = false;
         }
         public void LoadData()
         {

@@ -23,8 +23,8 @@ namespace QLTVEntityFramwork.Model
         public int MACARD { get; set; }
         public string TENUSER { get; set; }
         public string NUMBERCARD { get; set; }
-        public Nullable<System.DateTime> DATESTART { get; set; }
-        public Nullable<System.DateTime> DATEFINISH { get; set; }
+        public string DATESTART { get; set; }
+        public string DATEFINISH { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<USER> USERS { get; set; }

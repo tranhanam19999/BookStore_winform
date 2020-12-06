@@ -37,6 +37,7 @@ namespace QLTVEntityFramwork.Model
         public virtual DbSet<Authenticate_User> Authenticate_User { get; set; }
         public virtual DbSet<Book_Info> Book_Info { get; set; }
         public virtual DbSet<Borrower_Info> Borrower_Info { get; set; }
+        public virtual DbSet<Borrowing_Details> Borrowing_Details { get; set; }
         public virtual DbSet<Publisher_Info> Publisher_Info { get; set; }
     
         public virtual int Delete_Cards(Nullable<int> macard)
@@ -73,6 +74,24 @@ namespace QLTVEntityFramwork.Model
                 new ObjectParameter("mauser", typeof(int));
     
             return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction("Delete_User", mauserParameter);
+        }
+    
+        public virtual ObjectResult<SEARCH_TENSACH_Result> SEARCH_TENSACH(string tENSACH)
+        {
+            var tENSACHParameter = tENSACH != null ?
+                new ObjectParameter("TENSACH", tENSACH) :
+                new ObjectParameter("TENSACH", typeof(string));
+    
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<SEARCH_TENSACH_Result>("SEARCH_TENSACH", tENSACHParameter);
+        }
+    
+        public virtual ObjectResult<SEARCH_VITRI_Result> SEARCH_VITRI(string vITRI)
+        {
+            var vITRIParameter = vITRI != null ?
+                new ObjectParameter("VITRI", vITRI) :
+                new ObjectParameter("VITRI", typeof(string));
+    
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<SEARCH_VITRI_Result>("SEARCH_VITRI", vITRIParameter);
         }
     
         public virtual int sp_alterdiagram(string diagramname, Nullable<int> owner_id, Nullable<int> version, byte[] definition)

@@ -7,8 +7,8 @@
     <Property Name="MACARD" Type="int" Nullable="false" />
     <Property Name="TENUSER" Type="varchar" MaxLength="50" />
     <Property Name="NUMBERCARD" Type="varchar" MaxLength="50" />
-    <Property Name="DATESTART" Type="date" />
-    <Property Name="DATEFINISH" Type="date" />
+    <Property Name="DATESTART" Type="varchar" MaxLength="50" />
+    <Property Name="DATEFINISH" Type="varchar" MaxLength="50" />
   </EntityType>
   <EntityType Name="MUONSACH">
     <Key>
@@ -17,11 +17,9 @@
     </Key>
     <Property Name="MAUSER" Type="int" Nullable="false" />
     <Property Name="MASACH" Type="int" Nullable="false" />
-    <Property Name="NGAYMUON" Type="date" />
-    <Property Name="NGAYTRA" Type="date" />
-    <Property Name="SOLUONGSACHMUON" Type="int" />
-    <Property Name="SOLUONGSACHTRA" Type="int" />
-    <Property Name="SOLUONGSACHMAT" Type="int" />
+    <Property Name="NGAYMUON" Type="varchar" MaxLength="50" />
+    <Property Name="NGAYTRA" Type="varchar" MaxLength="50" />
+    <Property Name="TINHTRANG" Type="varchar" MaxLength="50" />
   </EntityType>
   <EntityType Name="NXB">
     <Key>
@@ -111,6 +109,18 @@ warning 6002: The table/view 'QLThuVien.dbo.Borrower_Info' does not have a prima
     <Property Name="SDT" Type="varchar" MaxLength="50" />
   </EntityType>
   <!--Errors Found During Generation:
+warning 6002: The table/view 'QLThuVien.dbo.Borrowing_Details' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="Borrowing_Details">
+    <Key>
+      <PropertyRef Name="TenSach" />
+    </Key>
+    <Property Name="TenUser" Type="varchar" MaxLength="50" />
+    <Property Name="TenSach" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="NGAYMUON" Type="varchar" MaxLength="50" />
+    <Property Name="NGAYTRA" Type="varchar" MaxLength="50" />
+    <Property Name="TINHTRANG" Type="varchar" MaxLength="50" />
+  </EntityType>
+  <!--Errors Found During Generation:
 warning 6002: The table/view 'QLThuVien.dbo.Publisher_Info' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
   <EntityType Name="Publisher_Info">
     <Key>
@@ -192,6 +202,12 @@ warning 6002: The table/view 'QLThuVien.dbo.Publisher_Info' does not have a prim
     <Parameter Name="mauser" Type="int" Mode="In" />
   </Function>
   <Function Name="fn_diagramobjects" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="true" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" ReturnType="int" />
+  <Function Name="SEARCH_TENSACH" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="TENSACH" Type="varchar" Mode="In" />
+  </Function>
+  <Function Name="SEARCH_VITRI" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="VITRI" Type="varchar" Mode="In" />
+  </Function>
   <Function Name="sp_alterdiagram" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
     <Parameter Name="diagramname" Type="nvarchar" Mode="In" />
     <Parameter Name="owner_id" Type="int" Mode="In" />
@@ -279,6 +295,15 @@ warning 6002: The table/view 'QLThuVien.dbo.Publisher_Info' does not have a prim
     [Borrower_Info].[DIACHI] AS [DIACHI], 
     [Borrower_Info].[SDT] AS [SDT]
     FROM [dbo].[Borrower_Info] AS [Borrower_Info]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="Borrowing_Details" EntityType="Self.Borrowing_Details" store:Type="Views" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+    [Borrowing_Details].[TenUser] AS [TenUser], 
+    [Borrowing_Details].[TenSach] AS [TenSach], 
+    [Borrowing_Details].[NGAYMUON] AS [NGAYMUON], 
+    [Borrowing_Details].[NGAYTRA] AS [NGAYTRA], 
+    [Borrowing_Details].[TINHTRANG] AS [TINHTRANG]
+    FROM [dbo].[Borrowing_Details] AS [Borrowing_Details]</DefiningQuery>
     </EntitySet>
     <EntitySet Name="Publisher_Info" EntityType="Self.Publisher_Info" store:Type="Views" store:Schema="dbo">
       <DefiningQuery>SELECT 

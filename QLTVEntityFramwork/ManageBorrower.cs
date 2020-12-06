@@ -36,7 +36,7 @@ namespace QLTVEntityFramwork
         void LoadData()
         {
             db.Configuration.LazyLoadingEnabled = false;
-            var data = db.Borrower_Info.ToList();
+            var data = db.USERS.ToList();
             dgvDocGia.DataSource = data;
             //using (var db = new Model1())
             //{
@@ -51,22 +51,27 @@ namespace QLTVEntityFramwork
             //dgvDocGia.Columns[3].AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
 
             dgvDocGia.Columns[0].HeaderText = "Mã Đọc Giả";
-            dgvDocGia.Columns[1].HeaderText = "Tên Đọc Giả";
-            dgvDocGia.Columns[2].HeaderText = "Địa Chỉ";
-            dgvDocGia.Columns[3].HeaderText = "SĐT";
+            dgvDocGia.Columns[1].HeaderText = "USERNAME";
+            dgvDocGia.Columns[3].HeaderText = "PASSWORD";
+            dgvDocGia.Columns[4].HeaderText = "Địa Chỉ";
+            dgvDocGia.Columns[5].HeaderText = "SĐT";
+            dgvDocGia.Columns[6].HeaderText = "Mã CARD";
+            dgvDocGia.Columns[7].HeaderText = "Chức vụ";
+            dgvDocGia.Columns[8].HeaderText = "Tên Đọc Giả";
+            dgvDocGia.Columns[9].Visible = false;
 
             db.Configuration.LazyLoadingEnabled = false;
-            var data1 = db.MUONSACHes.ToList();
+            var data1 = db.Borrowing_Details.ToList();
             dgvMuonSach.DataSource = data1;
-            dgvMuonSach.Columns[0].HeaderText = "Mã Đọc Giả";
-            dgvMuonSach.Columns[1].HeaderText = "Mã Sách";
+            dgvMuonSach.Columns[0].HeaderText = "Tên Đọc giả";
+            dgvMuonSach.Columns[1].HeaderText = "Tên Sách";
             dgvMuonSach.Columns[2].HeaderText = "Ngày Mượn";
             dgvMuonSach.Columns[3].HeaderText = "Ngày Trả";
-            dgvMuonSach.Columns[4].HeaderText = "Số Lượng Mượn";
-            dgvMuonSach.Columns[5].HeaderText = "Số Lượng Trả";
-            dgvMuonSach.Columns[6].HeaderText = "Số Lượng Mất";
-            dgvMuonSach.Columns[7].Visible = false;
-            dgvMuonSach.Columns[8].Visible = false;
+            dgvMuonSach.Columns[4].HeaderText = "Tình trạng";
+            //dgvMuonSach.Columns[5].HeaderText = "Số Lượng Trả";
+            //dgvMuonSach.Columns[6].HeaderText = "Số Lượng Mất";
+            //dgvMuonSach.Columns[7].Visible = false;
+            //dgvMuonSach.Columns[8].Visible = false;
             //using (var db = new Model1())
             //{
             //    btnCheck.Enabled = false;
