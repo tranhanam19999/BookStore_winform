@@ -82,25 +82,6 @@ ROLLBACK TRAN
 END
 --------------------------------------------------------------------------
 
-
------------------------------------------------------------
----kiểm tra user mới có trùng với user cũ đã tồn tại hay không ------(dc)
-GO
-CREATE TRIGGER Kiemtra_Them_User ON USERS
-FOR INSERT
-AS
-IF (Select TENUSER FROM INSERTED) 
-IN (Select TENUSER FROM USERS)
-BEGIN
-	Print 'Tên USER đã tồn tại'
-    ROLLBACK TRAN
-END
-
-insert into USERS values(9,'a','a','a','021',1,'dgfg')
----------------------------------------------------------------------
-
-
-
 -------------------------------------------------------------------
 ---- Xóa nhà xuất bản đòng thời xóa luôn sách của nhà xuất bản đó---(chua)
 --GO
@@ -172,12 +153,21 @@ END
 GO
 -------------------------------
 --Không cho phép cập nhật tên user đã tồn tại trước đó-----
-GO
 CREATE TRIGGER CHECK_UPDATE_USER ON USERS
-FOR UPDATE AS
-DECLARE @USERNAME NCHAR(50) = (SELECT USERNAME FROM inserted)
-IF (@USERNAME IN (SELECT USERNAME FROM USERS))
-BEGIN
-	PRINT 'TEN USER DA TON TAI'
-	ROLLBACK TRAN
-END
+instead of UPDATE AS
+DECLARE @USERNAME nvarchar(50) = (SELECT USERNAME FROM inserted)
+DECLARE @MAUSER INT = (SELECT MAUSER FROM inserted)
+if (@USERNAME = (select USERNAME  from USERS where @MAUSER = MAUSER))
+begin 
+	print 'KHONG UPDATE'
+end
+else
+	IF ((SELECT Count(*) FROM USERS WHERE USERNAME IN (@USERNAME))>0)
+	BEGIN
+		PRINT 'TEN USER DA TON TAI'
+		ROLLBACK TRAN
+	END
+	ELSE
+	BEGIN
+		update USERS set USERNAME = @USERNAME where MAUSER = @MAUSER
+	END
