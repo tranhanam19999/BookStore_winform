@@ -27,18 +27,54 @@ namespace QLTVEntityFramwork.Model
             throw new UnintentionalCodeFirstException();
         }
     
-        public virtual DbSet<CARD> CARDS { get; set; }
         public virtual DbSet<MUONSACH> MUONSACHes { get; set; }
         public virtual DbSet<NXB> NXBs { get; set; }
         public virtual DbSet<SACH> SACHes { get; set; }
         public virtual DbSet<sysdiagram> sysdiagrams { get; set; }
         public virtual DbSet<TACGIA> TACGIAs { get; set; }
         public virtual DbSet<USER> USERS { get; set; }
+        public virtual DbSet<CARD> CARDS { get; set; }
         public virtual DbSet<Authenticate_User> Authenticate_User { get; set; }
         public virtual DbSet<Book_Info> Book_Info { get; set; }
         public virtual DbSet<Borrower_Info> Borrower_Info { get; set; }
         public virtual DbSet<Borrowing_Details> Borrowing_Details { get; set; }
         public virtual DbSet<Publisher_Info> Publisher_Info { get; set; }
+    
+        public virtual int Delete_Cards(Nullable<int> macard)
+        {
+            var macardParameter = macard.HasValue ?
+                new ObjectParameter("macard", macard) :
+                new ObjectParameter("macard", typeof(int));
+    
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction("Delete_Cards", macardParameter);
+        }
+    
+        public virtual int Delete_Muon(Nullable<int> mauser)
+        {
+            var mauserParameter = mauser.HasValue ?
+                new ObjectParameter("mauser", mauser) :
+                new ObjectParameter("mauser", typeof(int));
+    
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction("Delete_Muon", mauserParameter);
+        }
+    
+        public virtual int Delete_SACH(Nullable<int> masach)
+        {
+            var masachParameter = masach.HasValue ?
+                new ObjectParameter("masach", masach) :
+                new ObjectParameter("masach", typeof(int));
+    
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction("Delete_SACH", masachParameter);
+        }
+    
+        public virtual int Delete_User(Nullable<int> mauser)
+        {
+            var mauserParameter = mauser.HasValue ?
+                new ObjectParameter("mauser", mauser) :
+                new ObjectParameter("mauser", typeof(int));
+    
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction("Delete_User", mauserParameter);
+        }
     
         public virtual ObjectResult<SEARCH_TENSACH_Result> SEARCH_TENSACH(string tENSACH)
         {
@@ -120,6 +156,23 @@ namespace QLTVEntityFramwork.Model
             return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction("sp_Create_Book", maNXBParameter, maTGParameter, tensachParameter, linhvucParameter, giaParameter, vitriParameter, dangduocmuonParameter, soluongbimatParameter, tongsoluongParameter);
         }
     
+        public virtual int sp_Create_Publisher(Nullable<int> mANXB, string tENNXB, string sDT)
+        {
+            var mANXBParameter = mANXB.HasValue ?
+                new ObjectParameter("MANXB", mANXB) :
+                new ObjectParameter("MANXB", typeof(int));
+    
+            var tENNXBParameter = tENNXB != null ?
+                new ObjectParameter("TENNXB", tENNXB) :
+                new ObjectParameter("TENNXB", typeof(string));
+    
+            var sDTParameter = sDT != null ?
+                new ObjectParameter("SDT", sDT) :
+                new ObjectParameter("SDT", typeof(string));
+    
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction("sp_Create_Publisher", mANXBParameter, tENNXBParameter, sDTParameter);
+        }
+    
         public virtual int sp_Create_User(string username, string password, string diachi, string sDT, string tenUser)
         {
             var usernameParameter = username != null ?
@@ -173,6 +226,15 @@ namespace QLTVEntityFramwork.Model
                 new ObjectParameter("Tensach", typeof(string));
     
             return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction("sp_Delete_Book", tensachParameter);
+        }
+    
+        public virtual int sp_Delete_Publisher(Nullable<int> mANXB)
+        {
+            var mANXBParameter = mANXB.HasValue ?
+                new ObjectParameter("MANXB", mANXB) :
+                new ObjectParameter("MANXB", typeof(int));
+    
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction("sp_Delete_Publisher", mANXBParameter);
         }
     
         public virtual int sp_Delete_User(Nullable<int> maUser)

@@ -17,8 +17,8 @@ namespace QLTVEntityFramwork.Model
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
         public USER()
         {
-            this.CARDS = new HashSet<CARD>();
             this.MUONSACHes = new HashSet<MUONSACH>();
+            this.CARDS = new HashSet<CARD>();
         }
     
         public int MAUSER { get; set; }
@@ -30,8 +30,8 @@ namespace QLTVEntityFramwork.Model
         public string TEN { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<CARD> CARDS { get; set; }
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<MUONSACH> MUONSACHes { get; set; }
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<CARD> CARDS { get; set; }
     }
 }
