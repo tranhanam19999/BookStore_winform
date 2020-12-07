@@ -154,20 +154,11 @@ GO
 -------------------------------
 --Không cho phép cập nhật tên user đã tồn tại trước đó-----
 CREATE TRIGGER CHECK_UPDATE_USER ON USERS
-instead of UPDATE AS
-DECLARE @USERNAME nvarchar(50) = (SELECT USERNAME FROM inserted)
-DECLARE @MAUSER INT = (SELECT MAUSER FROM inserted)
-if (@USERNAME = (select USERNAME  from USERS where @MAUSER = MAUSER))
-begin 
-	print 'KHONG UPDATE'
-end
-else
-	IF ((SELECT Count(*) FROM USERS WHERE USERNAME IN (@USERNAME))>0)
-	BEGIN
-		PRINT 'TEN USER DA TON TAI'
-		ROLLBACK TRAN
-	END
-	ELSE
-	BEGIN
-		update USERS set USERNAME = @USERNAME where MAUSER = @MAUSER
-	END
+after insert, UPDATE AS
+DECLARE @USERNAME nvarchar(10) = (SELECT USERNAME FROM inserted)
+DECLARE @MAUSER int = (SELECT MAUSER FROM inserted)
+IF ((SELECT Count(*) FROM USERS WHERE USERNAME=@USERNAME)>1)
+BEGIN
+	PRINT 'TEN USER DA TON TAI'
+	ROLLBACK TRAN
+END
