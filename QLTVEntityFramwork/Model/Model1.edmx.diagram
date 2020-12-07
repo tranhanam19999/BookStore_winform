@@ -4,24 +4,24 @@
   <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
     <!-- Diagram content (shape and connector positions) -->
     <edmx:Diagrams>
-      <Diagram DiagramId="63f7ecfbdecd4c719240fa6e4ca3509c" Name="Diagram1">
-        <EntityTypeShape EntityType="QLThuVienModel.CARD" Width="1.5" PointX="5.25" PointY="5.625" IsExpanded="true" />
+      <Diagram DiagramId="48d72438955d4e509f611e98fd55e647" Name="Diagram1">
         <EntityTypeShape EntityType="QLThuVienModel.MUONSACH" Width="1.5" PointX="5.25" PointY="1.625" IsExpanded="true" />
         <EntityTypeShape EntityType="QLThuVienModel.NXB" Width="1.5" PointX="0.75" PointY="1.875" IsExpanded="true" />
         <EntityTypeShape EntityType="QLThuVienModel.SACH" Width="1.5" PointX="3" PointY="1" IsExpanded="true" />
         <EntityTypeShape EntityType="QLThuVienModel.sysdiagram" Width="1.5" PointX="7.75" PointY="0.75" IsExpanded="true" />
         <EntityTypeShape EntityType="QLThuVienModel.TACGIA" Width="1.5" PointX="0.75" PointY="6" IsExpanded="true" />
         <EntityTypeShape EntityType="QLThuVienModel.USER" Width="1.5" PointX="3" PointY="5.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="QLThuVienModel.CARD" Width="1.5" PointX="5.25" PointY="5.625" IsExpanded="true" />
         <EntityTypeShape EntityType="QLThuVienModel.Authenticate_User" Width="1.5" PointX="7.75" PointY="3.75" IsExpanded="true" />
         <EntityTypeShape EntityType="QLThuVienModel.Book_Info" Width="1.5" PointX="7.75" PointY="6.75" IsExpanded="true" />
         <EntityTypeShape EntityType="QLThuVienModel.Borrower_Info" Width="1.5" PointX="9.75" PointY="0.75" IsExpanded="true" />
         <EntityTypeShape EntityType="QLThuVienModel.Borrowing_Details" Width="1.5" PointX="0.75" PointY="9.75" IsExpanded="true" />
         <EntityTypeShape EntityType="QLThuVienModel.Publisher_Info" Width="1.5" PointX="2.75" PointY="9.75" IsExpanded="true" />
-        <AssociationConnector Association="QLThuVienModel.FK_CARDS_USERS" ManuallyRouted="false" />
         <AssociationConnector Association="QLThuVienModel.FK__MUONSACH__MASACH__5535A963" ManuallyRouted="false" />
-        <AssociationConnector Association="QLThuVienModel.FK__MUONSACH__MAUSER__5441852A" ManuallyRouted="false" />
+        <AssociationConnector Association="QLThuVienModel.FK__MUONSACH__MAUSER__3A4CA8FD" ManuallyRouted="false" />
         <AssociationConnector Association="QLThuVienModel.FK__SACH__MANXB__4F7CD00D" ManuallyRouted="false" />
         <AssociationConnector Association="QLThuVienModel.FK__SACH__MATACGIA__5070F446" ManuallyRouted="false" />
+        <AssociationConnector Association="QLThuVienModel.FK__CARDS__MAUSER__367C1819" ManuallyRouted="false" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>

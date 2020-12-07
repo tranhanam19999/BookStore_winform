@@ -19,7 +19,9 @@ namespace QLTVEntityFramwork
         public static void Main()
         {
             Application.EnableVisualStyles();
-            Application.Run(new ManageBorrower());
+            //Application.Run(new ManageBorrower());
+            Application.Run(new FormControl());
+
         }
     }
 }
