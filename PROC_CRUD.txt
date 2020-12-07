@@ -92,3 +92,24 @@ BEGIN
 	WHERE TENSACH LIKE '%' + replace(@TENSACH, '%', '[%]') + '%' 
 		  
 END
+-- Proc Create Book
+create proc sp_Create_Publisher
+@MANXB int,
+@TENNXB varchar(50),
+@SDT varchar(50)
+as
+begin
+	INSERT INTO dbo.NXB([MANXB], [TENNXB], [SDT])
+	VALUES(@MANXB, @TENNXB, @SDT)
+end
+go
+
+-- Proc Delete Book
+create proc sp_Delete_Publisher
+@MANXB int
+as
+begin
+	DELETE FROM NXB
+	WHERE MANXB = @MANXB
+end
+go

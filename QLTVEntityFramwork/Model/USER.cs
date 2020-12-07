@@ -18,6 +18,7 @@ namespace QLTVEntityFramwork.Model
         public USER()
         {
             this.MUONSACHes = new HashSet<MUONSACH>();
+            this.CARDS = new HashSet<CARD>();
         }
     
         public int MAUSER { get; set; }
@@ -25,12 +26,12 @@ namespace QLTVEntityFramwork.Model
         public string MATKHAU { get; set; }
         public string DIACHI { get; set; }
         public string SDT { get; set; }
-        public Nullable<int> MACARD { get; set; }
         public string CHUCVU { get; set; }
         public string TEN { get; set; }
     
-        public virtual CARD CARD { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<MUONSACH> MUONSACHes { get; set; }
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<CARD> CARDS { get; set; }
     }
 }
