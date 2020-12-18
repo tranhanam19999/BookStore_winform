@@ -40,6 +40,111 @@ namespace QLTVEntityFramwork.Model
         public virtual DbSet<Borrowing_Details> Borrowing_Details { get; set; }
         public virtual DbSet<Publisher_Info> Publisher_Info { get; set; }
     
+        public virtual int Add_Cards(Nullable<int> macard, Nullable<int> mauser, string numbercard, string datestart, string datefinish)
+        {
+            var macardParameter = macard.HasValue ?
+                new ObjectParameter("macard", macard) :
+                new ObjectParameter("macard", typeof(int));
+    
+            var mauserParameter = mauser.HasValue ?
+                new ObjectParameter("mauser", mauser) :
+                new ObjectParameter("mauser", typeof(int));
+    
+            var numbercardParameter = numbercard != null ?
+                new ObjectParameter("numbercard", numbercard) :
+                new ObjectParameter("numbercard", typeof(string));
+    
+            var datestartParameter = datestart != null ?
+                new ObjectParameter("datestart", datestart) :
+                new ObjectParameter("datestart", typeof(string));
+    
+            var datefinishParameter = datefinish != null ?
+                new ObjectParameter("datefinish", datefinish) :
+                new ObjectParameter("datefinish", typeof(string));
+    
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction("Add_Cards", macardParameter, mauserParameter, numbercardParameter, datestartParameter, datefinishParameter);
+        }
+    
+        public virtual ObjectResult<Nullable<int>> borrower_delete(string tendocgia, string tensach, string ngayMuon, string ngayTra, string tinhTrang)
+        {
+            var tendocgiaParameter = tendocgia != null ?
+                new ObjectParameter("tendocgia", tendocgia) :
+                new ObjectParameter("tendocgia", typeof(string));
+    
+            var tensachParameter = tensach != null ?
+                new ObjectParameter("tensach", tensach) :
+                new ObjectParameter("tensach", typeof(string));
+    
+            var ngayMuonParameter = ngayMuon != null ?
+                new ObjectParameter("NgayMuon", ngayMuon) :
+                new ObjectParameter("NgayMuon", typeof(string));
+    
+            var ngayTraParameter = ngayTra != null ?
+                new ObjectParameter("NgayTra", ngayTra) :
+                new ObjectParameter("NgayTra", typeof(string));
+    
+            var tinhTrangParameter = tinhTrang != null ?
+                new ObjectParameter("TinhTrang", tinhTrang) :
+                new ObjectParameter("TinhTrang", typeof(string));
+    
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<Nullable<int>>("borrower_delete", tendocgiaParameter, tensachParameter, ngayMuonParameter, ngayTraParameter, tinhTrangParameter);
+        }
+    
+        public virtual ObjectResult<borrower_getall_Result> borrower_getall()
+        {
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<borrower_getall_Result>("borrower_getall");
+        }
+    
+        public virtual int borrower_insert(Nullable<int> mauser, Nullable<int> masach, string ngayMuon, string ngayTra, string tinhTrang)
+        {
+            var mauserParameter = mauser.HasValue ?
+                new ObjectParameter("mauser", mauser) :
+                new ObjectParameter("mauser", typeof(int));
+    
+            var masachParameter = masach.HasValue ?
+                new ObjectParameter("masach", masach) :
+                new ObjectParameter("masach", typeof(int));
+    
+            var ngayMuonParameter = ngayMuon != null ?
+                new ObjectParameter("NgayMuon", ngayMuon) :
+                new ObjectParameter("NgayMuon", typeof(string));
+    
+            var ngayTraParameter = ngayTra != null ?
+                new ObjectParameter("NgayTra", ngayTra) :
+                new ObjectParameter("NgayTra", typeof(string));
+    
+            var tinhTrangParameter = tinhTrang != null ?
+                new ObjectParameter("TinhTrang", tinhTrang) :
+                new ObjectParameter("TinhTrang", typeof(string));
+    
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction("borrower_insert", mauserParameter, masachParameter, ngayMuonParameter, ngayTraParameter, tinhTrangParameter);
+        }
+    
+        public virtual int borrower_update(string tendocgia, string tensach, string ngayMuon, string ngayTra, string tinhTrang)
+        {
+            var tendocgiaParameter = tendocgia != null ?
+                new ObjectParameter("tendocgia", tendocgia) :
+                new ObjectParameter("tendocgia", typeof(string));
+    
+            var tensachParameter = tensach != null ?
+                new ObjectParameter("tensach", tensach) :
+                new ObjectParameter("tensach", typeof(string));
+    
+            var ngayMuonParameter = ngayMuon != null ?
+                new ObjectParameter("NgayMuon", ngayMuon) :
+                new ObjectParameter("NgayMuon", typeof(string));
+    
+            var ngayTraParameter = ngayTra != null ?
+                new ObjectParameter("NgayTra", ngayTra) :
+                new ObjectParameter("NgayTra", typeof(string));
+    
+            var tinhTrangParameter = tinhTrang != null ?
+                new ObjectParameter("TinhTrang", tinhTrang) :
+                new ObjectParameter("TinhTrang", typeof(string));
+    
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction("borrower_update", tendocgiaParameter, tensachParameter, ngayMuonParameter, ngayTraParameter, tinhTrangParameter);
+        }
+    
         public virtual int Delete_Cards(Nullable<int> macard)
         {
             var macardParameter = macard.HasValue ?
@@ -74,6 +179,47 @@ namespace QLTVEntityFramwork.Model
                 new ObjectParameter("mauser", typeof(int));
     
             return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction("Delete_User", mauserParameter);
+        }
+    
+        public virtual ObjectResult<Get_Cards_Result> Get_Cards()
+        {
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<Get_Cards_Result>("Get_Cards");
+        }
+    
+        public virtual ObjectResult<Nullable<int>> get_masach(string tensach)
+        {
+            var tensachParameter = tensach != null ?
+                new ObjectParameter("Tensach", tensach) :
+                new ObjectParameter("Tensach", typeof(string));
+    
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<Nullable<int>>("get_masach", tensachParameter);
+        }
+    
+        public virtual ObjectResult<Nullable<int>> get_mauser(string tenUser)
+        {
+            var tenUserParameter = tenUser != null ?
+                new ObjectParameter("TenUser", tenUser) :
+                new ObjectParameter("TenUser", typeof(string));
+    
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<Nullable<int>>("get_mauser", tenUserParameter);
+        }
+    
+        public virtual ObjectResult<search_borrower_Result> search_borrower(string tendocgia)
+        {
+            var tendocgiaParameter = tendocgia != null ?
+                new ObjectParameter("tendocgia", tendocgia) :
+                new ObjectParameter("tendocgia", typeof(string));
+    
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<search_borrower_Result>("search_borrower", tendocgiaParameter);
+        }
+    
+        public virtual ObjectResult<Search_Cards_Result> Search_Cards(Nullable<int> macard)
+        {
+            var macardParameter = macard.HasValue ?
+                new ObjectParameter("macard", macard) :
+                new ObjectParameter("macard", typeof(int));
+    
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<Search_Cards_Result>("Search_Cards", macardParameter);
         }
     
         public virtual ObjectResult<SEARCH_TENSACH_Result> SEARCH_TENSACH(string tENSACH)
@@ -346,6 +492,31 @@ namespace QLTVEntityFramwork.Model
         public virtual int sp_upgraddiagrams()
         {
             return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction("sp_upgraddiagrams");
+        }
+    
+        public virtual int update_Cards(Nullable<int> macard, Nullable<int> mauser, string numbercard, string datestart, string datefinish)
+        {
+            var macardParameter = macard.HasValue ?
+                new ObjectParameter("macard", macard) :
+                new ObjectParameter("macard", typeof(int));
+    
+            var mauserParameter = mauser.HasValue ?
+                new ObjectParameter("mauser", mauser) :
+                new ObjectParameter("mauser", typeof(int));
+    
+            var numbercardParameter = numbercard != null ?
+                new ObjectParameter("numbercard", numbercard) :
+                new ObjectParameter("numbercard", typeof(string));
+    
+            var datestartParameter = datestart != null ?
+                new ObjectParameter("datestart", datestart) :
+                new ObjectParameter("datestart", typeof(string));
+    
+            var datefinishParameter = datefinish != null ?
+                new ObjectParameter("datefinish", datefinish) :
+                new ObjectParameter("datefinish", typeof(string));
+    
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction("update_Cards", macardParameter, mauserParameter, numbercardParameter, datestartParameter, datefinishParameter);
         }
     }
 }

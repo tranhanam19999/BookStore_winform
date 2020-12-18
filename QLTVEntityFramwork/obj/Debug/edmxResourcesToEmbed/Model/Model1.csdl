@@ -221,6 +221,35 @@
       <End Role="USERS" EntitySet="USERS" />
       <End Role="CARDS" EntitySet="CARDS" />
     </AssociationSet>
+    <FunctionImport Name="Add_Cards">
+      <Parameter Name="macard" Mode="In" Type="Int32" />
+      <Parameter Name="mauser" Mode="In" Type="Int32" />
+      <Parameter Name="numbercard" Mode="In" Type="String" />
+      <Parameter Name="datestart" Mode="In" Type="String" />
+      <Parameter Name="datefinish" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="borrower_delete" ReturnType="Collection(Int32)">
+      <Parameter Name="tendocgia" Mode="In" Type="String" />
+      <Parameter Name="tensach" Mode="In" Type="String" />
+      <Parameter Name="NgayMuon" Mode="In" Type="String" />
+      <Parameter Name="NgayTra" Mode="In" Type="String" />
+      <Parameter Name="TinhTrang" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="borrower_getall" ReturnType="Collection(QLThuVienModel.borrower_getall_Result)" />
+    <FunctionImport Name="borrower_insert">
+      <Parameter Name="mauser" Mode="In" Type="Int32" />
+      <Parameter Name="masach" Mode="In" Type="Int32" />
+      <Parameter Name="NgayMuon" Mode="In" Type="String" />
+      <Parameter Name="NgayTra" Mode="In" Type="String" />
+      <Parameter Name="TinhTrang" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="borrower_update">
+      <Parameter Name="tendocgia" Mode="In" Type="String" />
+      <Parameter Name="tensach" Mode="In" Type="String" />
+      <Parameter Name="NgayMuon" Mode="In" Type="String" />
+      <Parameter Name="NgayTra" Mode="In" Type="String" />
+      <Parameter Name="TinhTrang" Mode="In" Type="String" />
+    </FunctionImport>
     <FunctionImport Name="Delete_Cards">
       <Parameter Name="macard" Mode="In" Type="Int32" />
     </FunctionImport>
@@ -232,6 +261,19 @@
     </FunctionImport>
     <FunctionImport Name="Delete_User">
       <Parameter Name="mauser" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="Get_Cards" ReturnType="Collection(QLThuVienModel.Get_Cards_Result)" />
+    <FunctionImport Name="get_masach" ReturnType="Collection(Int32)">
+      <Parameter Name="Tensach" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="get_mauser" ReturnType="Collection(Int32)">
+      <Parameter Name="TenUser" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="search_borrower" ReturnType="Collection(QLThuVienModel.search_borrower_Result)">
+      <Parameter Name="tendocgia" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="Search_Cards" ReturnType="Collection(QLThuVienModel.Search_Cards_Result)">
+      <Parameter Name="macard" Mode="In" Type="Int32" />
     </FunctionImport>
     <FunctionImport Name="SEARCH_TENSACH" ReturnType="Collection(QLThuVienModel.SEARCH_TENSACH_Result)">
       <Parameter Name="TENSACH" Mode="In" Type="String" />
@@ -312,7 +354,41 @@
       <Parameter Name="Tongsoluong" Mode="In" Type="Int32" />
     </FunctionImport>
     <FunctionImport Name="sp_upgraddiagrams" />
+    <FunctionImport Name="update_Cards">
+      <Parameter Name="macard" Mode="In" Type="Int32" />
+      <Parameter Name="mauser" Mode="In" Type="Int32" />
+      <Parameter Name="numbercard" Mode="In" Type="String" />
+      <Parameter Name="datestart" Mode="In" Type="String" />
+      <Parameter Name="datefinish" Mode="In" Type="String" />
+    </FunctionImport>
   </EntityContainer>
+  <ComplexType Name="borrower_getall_Result">
+    <Property Type="String" Name="USERNAME" Nullable="false" MaxLength="50" />
+    <Property Type="String" Name="TENSACH" Nullable="false" MaxLength="50" />
+    <Property Type="String" Name="NGAYMUON" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="NGAYTRA" Nullable="true" MaxLength="50" />
+  </ComplexType>
+  <ComplexType Name="Get_Cards_Result">
+    <Property Type="Int32" Name="MACARD" Nullable="false" />
+    <Property Type="Int32" Name="MAUSER" Nullable="true" />
+    <Property Type="String" Name="NUMBERCARD" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="DATESTART" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="DATEFINISH" Nullable="true" MaxLength="50" />
+  </ComplexType>
+  <ComplexType Name="search_borrower_Result">
+    <Property Type="String" Name="USERNAME" Nullable="false" MaxLength="50" />
+    <Property Type="String" Name="TENSACH" Nullable="false" MaxLength="50" />
+    <Property Type="String" Name="NGAYMUON" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="NGAYTRA" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="TINHTRANG" Nullable="true" MaxLength="50" />
+  </ComplexType>
+  <ComplexType Name="Search_Cards_Result">
+    <Property Type="Int32" Name="MACARD" Nullable="false" />
+    <Property Type="Int32" Name="MAUSER" Nullable="true" />
+    <Property Type="String" Name="NUMBERCARD" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="DATESTART" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="DATEFINISH" Nullable="true" MaxLength="50" />
+  </ComplexType>
   <ComplexType Name="SEARCH_TENSACH_Result">
     <Property Type="String" Name="TENSACH" Nullable="false" MaxLength="50" />
     <Property Type="String" Name="LINHVUC" Nullable="true" MaxLength="50" />

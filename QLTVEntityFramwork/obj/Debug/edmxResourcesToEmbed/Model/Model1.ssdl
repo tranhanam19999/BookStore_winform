@@ -190,6 +190,35 @@ warning 6002: The table/view 'QLThuVien.dbo.Publisher_Info' does not have a prim
       </Dependent>
     </ReferentialConstraint>
   </Association>
+  <Function Name="Add_Cards" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="macard" Type="int" Mode="In" />
+    <Parameter Name="mauser" Type="int" Mode="In" />
+    <Parameter Name="numbercard" Type="varchar" Mode="In" />
+    <Parameter Name="datestart" Type="varchar" Mode="In" />
+    <Parameter Name="datefinish" Type="varchar" Mode="In" />
+  </Function>
+  <Function Name="borrower_delete" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="tendocgia" Type="varchar" Mode="In" />
+    <Parameter Name="tensach" Type="varchar" Mode="In" />
+    <Parameter Name="NgayMuon" Type="varchar" Mode="In" />
+    <Parameter Name="NgayTra" Type="varchar" Mode="In" />
+    <Parameter Name="TinhTrang" Type="varchar" Mode="In" />
+  </Function>
+  <Function Name="borrower_getall" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+  <Function Name="borrower_insert" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="mauser" Type="int" Mode="In" />
+    <Parameter Name="masach" Type="int" Mode="In" />
+    <Parameter Name="NgayMuon" Type="varchar" Mode="In" />
+    <Parameter Name="NgayTra" Type="varchar" Mode="In" />
+    <Parameter Name="TinhTrang" Type="varchar" Mode="In" />
+  </Function>
+  <Function Name="borrower_update" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="tendocgia" Type="varchar" Mode="In" />
+    <Parameter Name="tensach" Type="varchar" Mode="In" />
+    <Parameter Name="NgayMuon" Type="varchar" Mode="In" />
+    <Parameter Name="NgayTra" Type="varchar" Mode="In" />
+    <Parameter Name="TinhTrang" Type="varchar" Mode="In" />
+  </Function>
   <Function Name="Delete_Cards" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
     <Parameter Name="macard" Type="int" Mode="In" />
   </Function>
@@ -203,6 +232,19 @@ warning 6002: The table/view 'QLThuVien.dbo.Publisher_Info' does not have a prim
     <Parameter Name="mauser" Type="int" Mode="In" />
   </Function>
   <Function Name="fn_diagramobjects" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="true" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" ReturnType="int" />
+  <Function Name="Get_Cards" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+  <Function Name="get_masach" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="Tensach" Type="varchar" Mode="In" />
+  </Function>
+  <Function Name="get_mauser" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="TenUser" Type="varchar" Mode="In" />
+  </Function>
+  <Function Name="search_borrower" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="tendocgia" Type="varchar" Mode="In" />
+  </Function>
+  <Function Name="Search_Cards" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="macard" Type="int" Mode="In" />
+  </Function>
   <Function Name="SEARCH_TENSACH" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
     <Parameter Name="TENSACH" Type="varchar" Mode="In" />
   </Function>
@@ -282,6 +324,13 @@ warning 6002: The table/view 'QLThuVien.dbo.Publisher_Info' does not have a prim
     <Parameter Name="Tongsoluong" Type="int" Mode="In" />
   </Function>
   <Function Name="sp_upgraddiagrams" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+  <Function Name="update_Cards" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="macard" Type="int" Mode="In" />
+    <Parameter Name="mauser" Type="int" Mode="In" />
+    <Parameter Name="numbercard" Type="varchar" Mode="In" />
+    <Parameter Name="datestart" Type="varchar" Mode="In" />
+    <Parameter Name="datefinish" Type="varchar" Mode="In" />
+  </Function>
   <EntityContainer Name="QLThuVienModelStoreContainer">
     <EntitySet Name="MUONSACH" EntityType="Self.MUONSACH" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="NXB" EntityType="Self.NXB" Schema="dbo" store:Type="Tables" />

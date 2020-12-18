@@ -11,21 +11,19 @@ using QLTVEntityFramwork.Model;
 
 namespace QLTVEntityFramwork
 {
-    public partial class ManageBorrower : Form
+    public partial class ManageUser : Form
     {
         bool Them, CapNhat;
         bool checkThem = true;
         QLThuVienEntities db = new QLThuVienEntities();
-        public ManageBorrower()
+        public ManageUser()
         {
             InitializeComponent();
 
             txtMaUser.Enabled = false;
 
             LoadData();
-            AddItemNam(cbNamMuon, 1999, 2025);
-            AddItemMonth(cbThangMuon);
-            AddItemMonth(cbThangTra);
+            
             SetDisableComboBox();
             DisableComponent();
 
@@ -65,13 +63,7 @@ namespace QLTVEntityFramwork
             db.Configuration.LazyLoadingEnabled = false;
 
             var listUserBorrowing = db.Borrowing_Details.ToList();
-            dgvMuonSach.DataSource = listUserBorrowing;
-
-            dgvMuonSach.Columns[0].HeaderText = "Tên Đọc giả";
-            dgvMuonSach.Columns[1].HeaderText = "Tên Sách";
-            dgvMuonSach.Columns[2].HeaderText = "Ngày Mượn";
-            dgvMuonSach.Columns[3].HeaderText = "Ngày Trả";
-            dgvMuonSach.Columns[4].HeaderText = "Tình trạng";
+         
 
             btnOK.Enabled = false;
         }
@@ -84,7 +76,7 @@ namespace QLTVEntityFramwork
             txtSDT.Enabled = false;
             btnLuu.Enabled = false;
             btnHuy.Enabled = false;
-            cbMaSach.Enabled = false;
+          
         }
         public void EnableComponent()
         {
@@ -105,21 +97,11 @@ namespace QLTVEntityFramwork
             txtSDT.Text = "";
             txtDiaChi.Text = "";
 
-            cbNamMuon.Text = "";
-            cbThangMuon.Text = "";
-            cbNgayMuon.Text = "";
-            cbNamTra.Text = "";
-            cbThangTra.Text = "";
-            cbNgayTra.Text = "";
+         
         }
         public void SetDisableComboBox()
         {
-            cbNamMuon.Enabled = false;
-            cbThangMuon.Enabled = false;
-            cbNgayMuon.Enabled = false;
-            cbNamTra.Enabled = false;
-            cbThangTra.Enabled = false;
-            cbNgayTra.Enabled = false;
+         
         }
 
         public bool checkYear(int year)

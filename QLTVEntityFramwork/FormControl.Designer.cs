@@ -44,6 +44,10 @@
             this.pcbManageBorrower = new System.Windows.Forms.PictureBox();
             this.pcbSearchInformation = new System.Windows.Forms.PictureBox();
             this.btnReport = new System.Windows.Forms.Button();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.label8 = new System.Windows.Forms.Label();
+            this.label9 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pcbAboutUs)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pcbMore)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pcbWriter)).BeginInit();
@@ -51,6 +55,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.pcbManageBook)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pcbManageBorrower)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pcbSearchInformation)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.SuspendLayout();
             // 
             // label7
@@ -70,7 +76,7 @@
             this.label6.AutoSize = true;
             this.label6.BackColor = System.Drawing.SystemColors.Control;
             this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(885, 87);
+            this.label6.Location = new System.Drawing.Point(661, 104);
             this.label6.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(70, 25);
@@ -81,7 +87,7 @@
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(534, 373);
+            this.label5.Location = new System.Drawing.Point(392, 373);
             this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(102, 25);
@@ -96,16 +102,17 @@
             this.label4.Location = new System.Drawing.Point(169, 373);
             this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(182, 25);
+            this.label4.Size = new System.Drawing.Size(141, 25);
             this.label4.TabIndex = 35;
-            this.label4.Text = "Manage Borrower";
+            this.label4.Text = "Manage User";
+            this.label4.Click += new System.EventHandler(this.label4_Click);
             // 
             // label3
             // 
             this.label3.AutoSize = true;
             this.label3.BackColor = System.Drawing.SystemColors.Control;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(185, 87);
+            this.label3.Location = new System.Drawing.Point(128, 87);
             this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(145, 25);
@@ -117,7 +124,7 @@
             this.label2.AutoSize = true;
             this.label2.BackColor = System.Drawing.Color.Transparent;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(492, 87);
+            this.label2.Location = new System.Drawing.Point(322, 87);
             this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(193, 25);
@@ -155,10 +162,10 @@
             // 
             this.pcbMore.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pcbMore.BackgroundImage")));
             this.pcbMore.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pcbMore.Location = new System.Drawing.Point(774, 340);
+            this.pcbMore.Location = new System.Drawing.Point(841, 340);
             this.pcbMore.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.pcbMore.Name = "pcbMore";
-            this.pcbMore.Size = new System.Drawing.Size(296, 266);
+            this.pcbMore.Size = new System.Drawing.Size(210, 182);
             this.pcbMore.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pcbMore.TabIndex = 38;
             this.pcbMore.TabStop = false;
@@ -168,10 +175,10 @@
             // 
             this.pcbWriter.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pcbWriter.BackgroundImage")));
             this.pcbWriter.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pcbWriter.Location = new System.Drawing.Point(774, 64);
+            this.pcbWriter.Location = new System.Drawing.Point(596, 62);
             this.pcbWriter.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.pcbWriter.Name = "pcbWriter";
-            this.pcbWriter.Size = new System.Drawing.Size(296, 266);
+            this.pcbWriter.Size = new System.Drawing.Size(210, 197);
             this.pcbWriter.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pcbWriter.TabIndex = 37;
             this.pcbWriter.TabStop = false;
@@ -181,10 +188,10 @@
             // 
             this.pcbPublisher.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pcbPublisher.BackgroundImage")));
             this.pcbPublisher.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pcbPublisher.Location = new System.Drawing.Point(435, 340);
+            this.pcbPublisher.Location = new System.Drawing.Point(327, 340);
             this.pcbPublisher.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.pcbPublisher.Name = "pcbPublisher";
-            this.pcbPublisher.Size = new System.Drawing.Size(296, 266);
+            this.pcbPublisher.Size = new System.Drawing.Size(182, 182);
             this.pcbPublisher.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pcbPublisher.TabIndex = 31;
             this.pcbPublisher.TabStop = false;
@@ -197,7 +204,7 @@
             this.pcbManageBook.Location = new System.Drawing.Point(104, 64);
             this.pcbManageBook.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.pcbManageBook.Name = "pcbManageBook";
-            this.pcbManageBook.Size = new System.Drawing.Size(296, 266);
+            this.pcbManageBook.Size = new System.Drawing.Size(203, 195);
             this.pcbManageBook.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pcbManageBook.TabIndex = 30;
             this.pcbManageBook.TabStop = false;
@@ -210,7 +217,7 @@
             this.pcbManageBorrower.Location = new System.Drawing.Point(104, 340);
             this.pcbManageBorrower.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.pcbManageBorrower.Name = "pcbManageBorrower";
-            this.pcbManageBorrower.Size = new System.Drawing.Size(296, 266);
+            this.pcbManageBorrower.Size = new System.Drawing.Size(203, 182);
             this.pcbManageBorrower.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pcbManageBorrower.TabIndex = 29;
             this.pcbManageBorrower.TabStop = false;
@@ -221,10 +228,10 @@
             this.pcbSearchInformation.BackColor = System.Drawing.Color.Transparent;
             this.pcbSearchInformation.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pcbSearchInformation.BackgroundImage")));
             this.pcbSearchInformation.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pcbSearchInformation.Location = new System.Drawing.Point(435, 64);
+            this.pcbSearchInformation.Location = new System.Drawing.Point(327, 64);
             this.pcbSearchInformation.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.pcbSearchInformation.Name = "pcbSearchInformation";
-            this.pcbSearchInformation.Size = new System.Drawing.Size(296, 266);
+            this.pcbSearchInformation.Size = new System.Drawing.Size(182, 195);
             this.pcbSearchInformation.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pcbSearchInformation.TabIndex = 28;
             this.pcbSearchInformation.TabStop = false;
@@ -241,6 +248,57 @@
             this.btnReport.UseVisualStyleBackColor = true;
             this.btnReport.Click += new System.EventHandler(this.btnReport_Click);
             // 
+            // pictureBox1
+            // 
+            this.pictureBox1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox1.BackgroundImage")));
+            this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pictureBox1.Location = new System.Drawing.Point(841, 62);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(210, 197);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 43;
+            this.pictureBox1.TabStop = false;
+            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
+            // 
+            // pictureBox2
+            // 
+            this.pictureBox2.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox2.BackgroundImage")));
+            this.pictureBox2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pictureBox2.Location = new System.Drawing.Point(596, 340);
+            this.pictureBox2.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(210, 182);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox2.TabIndex = 44;
+            this.pictureBox2.TabStop = false;
+            this.pictureBox2.Click += new System.EventHandler(this.pictureBox2_Click);
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.BackColor = System.Drawing.Color.Transparent;
+            this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label8.Location = new System.Drawing.Point(873, 115);
+            this.label8.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(182, 25);
+            this.label8.TabIndex = 45;
+            this.label8.Text = "Manage Borrower";
+            this.label8.Click += new System.EventHandler(this.label8_Click);
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.BackColor = System.Drawing.Color.Transparent;
+            this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label9.Location = new System.Drawing.Point(647, 404);
+            this.label9.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(143, 25);
+            this.label9.TabIndex = 46;
+            this.label9.Text = "Manage Card";
+            // 
             // FormControl
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
@@ -248,6 +306,10 @@
             this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.BackgroundImage = global::QLTVEntityFramwork.Properties.Resources._121;
             this.ClientSize = new System.Drawing.Size(1278, 623);
+            this.Controls.Add(this.label9);
+            this.Controls.Add(this.label8);
+            this.Controls.Add(this.pictureBox2);
+            this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.btnReport);
             this.Controls.Add(this.pcbAboutUs);
             this.Controls.Add(this.label7);
@@ -274,6 +336,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.pcbManageBook)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pcbManageBorrower)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pcbSearchInformation)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -296,5 +360,9 @@
         private System.Windows.Forms.PictureBox pcbSearchInformation;
         private System.Windows.Forms.PictureBox pcbWriter;
         private System.Windows.Forms.Button btnReport;
+        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.PictureBox pictureBox2;
+        private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.Label label9;
     }
 }

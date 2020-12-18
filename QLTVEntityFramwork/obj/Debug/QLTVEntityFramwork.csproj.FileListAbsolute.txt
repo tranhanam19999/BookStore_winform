@@ -536,7 +536,6 @@ D:\BookStore_winform\QLTVEntityFramwork\obj\Debug\QLTVEntityFramwork.FormMain.re
 D:\BookStore_winform\QLTVEntityFramwork\obj\Debug\QLTVEntityFramwork.FormReport.resources
 D:\BookStore_winform\QLTVEntityFramwork\obj\Debug\QLTVEntityFramwork.LoginForm.resources
 D:\BookStore_winform\QLTVEntityFramwork\obj\Debug\QLTVEntityFramwork.ManageBook.resources
-D:\BookStore_winform\QLTVEntityFramwork\obj\Debug\QLTVEntityFramwork.ManageBorrower.resources
 D:\BookStore_winform\QLTVEntityFramwork\obj\Debug\QLTVEntityFramwork.More.resources
 D:\BookStore_winform\QLTVEntityFramwork\obj\Debug\QLTVEntityFramwork.Properties.Resources.resources
 D:\BookStore_winform\QLTVEntityFramwork\obj\Debug\QLTVEntityFramwork.Publisher.resources
@@ -715,3 +714,6 @@ E:\Học Kì I - Năm 3\HQTCSDL\Step2Final_Project\BookStore_winform\QLTVEntityF
 E:\Học Kì I - Năm 3\HQTCSDL\Step2Final_Project\BookStore_winform\QLTVEntityFramwork\obj\Debug\QLTVEntityFramwork.csproj.CopyComplete
 E:\Học Kì I - Năm 3\HQTCSDL\Step2Final_Project\BookStore_winform\QLTVEntityFramwork\obj\Debug\QLTVEntityFramwork.exe
 E:\Học Kì I - Năm 3\HQTCSDL\Step2Final_Project\BookStore_winform\QLTVEntityFramwork\obj\Debug\QLTVEntityFramwork.pdb
+D:\BookStore_winform\QLTVEntityFramwork\obj\Debug\QLTVEntityFramwork.ManagerBorrower.resources
+D:\BookStore_winform\QLTVEntityFramwork\obj\Debug\QLTVEntityFramwork.ManageUser.resources
+D:\BookStore_winform\QLTVEntityFramwork\obj\Debug\QLTVEntityFramwork.ManagerCard.resources

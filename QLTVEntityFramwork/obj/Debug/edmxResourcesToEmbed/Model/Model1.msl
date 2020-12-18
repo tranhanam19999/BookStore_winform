@@ -130,10 +130,59 @@
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
+    <FunctionImportMapping FunctionImportName="Add_Cards" FunctionName="QLThuVienModel.Store.Add_Cards" />
+    <FunctionImportMapping FunctionImportName="borrower_delete" FunctionName="QLThuVienModel.Store.borrower_delete" />
+    <FunctionImportMapping FunctionImportName="borrower_getall" FunctionName="QLThuVienModel.Store.borrower_getall">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="QLThuVienModel.borrower_getall_Result">
+          <ScalarProperty Name="USERNAME" ColumnName="USERNAME" />
+          <ScalarProperty Name="TENSACH" ColumnName="TENSACH" />
+          <ScalarProperty Name="NGAYMUON" ColumnName="NGAYMUON" />
+          <ScalarProperty Name="NGAYTRA" ColumnName="NGAYTRA" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="borrower_insert" FunctionName="QLThuVienModel.Store.borrower_insert" />
+    <FunctionImportMapping FunctionImportName="borrower_update" FunctionName="QLThuVienModel.Store.borrower_update" />
     <FunctionImportMapping FunctionImportName="Delete_Cards" FunctionName="QLThuVienModel.Store.Delete_Cards" />
     <FunctionImportMapping FunctionImportName="Delete_Muon" FunctionName="QLThuVienModel.Store.Delete_Muon" />
     <FunctionImportMapping FunctionImportName="Delete_SACH" FunctionName="QLThuVienModel.Store.Delete_SACH" />
     <FunctionImportMapping FunctionImportName="Delete_User" FunctionName="QLThuVienModel.Store.Delete_User" />
+    <FunctionImportMapping FunctionImportName="Get_Cards" FunctionName="QLThuVienModel.Store.Get_Cards">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="QLThuVienModel.Get_Cards_Result">
+          <ScalarProperty Name="MACARD" ColumnName="MACARD" />
+          <ScalarProperty Name="MAUSER" ColumnName="MAUSER" />
+          <ScalarProperty Name="NUMBERCARD" ColumnName="NUMBERCARD" />
+          <ScalarProperty Name="DATESTART" ColumnName="DATESTART" />
+          <ScalarProperty Name="DATEFINISH" ColumnName="DATEFINISH" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="get_masach" FunctionName="QLThuVienModel.Store.get_masach" />
+    <FunctionImportMapping FunctionImportName="get_mauser" FunctionName="QLThuVienModel.Store.get_mauser" />
+    <FunctionImportMapping FunctionImportName="search_borrower" FunctionName="QLThuVienModel.Store.search_borrower">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="QLThuVienModel.search_borrower_Result">
+          <ScalarProperty Name="USERNAME" ColumnName="USERNAME" />
+          <ScalarProperty Name="TENSACH" ColumnName="TENSACH" />
+          <ScalarProperty Name="NGAYMUON" ColumnName="NGAYMUON" />
+          <ScalarProperty Name="NGAYTRA" ColumnName="NGAYTRA" />
+          <ScalarProperty Name="TINHTRANG" ColumnName="TINHTRANG" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="Search_Cards" FunctionName="QLThuVienModel.Store.Search_Cards">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="QLThuVienModel.Search_Cards_Result">
+          <ScalarProperty Name="MACARD" ColumnName="MACARD" />
+          <ScalarProperty Name="MAUSER" ColumnName="MAUSER" />
+          <ScalarProperty Name="NUMBERCARD" ColumnName="NUMBERCARD" />
+          <ScalarProperty Name="DATESTART" ColumnName="DATESTART" />
+          <ScalarProperty Name="DATEFINISH" ColumnName="DATEFINISH" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
     <FunctionImportMapping FunctionImportName="SEARCH_TENSACH" FunctionName="QLThuVienModel.Store.SEARCH_TENSACH">
       <ResultMapping>
         <ComplexTypeMapping TypeName="QLThuVienModel.SEARCH_TENSACH_Result">
@@ -191,5 +240,6 @@
     <FunctionImportMapping FunctionImportName="sp_renamediagram" FunctionName="QLThuVienModel.Store.sp_renamediagram" />
     <FunctionImportMapping FunctionImportName="sp_Update_Book" FunctionName="QLThuVienModel.Store.sp_Update_Book" />
     <FunctionImportMapping FunctionImportName="sp_upgraddiagrams" FunctionName="QLThuVienModel.Store.sp_upgraddiagrams" />
+    <FunctionImportMapping FunctionImportName="update_Cards" FunctionName="QLThuVienModel.Store.update_Cards" />
   </EntityContainerMapping>
 </Mapping>

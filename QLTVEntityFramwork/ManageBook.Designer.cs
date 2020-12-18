@@ -44,6 +44,10 @@
             this.label2 = new System.Windows.Forms.Label();
             this.dgvQLSach = new System.Windows.Forms.DataGridView();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.cbMaTG = new System.Windows.Forms.ComboBox();
+            this.cbMaNXB = new System.Windows.Forms.ComboBox();
+            this.label10 = new System.Windows.Forms.Label();
+            this.label9 = new System.Windows.Forms.Label();
             this.txtTongSoLuong = new System.Windows.Forms.TextBox();
             this.txtSoLuongBiMat = new System.Windows.Forms.TextBox();
             this.txtTinhTrangMuon = new System.Windows.Forms.TextBox();
@@ -51,10 +55,6 @@
             this.label8 = new System.Windows.Forms.Label();
             this.txtGia = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.label9 = new System.Windows.Forms.Label();
-            this.label10 = new System.Windows.Forms.Label();
-            this.cbMaNXB = new System.Windows.Forms.ComboBox();
-            this.cbMaTG = new System.Windows.Forms.ComboBox();
             ((System.ComponentModel.ISupportInitialize)(this.dgvQLSach)).BeginInit();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
@@ -240,6 +240,7 @@
             this.dgvQLSach.Size = new System.Drawing.Size(1234, 460);
             this.dgvQLSach.TabIndex = 83;
             this.dgvQLSach.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvQLSach_CellClick);
+            this.dgvQLSach.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvQLSach_CellContentClick);
             // 
             // panel1
             // 
@@ -267,6 +268,50 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(1144, 184);
             this.panel1.TabIndex = 82;
+            // 
+            // cbMaTG
+            // 
+            this.cbMaTG.FormattingEnabled = true;
+            this.cbMaTG.Location = new System.Drawing.Point(988, 138);
+            this.cbMaTG.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.cbMaTG.Name = "cbMaTG";
+            this.cbMaTG.Size = new System.Drawing.Size(145, 28);
+            this.cbMaTG.TabIndex = 108;
+            // 
+            // cbMaNXB
+            // 
+            this.cbMaNXB.FormattingEnabled = true;
+            this.cbMaNXB.Location = new System.Drawing.Point(645, 139);
+            this.cbMaNXB.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.cbMaNXB.Name = "cbMaNXB";
+            this.cbMaNXB.Size = new System.Drawing.Size(145, 28);
+            this.cbMaNXB.TabIndex = 107;
+            // 
+            // label10
+            // 
+            this.label10.AccessibleRole = System.Windows.Forms.AccessibleRole.WhiteSpace;
+            this.label10.AutoSize = true;
+            this.label10.BackColor = System.Drawing.Color.Transparent;
+            this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label10.Location = new System.Drawing.Point(824, 138);
+            this.label10.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(149, 29);
+            this.label10.TabIndex = 106;
+            this.label10.Text = "Mã Tác giả:";
+            // 
+            // label9
+            // 
+            this.label9.AccessibleRole = System.Windows.Forms.AccessibleRole.WhiteSpace;
+            this.label9.AutoSize = true;
+            this.label9.BackColor = System.Drawing.Color.Transparent;
+            this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label9.Location = new System.Drawing.Point(500, 139);
+            this.label9.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(116, 29);
+            this.label9.TabIndex = 105;
+            this.label9.Text = "Mã NXB:";
             // 
             // txtTongSoLuong
             // 
@@ -339,50 +384,6 @@
             this.label1.Size = new System.Drawing.Size(337, 47);
             this.label1.TabIndex = 81;
             this.label1.Text = "QUẢN LÝ SÁCH";
-            // 
-            // label9
-            // 
-            this.label9.AccessibleRole = System.Windows.Forms.AccessibleRole.WhiteSpace;
-            this.label9.AutoSize = true;
-            this.label9.BackColor = System.Drawing.Color.Transparent;
-            this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.Location = new System.Drawing.Point(500, 139);
-            this.label9.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(116, 29);
-            this.label9.TabIndex = 105;
-            this.label9.Text = "Mã NXB:";
-            // 
-            // label10
-            // 
-            this.label10.AccessibleRole = System.Windows.Forms.AccessibleRole.WhiteSpace;
-            this.label10.AutoSize = true;
-            this.label10.BackColor = System.Drawing.Color.Transparent;
-            this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label10.Location = new System.Drawing.Point(824, 138);
-            this.label10.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(149, 29);
-            this.label10.TabIndex = 106;
-            this.label10.Text = "Mã Tác giả:";
-            // 
-            // cbMaNXB
-            // 
-            this.cbMaNXB.FormattingEnabled = true;
-            this.cbMaNXB.Location = new System.Drawing.Point(645, 139);
-            this.cbMaNXB.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.cbMaNXB.Name = "cbMaNXB";
-            this.cbMaNXB.Size = new System.Drawing.Size(145, 28);
-            this.cbMaNXB.TabIndex = 107;
-            // 
-            // cbMaTG
-            // 
-            this.cbMaTG.FormattingEnabled = true;
-            this.cbMaTG.Location = new System.Drawing.Point(988, 138);
-            this.cbMaTG.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.cbMaTG.Name = "cbMaTG";
-            this.cbMaTG.Size = new System.Drawing.Size(145, 28);
-            this.cbMaTG.TabIndex = 108;
             // 
             // ManageBook
             // 

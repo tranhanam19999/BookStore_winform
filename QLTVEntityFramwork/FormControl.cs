@@ -29,7 +29,7 @@ namespace QLTVEntityFramwork
 
         private void pcbManageBorrower_Click(object sender, System.EventArgs e)
         {
-            ManageBorrower manageBorrower = new ManageBorrower();
+            ManageUser manageBorrower = new ManageUser();
             manageBorrower.ShowDialog();
         }
 
@@ -55,6 +55,28 @@ namespace QLTVEntityFramwork
         {
             FormReport report = new FormReport();
             report.ShowDialog();
+        }
+
+        private void pictureBox1_Click(object sender, System.EventArgs e)
+        {
+            ManagerBorrower report = new ManagerBorrower();
+            report.ShowDialog();
+        }
+
+        private void pictureBox2_Click(object sender, System.EventArgs e)
+        {
+            ManagerCard card = new ManagerCard();
+            card.ShowDialog();
+        }
+
+        private void label4_Click(object sender, System.EventArgs e)
+        {
+
+        }
+
+        private void label8_Click(object sender, System.EventArgs e)
+        {
+
         }
     }
 }

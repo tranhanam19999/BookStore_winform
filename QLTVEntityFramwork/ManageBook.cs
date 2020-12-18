@@ -362,5 +362,10 @@ namespace QLTVEntityFramwork
             btnCapNhat.Enabled = true;
             btnHuy.Enabled = false;
         }
+
+        private void dgvQLSach_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
     }
 }
