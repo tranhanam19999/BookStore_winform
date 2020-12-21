@@ -103,6 +103,76 @@ namespace QLTVEntityFramwork
 
         private void btnLuu_Click(object sender, EventArgs e)
         {
+            
+
+
+        }
+
+        private void btnXoa_Click(object sender, EventArgs e)
+        {
+           
+        }
+
+        private void btnHuy_Click(object sender, EventArgs e)
+        {
+           
+        }
+
+        private void btnCapNhat_Click(object sender, EventArgs e)
+        {
+          
+        }
+
+        private void searchMuonSach_Click(object sender, EventArgs e)
+        {
+           
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            LoadData();
+        }
+
+        private void ManagerBorrower_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnXoa_Click_1(object sender, EventArgs e)
+        {
+            string tendocgia = txtTenDocGia.Text.ToString();
+            string tensach = txtTenSach.Text.ToString();
+            string ngaymuon = txtNgayMuon.Text.ToString();
+            string ngaygtra = txtNgayTra.Text.ToString();
+            string tinhtrang = txtTinhTrang.Text.ToString();
+
+            DialogResult traloi;
+            traloi = MessageBox.Show("Ban co muon xoa mau tin nay ko?", "Tra loi"
+                , MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+            if (traloi == DialogResult.Yes)
+            {
+
+                db.borrower_delete(tendocgia, tensach, ngaymuon, ngaygtra, tinhtrang);
+                LoadData();
+                MessageBox.Show("Da Xoa Xong!");
+            }
+            else
+            {
+                MessageBox.Show("Ban Da Bam Khong!");
+            }
+            ClearClickedData();
+        }
+
+        private void btnCapNhat_Click_1(object sender, EventArgs e)
+        {
+            EnableComponent();
+            btnThem.Enabled = false;
+            btnXoa.Enabled = false;
+            CapNhat = true;
+        }
+
+        private void btnLuu_Click_1(object sender, EventArgs e)
+        {
             if (Them == true)
             {
                 if (checkThem == true)
@@ -112,12 +182,11 @@ namespace QLTVEntityFramwork
                     string tendocgia = txtTenDocGia.Text.ToString();
                     string tensach = txtTenSach.Text.ToString();
                     string ngaymuon = txtNgayMuon.Text.ToString();
-                    string ngaygtra = txtNgayTra.Text.ToString();
+                    string ngaytra = txtNgayTra.Text.ToString();
                     string tinhtrang = txtTinhTrang.Text.ToString();
-                    MessageBox.Show(tendocgia);
+                    MessageBox.Show(ngaymuon);
 
-                    db.borrower_insert(10, 20, ngaymuon, ngaygtra, tinhtrang);
-
+                    db.borrower_insert(tendocgia, tensach, ngaymuon, ngaytra, tinhtrang);
                     LoadData();
                     MessageBox.Show("Da them xong");
                     btnLuu.Enabled = false;
@@ -144,14 +213,15 @@ namespace QLTVEntityFramwork
                     MessageBox.Show(tendocgia);
 
                     db.borrower_update(tendocgia, tensach, ngaymuon, ngaygtra, tinhtrang);
-
+                    LoadData();
                     DisableComponent();
                     MessageBox.Show("Đã cập nhật xong !!!");
-                    LoadData();
+                    
                 }
                 catch
                 {
                     MessageBox.Show("Không cập nhật được. Lỗi rồi!");
+                    LoadData();
                 }
 
                 btnHuy.Enabled = false;
@@ -160,36 +230,9 @@ namespace QLTVEntityFramwork
                 btnXoa.Enabled = true;
                 btnCapNhat.Enabled = true;
             }
-
-
         }
 
-        private void btnXoa_Click(object sender, EventArgs e)
-        {
-            string tendocgia = txtTenDocGia.Text.ToString();
-            string tensach = txtTenSach.Text.ToString();
-            string ngaymuon = txtNgayMuon.Text.ToString();
-            string ngaygtra = txtNgayTra.Text.ToString();
-            string tinhtrang = txtTinhTrang.Text.ToString();
-
-            DialogResult traloi;
-            traloi = MessageBox.Show("Ban co muon xoa mau tin nay ko?", "Tra loi"
-                , MessageBoxButtons.YesNo, MessageBoxIcon.Question);
-            if (traloi == DialogResult.Yes)
-            {
-
-                db.borrower_delete(tendocgia, tensach, ngaymuon, ngaygtra, tinhtrang);
-                LoadData();
-                MessageBox.Show("Da Xoa Xong!");
-            }
-            else
-            {
-                MessageBox.Show("Ban Da Bam Khong!");
-            }
-            ClearClickedData();
-        }
-
-        private void btnHuy_Click(object sender, EventArgs e)
+        private void btnHuy_Click_1(object sender, EventArgs e)
         {
             EnableComponent();
 
@@ -199,16 +242,7 @@ namespace QLTVEntityFramwork
             btnCapNhat.Enabled = true;
         }
 
-        private void btnCapNhat_Click(object sender, EventArgs e)
-        {
-            EnableComponent();
-            btnThem.Enabled = false;
-            btnXoa.Enabled = false;
-
-            CapNhat = true;
-        }
-
-        private void searchMuonSach_Click(object sender, EventArgs e)
+        private void searchMuonSach_Click_1(object sender, EventArgs e)
         {
             db.Configuration.LazyLoadingEnabled = false;
 
@@ -223,13 +257,29 @@ namespace QLTVEntityFramwork
             dgvMuonSach.Columns[4].HeaderText = "Tình trạng";
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void button1_Click_1(object sender, EventArgs e)
         {
             LoadData();
         }
 
-        private void ManagerBorrower_Load(object sender, EventArgs e)
+        private void dgvMuonSach_CellContentClick_1(object sender, DataGridViewCellEventArgs e)
         {
+            int r = dgvMuonSach.CurrentCell.RowIndex;
+            //   var MasachClick = db.GetMaSach(dgvDocGia.Rows[r].Cells[1].Value.ToString());
+
+
+            //this.txtMaSach.Text = MasachClick;
+            this.txtTenDocGia.Text = dgvMuonSach.Rows[r].Cells[0].Value.ToString();
+            this.txtTenSach.Text = dgvMuonSach.Rows[r].Cells[1].Value.ToString();
+            this.txtNgayMuon.Text = dgvMuonSach.Rows[r].Cells[2].Value.ToString();
+            this.txtNgayTra.Text = dgvMuonSach.Rows[r].Cells[3].Value.ToString();
+            this.txtTinhTrang.Text = dgvMuonSach.Rows[r].Cells[4].Value.ToString();
+        }
+
+        private void dgvMuonSach_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            
+
 
         }
 

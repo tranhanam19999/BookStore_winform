@@ -59,6 +59,7 @@
             this.button1.TabIndex = 180;
             this.button1.Text = "Hủy Search";
             this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click_1);
             // 
             // txtMaCart
             // 
@@ -125,6 +126,7 @@
             this.btnHuy.TabIndex = 173;
             this.btnHuy.Text = "Hủy";
             this.btnHuy.UseVisualStyleBackColor = true;
+            this.btnHuy.Click += new System.EventHandler(this.btnHuy_Click);
             // 
             // btnLuu
             // 
@@ -137,6 +139,7 @@
             this.btnLuu.TabIndex = 172;
             this.btnLuu.Text = "Lưu";
             this.btnLuu.UseVisualStyleBackColor = true;
+            this.btnLuu.Click += new System.EventHandler(this.btnLuu_Click_1);
             // 
             // btnXoa
             // 
@@ -149,6 +152,7 @@
             this.btnXoa.TabIndex = 171;
             this.btnXoa.Text = "Xóa";
             this.btnXoa.UseVisualStyleBackColor = true;
+            this.btnXoa.Click += new System.EventHandler(this.btnXoa_Click_1);
             // 
             // btnCapNhat
             // 
@@ -161,6 +165,7 @@
             this.btnCapNhat.TabIndex = 170;
             this.btnCapNhat.Text = "Cập nhật";
             this.btnCapNhat.UseVisualStyleBackColor = true;
+            this.btnCapNhat.Click += new System.EventHandler(this.btnCapNhat_Click_1);
             // 
             // btnThem
             // 
@@ -173,6 +178,7 @@
             this.btnThem.TabIndex = 169;
             this.btnThem.Text = "Thêm";
             this.btnThem.UseVisualStyleBackColor = true;
+            this.btnThem.Click += new System.EventHandler(this.btnThem_Click_1);
             // 
             // searchMuonSach
             // 
@@ -182,6 +188,7 @@
             this.searchMuonSach.TabIndex = 168;
             this.searchMuonSach.Text = "Search";
             this.searchMuonSach.UseVisualStyleBackColor = true;
+            this.searchMuonSach.Click += new System.EventHandler(this.searchMuonSach_Click_1);
             // 
             // txtNgayMo
             // 
@@ -250,6 +257,7 @@
             this.dgvCard.RowTemplate.Height = 24;
             this.dgvCard.Size = new System.Drawing.Size(899, 391);
             this.dgvCard.TabIndex = 161;
+            this.dgvCard.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvCard_CellClick_1);
             this.dgvCard.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvCard_CellContentClick);
             // 
             // ManagerCard
@@ -279,6 +287,7 @@
             this.Controls.Add(this.dgvCard);
             this.Name = "ManagerCard";
             this.Text = "ManagerCard";
+            this.Load += new System.EventHandler(this.ManagerCard_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvCard)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

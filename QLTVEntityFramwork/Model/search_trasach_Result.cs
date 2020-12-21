@@ -11,12 +11,12 @@ namespace QLTVEntityFramwork.Model
 {
     using System;
     
-    public partial class sp_helpdiagrams_Result
+    public partial class search_trasach_Result
     {
-        public string Database { get; set; }
-        public string Name { get; set; }
-        public int ID { get; set; }
-        public string Owner { get; set; }
-        public int OwnerID { get; set; }
+        public string USERNAME { get; set; }
+        public string TENSACH { get; set; }
+        public string NGAYMUON { get; set; }
+        public string NGAYTRA { get; set; }
+        public string TINHTRANG { get; set; }
     }
 }

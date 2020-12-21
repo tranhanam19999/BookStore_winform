@@ -344,7 +344,7 @@
             this.txtMaUser.Size = new System.Drawing.Size(174, 26);
             this.txtMaUser.TabIndex = 107;
             // 
-            // ManageBorrower
+            // ManageUser
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -375,8 +375,9 @@
             this.Controls.Add(this.dgvDocGia);
             this.Controls.Add(this.label1);
             this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.Name = "ManageBorrower";
+            this.Name = "ManageUser";
             this.Text = "ManageBorrower";
+            this.Load += new System.EventHandler(this.ManageUser_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvDocGia)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

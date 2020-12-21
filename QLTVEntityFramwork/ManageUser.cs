@@ -444,6 +444,11 @@ namespace QLTVEntityFramwork
             //    AddItemDay(cbNgayTra, 30);
         }
 
+        private void ManageUser_Load(object sender, EventArgs e)
+        {
+
+        }
+
         private void btnXoa_Click(object sender, EventArgs e)
         {
             int r = dgvDocGia.CurrentCell.RowIndex;

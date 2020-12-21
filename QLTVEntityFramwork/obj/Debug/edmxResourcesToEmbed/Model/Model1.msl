@@ -1,8 +1,8 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
-  <EntityContainerMapping StorageEntityContainer="QLThuVienModelStoreContainer" CdmEntityContainer="QLThuVienEntities">
+  <EntityContainerMapping StorageEntityContainer="QLTVEntityFramworkStoreContainer" CdmEntityContainer="QLThuVienEntities">
     <EntitySetMapping Name="MUONSACHes">
-      <EntityTypeMapping TypeName="QLThuVienModel.MUONSACH">
+      <EntityTypeMapping TypeName="QLTVEntityFramwork.MUONSACH">
         <MappingFragment StoreEntitySet="MUONSACH">
           <ScalarProperty Name="MAUSER" ColumnName="MAUSER" />
           <ScalarProperty Name="MASACH" ColumnName="MASACH" />
@@ -13,7 +13,7 @@
       </EntityTypeMapping>
     </EntitySetMapping>
     <EntitySetMapping Name="NXBs">
-      <EntityTypeMapping TypeName="QLThuVienModel.NXB">
+      <EntityTypeMapping TypeName="QLTVEntityFramwork.NXB">
         <MappingFragment StoreEntitySet="NXB">
           <ScalarProperty Name="MANXB" ColumnName="MANXB" />
           <ScalarProperty Name="TENNXB" ColumnName="TENNXB" />
@@ -22,7 +22,7 @@
       </EntityTypeMapping>
     </EntitySetMapping>
     <EntitySetMapping Name="SACHes">
-      <EntityTypeMapping TypeName="QLThuVienModel.SACH">
+      <EntityTypeMapping TypeName="QLTVEntityFramwork.SACH">
         <MappingFragment StoreEntitySet="SACH">
           <ScalarProperty Name="MASACH" ColumnName="MASACH" />
           <ScalarProperty Name="MANXB" ColumnName="MANXB" />
@@ -38,7 +38,7 @@
       </EntityTypeMapping>
     </EntitySetMapping>
     <EntitySetMapping Name="sysdiagrams">
-      <EntityTypeMapping TypeName="QLThuVienModel.sysdiagram">
+      <EntityTypeMapping TypeName="QLTVEntityFramwork.sysdiagram">
         <MappingFragment StoreEntitySet="sysdiagrams">
           <ScalarProperty Name="name" ColumnName="name" />
           <ScalarProperty Name="principal_id" ColumnName="principal_id" />
@@ -49,7 +49,7 @@
       </EntityTypeMapping>
     </EntitySetMapping>
     <EntitySetMapping Name="TACGIAs">
-      <EntityTypeMapping TypeName="QLThuVienModel.TACGIA">
+      <EntityTypeMapping TypeName="QLTVEntityFramwork.TACGIA">
         <MappingFragment StoreEntitySet="TACGIA">
           <ScalarProperty Name="MATACGIA" ColumnName="MATACGIA" />
           <ScalarProperty Name="TENTACGIA" ColumnName="TENTACGIA" />
@@ -57,7 +57,7 @@
       </EntityTypeMapping>
     </EntitySetMapping>
     <EntitySetMapping Name="USERS">
-      <EntityTypeMapping TypeName="QLThuVienModel.USER">
+      <EntityTypeMapping TypeName="QLTVEntityFramwork.USER">
         <MappingFragment StoreEntitySet="USERS">
           <ScalarProperty Name="MAUSER" ColumnName="MAUSER" />
           <ScalarProperty Name="USERNAME" ColumnName="USERNAME" />
@@ -70,7 +70,7 @@
       </EntityTypeMapping>
     </EntitySetMapping>
     <EntitySetMapping Name="CARDS">
-      <EntityTypeMapping TypeName="QLThuVienModel.CARD">
+      <EntityTypeMapping TypeName="QLTVEntityFramwork.CARD">
         <MappingFragment StoreEntitySet="CARDS">
           <ScalarProperty Name="MACARD" ColumnName="MACARD" />
           <ScalarProperty Name="MAUSER" ColumnName="MAUSER" />
@@ -81,7 +81,7 @@
       </EntityTypeMapping>
     </EntitySetMapping>
     <EntitySetMapping Name="Authenticate_User">
-      <EntityTypeMapping TypeName="QLThuVienModel.Authenticate_User">
+      <EntityTypeMapping TypeName="QLTVEntityFramwork.Authenticate_User">
         <MappingFragment StoreEntitySet="Authenticate_User">
           <ScalarProperty Name="USERNAME" ColumnName="USERNAME" />
           <ScalarProperty Name="MATKHAU" ColumnName="MATKHAU" />
@@ -89,7 +89,7 @@
       </EntityTypeMapping>
     </EntitySetMapping>
     <EntitySetMapping Name="Book_Info">
-      <EntityTypeMapping TypeName="QLThuVienModel.Book_Info">
+      <EntityTypeMapping TypeName="QLTVEntityFramwork.Book_Info">
         <MappingFragment StoreEntitySet="Book_Info">
           <ScalarProperty Name="TENSACH" ColumnName="TENSACH" />
           <ScalarProperty Name="LINHVUC" ColumnName="LINHVUC" />
@@ -102,7 +102,7 @@
       </EntityTypeMapping>
     </EntitySetMapping>
     <EntitySetMapping Name="Borrower_Info">
-      <EntityTypeMapping TypeName="QLThuVienModel.Borrower_Info">
+      <EntityTypeMapping TypeName="QLTVEntityFramwork.Borrower_Info">
         <MappingFragment StoreEntitySet="Borrower_Info">
           <ScalarProperty Name="MAUSER" ColumnName="MAUSER" />
           <ScalarProperty Name="TEN" ColumnName="TEN" />
@@ -112,7 +112,7 @@
       </EntityTypeMapping>
     </EntitySetMapping>
     <EntitySetMapping Name="Borrowing_Details">
-      <EntityTypeMapping TypeName="QLThuVienModel.Borrowing_Details">
+      <EntityTypeMapping TypeName="QLTVEntityFramwork.Borrowing_Details">
         <MappingFragment StoreEntitySet="Borrowing_Details">
           <ScalarProperty Name="TenUser" ColumnName="TenUser" />
           <ScalarProperty Name="TenSach" ColumnName="TenSach" />
@@ -123,18 +123,18 @@
       </EntityTypeMapping>
     </EntitySetMapping>
     <EntitySetMapping Name="Publisher_Info">
-      <EntityTypeMapping TypeName="QLThuVienModel.Publisher_Info">
+      <EntityTypeMapping TypeName="QLTVEntityFramwork.Publisher_Info">
         <MappingFragment StoreEntitySet="Publisher_Info">
           <ScalarProperty Name="TENNXB" ColumnName="TENNXB" />
           <ScalarProperty Name="SDT" ColumnName="SDT" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
-    <FunctionImportMapping FunctionImportName="Add_Cards" FunctionName="QLThuVienModel.Store.Add_Cards" />
-    <FunctionImportMapping FunctionImportName="borrower_delete" FunctionName="QLThuVienModel.Store.borrower_delete" />
-    <FunctionImportMapping FunctionImportName="borrower_getall" FunctionName="QLThuVienModel.Store.borrower_getall">
+    <FunctionImportMapping FunctionImportName="Add_Cards" FunctionName="QLTVEntityFramwork.Store.Add_Cards" />
+    <FunctionImportMapping FunctionImportName="borrower_delete" FunctionName="QLTVEntityFramwork.Store.borrower_delete" />
+    <FunctionImportMapping FunctionImportName="borrower_getall" FunctionName="QLTVEntityFramwork.Store.borrower_getall">
       <ResultMapping>
-        <ComplexTypeMapping TypeName="QLThuVienModel.borrower_getall_Result">
+        <ComplexTypeMapping TypeName="QLTVEntityFramwork.borrower_getall_Result">
           <ScalarProperty Name="USERNAME" ColumnName="USERNAME" />
           <ScalarProperty Name="TENSACH" ColumnName="TENSACH" />
           <ScalarProperty Name="NGAYMUON" ColumnName="NGAYMUON" />
@@ -142,15 +142,15 @@
         </ComplexTypeMapping>
       </ResultMapping>
     </FunctionImportMapping>
-    <FunctionImportMapping FunctionImportName="borrower_insert" FunctionName="QLThuVienModel.Store.borrower_insert" />
-    <FunctionImportMapping FunctionImportName="borrower_update" FunctionName="QLThuVienModel.Store.borrower_update" />
-    <FunctionImportMapping FunctionImportName="Delete_Cards" FunctionName="QLThuVienModel.Store.Delete_Cards" />
-    <FunctionImportMapping FunctionImportName="Delete_Muon" FunctionName="QLThuVienModel.Store.Delete_Muon" />
-    <FunctionImportMapping FunctionImportName="Delete_SACH" FunctionName="QLThuVienModel.Store.Delete_SACH" />
-    <FunctionImportMapping FunctionImportName="Delete_User" FunctionName="QLThuVienModel.Store.Delete_User" />
-    <FunctionImportMapping FunctionImportName="Get_Cards" FunctionName="QLThuVienModel.Store.Get_Cards">
+    <FunctionImportMapping FunctionImportName="borrower_insert" FunctionName="QLTVEntityFramwork.Store.borrower_insert" />
+    <FunctionImportMapping FunctionImportName="borrower_update" FunctionName="QLTVEntityFramwork.Store.borrower_update" />
+    <FunctionImportMapping FunctionImportName="Delete_Cards" FunctionName="QLTVEntityFramwork.Store.Delete_Cards" />
+    <FunctionImportMapping FunctionImportName="Delete_Muon" FunctionName="QLTVEntityFramwork.Store.Delete_Muon" />
+    <FunctionImportMapping FunctionImportName="Delete_SACH" FunctionName="QLTVEntityFramwork.Store.Delete_SACH" />
+    <FunctionImportMapping FunctionImportName="Delete_User" FunctionName="QLTVEntityFramwork.Store.Delete_User" />
+    <FunctionImportMapping FunctionImportName="Get_Cards" FunctionName="QLTVEntityFramwork.Store.Get_Cards">
       <ResultMapping>
-        <ComplexTypeMapping TypeName="QLThuVienModel.Get_Cards_Result">
+        <ComplexTypeMapping TypeName="QLTVEntityFramwork.Get_Cards_Result">
           <ScalarProperty Name="MACARD" ColumnName="MACARD" />
           <ScalarProperty Name="MAUSER" ColumnName="MAUSER" />
           <ScalarProperty Name="NUMBERCARD" ColumnName="NUMBERCARD" />
@@ -159,11 +159,11 @@
         </ComplexTypeMapping>
       </ResultMapping>
     </FunctionImportMapping>
-    <FunctionImportMapping FunctionImportName="get_masach" FunctionName="QLThuVienModel.Store.get_masach" />
-    <FunctionImportMapping FunctionImportName="get_mauser" FunctionName="QLThuVienModel.Store.get_mauser" />
-    <FunctionImportMapping FunctionImportName="search_borrower" FunctionName="QLThuVienModel.Store.search_borrower">
+    <FunctionImportMapping FunctionImportName="get_masach" FunctionName="QLTVEntityFramwork.Store.get_masach" />
+    <FunctionImportMapping FunctionImportName="get_mauser" FunctionName="QLTVEntityFramwork.Store.get_mauser" />
+    <FunctionImportMapping FunctionImportName="search_borrower" FunctionName="QLTVEntityFramwork.Store.search_borrower">
       <ResultMapping>
-        <ComplexTypeMapping TypeName="QLThuVienModel.search_borrower_Result">
+        <ComplexTypeMapping TypeName="QLTVEntityFramwork.search_borrower_Result">
           <ScalarProperty Name="USERNAME" ColumnName="USERNAME" />
           <ScalarProperty Name="TENSACH" ColumnName="TENSACH" />
           <ScalarProperty Name="NGAYMUON" ColumnName="NGAYMUON" />
@@ -172,9 +172,9 @@
         </ComplexTypeMapping>
       </ResultMapping>
     </FunctionImportMapping>
-    <FunctionImportMapping FunctionImportName="Search_Cards" FunctionName="QLThuVienModel.Store.Search_Cards">
+    <FunctionImportMapping FunctionImportName="Search_Cards" FunctionName="QLTVEntityFramwork.Store.Search_Cards">
       <ResultMapping>
-        <ComplexTypeMapping TypeName="QLThuVienModel.Search_Cards_Result">
+        <ComplexTypeMapping TypeName="QLTVEntityFramwork.Search_Cards_Result">
           <ScalarProperty Name="MACARD" ColumnName="MACARD" />
           <ScalarProperty Name="MAUSER" ColumnName="MAUSER" />
           <ScalarProperty Name="NUMBERCARD" ColumnName="NUMBERCARD" />
@@ -183,9 +183,9 @@
         </ComplexTypeMapping>
       </ResultMapping>
     </FunctionImportMapping>
-    <FunctionImportMapping FunctionImportName="SEARCH_TENSACH" FunctionName="QLThuVienModel.Store.SEARCH_TENSACH">
+    <FunctionImportMapping FunctionImportName="SEARCH_TENSACH" FunctionName="QLTVEntityFramwork.Store.SEARCH_TENSACH">
       <ResultMapping>
-        <ComplexTypeMapping TypeName="QLThuVienModel.SEARCH_TENSACH_Result">
+        <ComplexTypeMapping TypeName="QLTVEntityFramwork.SEARCH_TENSACH_Result">
           <ScalarProperty Name="TENSACH" ColumnName="TENSACH" />
           <ScalarProperty Name="LINHVUC" ColumnName="LINHVUC" />
           <ScalarProperty Name="GIA" ColumnName="GIA" />
@@ -196,9 +196,9 @@
         </ComplexTypeMapping>
       </ResultMapping>
     </FunctionImportMapping>
-    <FunctionImportMapping FunctionImportName="SEARCH_VITRI" FunctionName="QLThuVienModel.Store.SEARCH_VITRI">
+    <FunctionImportMapping FunctionImportName="SEARCH_VITRI" FunctionName="QLTVEntityFramwork.Store.SEARCH_VITRI">
       <ResultMapping>
-        <ComplexTypeMapping TypeName="QLThuVienModel.SEARCH_VITRI_Result">
+        <ComplexTypeMapping TypeName="QLTVEntityFramwork.SEARCH_VITRI_Result">
           <ScalarProperty Name="TENSACH" ColumnName="TENSACH" />
           <ScalarProperty Name="LINHVUC" ColumnName="LINHVUC" />
           <ScalarProperty Name="GIA" ColumnName="GIA" />
@@ -209,37 +209,20 @@
         </ComplexTypeMapping>
       </ResultMapping>
     </FunctionImportMapping>
-    <FunctionImportMapping FunctionImportName="sp_alterdiagram" FunctionName="QLThuVienModel.Store.sp_alterdiagram" />
-    <FunctionImportMapping FunctionImportName="sp_Create_Book" FunctionName="QLThuVienModel.Store.sp_Create_Book" />
-    <FunctionImportMapping FunctionImportName="sp_Create_Publisher" FunctionName="QLThuVienModel.Store.sp_Create_Publisher" />
-    <FunctionImportMapping FunctionImportName="sp_Create_User" FunctionName="QLThuVienModel.Store.sp_Create_User" />
-    <FunctionImportMapping FunctionImportName="sp_creatediagram" FunctionName="QLThuVienModel.Store.sp_creatediagram" />
-    <FunctionImportMapping FunctionImportName="sp_Delete_Book" FunctionName="QLThuVienModel.Store.sp_Delete_Book" />
-    <FunctionImportMapping FunctionImportName="sp_Delete_Publisher" FunctionName="QLThuVienModel.Store.sp_Delete_Publisher" />
-    <FunctionImportMapping FunctionImportName="sp_Delete_User" FunctionName="QLThuVienModel.Store.sp_Delete_User" />
-    <FunctionImportMapping FunctionImportName="sp_dropdiagram" FunctionName="QLThuVienModel.Store.sp_dropdiagram" />
-    <FunctionImportMapping FunctionImportName="sp_helpdiagramdefinition" FunctionName="QLThuVienModel.Store.sp_helpdiagramdefinition">
-      <ResultMapping>
-        <ComplexTypeMapping TypeName="QLThuVienModel.sp_helpdiagramdefinition_Result">
-          <ScalarProperty Name="version" ColumnName="version" />
-          <ScalarProperty Name="definition" ColumnName="definition" />
-        </ComplexTypeMapping>
-      </ResultMapping>
-    </FunctionImportMapping>
-    <FunctionImportMapping FunctionImportName="sp_helpdiagrams" FunctionName="QLThuVienModel.Store.sp_helpdiagrams">
-      <ResultMapping>
-        <ComplexTypeMapping TypeName="QLThuVienModel.sp_helpdiagrams_Result">
-          <ScalarProperty Name="Database" ColumnName="Database" />
-          <ScalarProperty Name="Name" ColumnName="Name" />
-          <ScalarProperty Name="ID" ColumnName="ID" />
-          <ScalarProperty Name="Owner" ColumnName="Owner" />
-          <ScalarProperty Name="OwnerID" ColumnName="OwnerID" />
-        </ComplexTypeMapping>
-      </ResultMapping>
-    </FunctionImportMapping>
-    <FunctionImportMapping FunctionImportName="sp_renamediagram" FunctionName="QLThuVienModel.Store.sp_renamediagram" />
-    <FunctionImportMapping FunctionImportName="sp_Update_Book" FunctionName="QLThuVienModel.Store.sp_Update_Book" />
-    <FunctionImportMapping FunctionImportName="sp_upgraddiagrams" FunctionName="QLThuVienModel.Store.sp_upgraddiagrams" />
-    <FunctionImportMapping FunctionImportName="update_Cards" FunctionName="QLThuVienModel.Store.update_Cards" />
+    <FunctionImportMapping FunctionImportName="sp_alterdiagram" FunctionName="QLTVEntityFramwork.Store.sp_alterdiagram" />
+    <FunctionImportMapping FunctionImportName="sp_Create_Book" FunctionName="QLTVEntityFramwork.Store.sp_Create_Book" />
+    <FunctionImportMapping FunctionImportName="sp_Create_Publisher" FunctionName="QLTVEntityFramwork.Store.sp_Create_Publisher" />
+    <FunctionImportMapping FunctionImportName="sp_Create_User" FunctionName="QLTVEntityFramwork.Store.sp_Create_User" />
+    <FunctionImportMapping FunctionImportName="sp_creatediagram" FunctionName="QLTVEntityFramwork.Store.sp_creatediagram" />
+    <FunctionImportMapping FunctionImportName="sp_Delete_Book" FunctionName="QLTVEntityFramwork.Store.sp_Delete_Book" />
+    <FunctionImportMapping FunctionImportName="sp_Delete_Publisher" FunctionName="QLTVEntityFramwork.Store.sp_Delete_Publisher" />
+    <FunctionImportMapping FunctionImportName="sp_Delete_User" FunctionName="QLTVEntityFramwork.Store.sp_Delete_User" />
+    <FunctionImportMapping FunctionImportName="sp_dropdiagram" FunctionName="QLTVEntityFramwork.Store.sp_dropdiagram" />
+    <FunctionImportMapping FunctionImportName="sp_helpdiagramdefinition" FunctionName="QLTVEntityFramwork.Store.sp_helpdiagramdefinition" />
+    <FunctionImportMapping FunctionImportName="sp_helpdiagrams" FunctionName="QLTVEntityFramwork.Store.sp_helpdiagrams" />
+    <FunctionImportMapping FunctionImportName="sp_renamediagram" FunctionName="QLTVEntityFramwork.Store.sp_renamediagram" />
+    <FunctionImportMapping FunctionImportName="sp_Update_Book" FunctionName="QLTVEntityFramwork.Store.sp_Update_Book" />
+    <FunctionImportMapping FunctionImportName="sp_upgraddiagrams" FunctionName="QLTVEntityFramwork.Store.sp_upgraddiagrams" />
+    <FunctionImportMapping FunctionImportName="update_Cards" FunctionName="QLTVEntityFramwork.Store.update_Cards" />
   </EntityContainerMapping>
 </Mapping>
