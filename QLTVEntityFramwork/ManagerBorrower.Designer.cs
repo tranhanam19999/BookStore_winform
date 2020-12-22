@@ -119,7 +119,7 @@
             // 
             this.btnHuy.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnHuy.ForeColor = System.Drawing.Color.Red;
-            this.btnHuy.Location = new System.Drawing.Point(957, 446);
+            this.btnHuy.Location = new System.Drawing.Point(957, 528);
             this.btnHuy.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.btnHuy.Name = "btnHuy";
             this.btnHuy.Size = new System.Drawing.Size(171, 72);
@@ -132,7 +132,7 @@
             // 
             this.btnLuu.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnLuu.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.btnLuu.Location = new System.Drawing.Point(957, 364);
+            this.btnLuu.Location = new System.Drawing.Point(957, 446);
             this.btnLuu.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.btnLuu.Name = "btnLuu";
             this.btnLuu.Size = new System.Drawing.Size(174, 72);
@@ -145,7 +145,7 @@
             // 
             this.btnXoa.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnXoa.ForeColor = System.Drawing.Color.Red;
-            this.btnXoa.Location = new System.Drawing.Point(957, 200);
+            this.btnXoa.Location = new System.Drawing.Point(960, 282);
             this.btnXoa.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.btnXoa.Name = "btnXoa";
             this.btnXoa.Size = new System.Drawing.Size(174, 72);
@@ -158,7 +158,7 @@
             // 
             this.btnCapNhat.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnCapNhat.ForeColor = System.Drawing.Color.Blue;
-            this.btnCapNhat.Location = new System.Drawing.Point(957, 282);
+            this.btnCapNhat.Location = new System.Drawing.Point(960, 364);
             this.btnCapNhat.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.btnCapNhat.Name = "btnCapNhat";
             this.btnCapNhat.Size = new System.Drawing.Size(174, 72);
@@ -171,10 +171,10 @@
             // 
             this.btnThem.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnThem.ForeColor = System.Drawing.Color.Green;
-            this.btnThem.Location = new System.Drawing.Point(1113, 14);
+            this.btnThem.Location = new System.Drawing.Point(960, 200);
             this.btnThem.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.btnThem.Name = "btnThem";
-            this.btnThem.Size = new System.Drawing.Size(35, 16);
+            this.btnThem.Size = new System.Drawing.Size(174, 72);
             this.btnThem.TabIndex = 150;
             this.btnThem.Text = "Thêm";
             this.btnThem.UseVisualStyleBackColor = true;
