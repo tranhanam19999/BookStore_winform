@@ -55,7 +55,7 @@
             // 
             this.button1.Location = new System.Drawing.Point(873, 147);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 30);
+            this.button1.Size = new System.Drawing.Size(134, 30);
             this.button1.TabIndex = 180;
             this.button1.Text = "Hủy Search";
             this.button1.UseVisualStyleBackColor = true;
@@ -77,9 +77,9 @@
             // 
             // txtNgayHetHan
             // 
-            this.txtNgayHetHan.Location = new System.Drawing.Point(665, 95);
+            this.txtNgayHetHan.Location = new System.Drawing.Point(583, 95);
             this.txtNgayHetHan.Name = "txtNgayHetHan";
-            this.txtNgayHetHan.Size = new System.Drawing.Size(100, 26);
+            this.txtNgayHetHan.Size = new System.Drawing.Size(192, 26);
             this.txtNgayHetHan.TabIndex = 177;
             // 
             // ds
@@ -89,20 +89,20 @@
             this.ds.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ds.Location = new System.Drawing.Point(60, 88);
             this.ds.Name = "ds";
-            this.ds.Size = new System.Drawing.Size(110, 29);
+            this.ds.Size = new System.Drawing.Size(117, 29);
             this.ds.TabIndex = 176;
-            this.ds.Text = "Mã User";
+            this.ds.Text = "Mã User:";
             // 
             // kk
             // 
             this.kk.AutoSize = true;
             this.kk.BackColor = System.Drawing.Color.Transparent;
             this.kk.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.kk.Location = new System.Drawing.Point(437, 92);
+            this.kk.Location = new System.Drawing.Point(386, 95);
             this.kk.Name = "kk";
-            this.kk.Size = new System.Drawing.Size(173, 29);
+            this.kk.Size = new System.Drawing.Size(180, 29);
             this.kk.TabIndex = 175;
-            this.kk.Text = "Ngày Hết Hạn";
+            this.kk.Text = "Ngày Hết Hạn:";
             // 
             // d
             // 
@@ -111,9 +111,9 @@
             this.d.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.d.Location = new System.Drawing.Point(60, 29);
             this.d.Name = "d";
-            this.d.Size = new System.Drawing.Size(111, 29);
+            this.d.Size = new System.Drawing.Size(118, 29);
             this.d.TabIndex = 174;
-            this.d.Text = "Mã Card";
+            this.d.Text = "Mã Card:";
             // 
             // btnHuy
             // 
@@ -192,9 +192,9 @@
             // 
             // txtNgayMo
             // 
-            this.txtNgayMo.Location = new System.Drawing.Point(665, 33);
+            this.txtNgayMo.Location = new System.Drawing.Point(583, 33);
             this.txtNgayMo.Name = "txtNgayMo";
-            this.txtNgayMo.Size = new System.Drawing.Size(100, 26);
+            this.txtNgayMo.Size = new System.Drawing.Size(192, 26);
             this.txtNgayMo.TabIndex = 167;
             // 
             // txtNumberCard
@@ -206,9 +206,9 @@
             // 
             // txtMaCardSearch
             // 
-            this.txtMaCardSearch.Location = new System.Drawing.Point(665, 149);
+            this.txtMaCardSearch.Location = new System.Drawing.Point(583, 149);
             this.txtMaCardSearch.Name = "txtMaCardSearch";
-            this.txtMaCardSearch.Size = new System.Drawing.Size(100, 26);
+            this.txtMaCardSearch.Size = new System.Drawing.Size(192, 26);
             this.txtMaCardSearch.TabIndex = 165;
             // 
             // txtNgay
@@ -216,11 +216,11 @@
             this.txtNgay.AutoSize = true;
             this.txtNgay.BackColor = System.Drawing.Color.Transparent;
             this.txtNgay.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtNgay.Location = new System.Drawing.Point(489, 29);
+            this.txtNgay.Location = new System.Drawing.Point(386, 33);
             this.txtNgay.Name = "txtNgay";
-            this.txtNgay.Size = new System.Drawing.Size(116, 29);
+            this.txtNgay.Size = new System.Drawing.Size(180, 29);
             this.txtNgay.TabIndex = 164;
-            this.txtNgay.Text = "Ngày Mở";
+            this.txtNgay.Text = "Ngày Đăng ký:";
             // 
             // dfa
             // 
@@ -229,20 +229,20 @@
             this.dfa.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dfa.Location = new System.Drawing.Point(60, 145);
             this.dfa.Name = "dfa";
-            this.dfa.Size = new System.Drawing.Size(108, 29);
+            this.dfa.Size = new System.Drawing.Size(115, 29);
             this.dfa.TabIndex = 163;
-            this.dfa.Text = "Số Card";
+            this.dfa.Text = "Số Card:";
             // 
             // label6
             // 
             this.label6.AutoSize = true;
             this.label6.BackColor = System.Drawing.Color.Transparent;
             this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(489, 145);
+            this.label6.Location = new System.Drawing.Point(386, 148);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(121, 29);
+            this.label6.Size = new System.Drawing.Size(128, 29);
             this.label6.TabIndex = 162;
-            this.label6.Text = "Tìm kiếm";
+            this.label6.Text = "Tìm kiếm:";
             // 
             // dgvCard
             // 
@@ -264,6 +264,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackgroundImage = global::QLTVEntityFramwork.Properties.Resources._121;
             this.ClientSize = new System.Drawing.Size(1178, 621);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.txtMaCart);

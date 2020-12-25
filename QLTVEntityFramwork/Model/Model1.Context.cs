@@ -95,15 +95,15 @@ namespace QLTVEntityFramwork.Model
             return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<borrower_getall_Result>("borrower_getall");
         }
     
-        public virtual int borrower_insert(string tendocgia, string tensach, string ngayMuon, string ngayTra, string tinhTrang)
+        public virtual int borrower_insert(Nullable<int> mauser, Nullable<int> masach, string ngayMuon, string ngayTra, string tinhTrang)
         {
-            var tendocgiaParameter = tendocgia != null ?
-                new ObjectParameter("tendocgia", tendocgia) :
-                new ObjectParameter("tendocgia", typeof(string));
+            var mauserParameter = mauser.HasValue ?
+                new ObjectParameter("mauser", mauser) :
+                new ObjectParameter("mauser", typeof(int));
     
-            var tensachParameter = tensach != null ?
-                new ObjectParameter("tensach", tensach) :
-                new ObjectParameter("tensach", typeof(string));
+            var masachParameter = masach.HasValue ?
+                new ObjectParameter("masach", masach) :
+                new ObjectParameter("masach", typeof(int));
     
             var ngayMuonParameter = ngayMuon != null ?
                 new ObjectParameter("NgayMuon", ngayMuon) :
@@ -117,7 +117,7 @@ namespace QLTVEntityFramwork.Model
                 new ObjectParameter("TinhTrang", tinhTrang) :
                 new ObjectParameter("TinhTrang", typeof(string));
     
-            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction("borrower_insert", tendocgiaParameter, tensachParameter, ngayMuonParameter, ngayTraParameter, tinhTrangParameter);
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction("borrower_insert", mauserParameter, masachParameter, ngayMuonParameter, ngayTraParameter, tinhTrangParameter);
         }
     
         public virtual int borrower_update(string tendocgia, string tensach, string ngayMuon, string ngayTra, string tinhTrang)
@@ -405,7 +405,7 @@ namespace QLTVEntityFramwork.Model
             return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction("sp_dropdiagram", diagramnameParameter, owner_idParameter);
         }
     
-        public virtual int sp_helpdiagramdefinition(string diagramname, Nullable<int> owner_id)
+        public virtual ObjectResult<sp_helpdiagramdefinition_Result> sp_helpdiagramdefinition(string diagramname, Nullable<int> owner_id)
         {
             var diagramnameParameter = diagramname != null ?
                 new ObjectParameter("diagramname", diagramname) :
@@ -415,10 +415,10 @@ namespace QLTVEntityFramwork.Model
                 new ObjectParameter("owner_id", owner_id) :
                 new ObjectParameter("owner_id", typeof(int));
     
-            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction("sp_helpdiagramdefinition", diagramnameParameter, owner_idParameter);
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<sp_helpdiagramdefinition_Result>("sp_helpdiagramdefinition", diagramnameParameter, owner_idParameter);
         }
     
-        public virtual int sp_helpdiagrams(string diagramname, Nullable<int> owner_id)
+        public virtual ObjectResult<sp_helpdiagrams_Result> sp_helpdiagrams(string diagramname, Nullable<int> owner_id)
         {
             var diagramnameParameter = diagramname != null ?
                 new ObjectParameter("diagramname", diagramname) :
@@ -428,7 +428,7 @@ namespace QLTVEntityFramwork.Model
                 new ObjectParameter("owner_id", owner_id) :
                 new ObjectParameter("owner_id", typeof(int));
     
-            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction("sp_helpdiagrams", diagramnameParameter, owner_idParameter);
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<sp_helpdiagrams_Result>("sp_helpdiagrams", diagramnameParameter, owner_idParameter);
         }
     
         public virtual int sp_renamediagram(string diagramname, Nullable<int> owner_id, string new_diagramname)

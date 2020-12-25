@@ -207,8 +207,8 @@ namespace QLTVEntityFramwork
                 try
                 {
                     db.Configuration.LazyLoadingEnabled = false;
-
-                    var s = db.SACHes.Where(x => x.MASACH == 1).ToList().FirstOrDefault();
+                    string tmp = (txtTenSach.Text);
+                    var s = db.SACHes.Where(x => x.TENSACH == tmp).ToList().FirstOrDefault();
                     s.MANXB = int.Parse(cbMaNXB.SelectedItem.ToString());
                     s.MATACGIA = int.Parse(cbMaTG.SelectedItem.ToString());
                     s.TENSACH = txtTenSach.Text;

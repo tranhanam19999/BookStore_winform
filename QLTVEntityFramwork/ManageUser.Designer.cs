@@ -59,7 +59,7 @@
             // 
             this.btnTra.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnTra.ForeColor = System.Drawing.Color.DarkSeaGreen;
-            this.btnTra.Location = new System.Drawing.Point(947, 705);
+            this.btnTra.Location = new System.Drawing.Point(988, 823);
             this.btnTra.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnTra.Name = "btnTra";
             this.btnTra.Size = new System.Drawing.Size(165, 72);
@@ -72,7 +72,7 @@
             // 
             this.btnOK.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnOK.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.btnOK.Location = new System.Drawing.Point(1298, 705);
+            this.btnOK.Location = new System.Drawing.Point(1320, 823);
             this.btnOK.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnOK.Name = "btnOK";
             this.btnOK.Size = new System.Drawing.Size(174, 72);
@@ -85,7 +85,7 @@
             // 
             this.btnCheck.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnCheck.ForeColor = System.Drawing.Color.Red;
-            this.btnCheck.Location = new System.Drawing.Point(1118, 705);
+            this.btnCheck.Location = new System.Drawing.Point(1149, 823);
             this.btnCheck.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnCheck.Name = "btnCheck";
             this.btnCheck.Size = new System.Drawing.Size(174, 72);
@@ -98,7 +98,7 @@
             // 
             this.btnMuonSach.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnMuonSach.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
-            this.btnMuonSach.Location = new System.Drawing.Point(765, 705);
+            this.btnMuonSach.Location = new System.Drawing.Point(816, 823);
             this.btnMuonSach.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.btnMuonSach.Name = "btnMuonSach";
             this.btnMuonSach.Size = new System.Drawing.Size(174, 72);
@@ -111,7 +111,7 @@
             // 
             this.btnHuy.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnHuy.ForeColor = System.Drawing.Color.Red;
-            this.btnHuy.Location = new System.Drawing.Point(143, 788);
+            this.btnHuy.Location = new System.Drawing.Point(759, 211);
             this.btnHuy.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.btnHuy.Name = "btnHuy";
             this.btnHuy.Size = new System.Drawing.Size(171, 72);
@@ -124,7 +124,7 @@
             // 
             this.btnLuu.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnLuu.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.btnLuu.Location = new System.Drawing.Point(143, 705);
+            this.btnLuu.Location = new System.Drawing.Point(756, 129);
             this.btnLuu.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.btnLuu.Name = "btnLuu";
             this.btnLuu.Size = new System.Drawing.Size(174, 72);
@@ -137,7 +137,7 @@
             // 
             this.btnXoa.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnXoa.ForeColor = System.Drawing.Color.Red;
-            this.btnXoa.Location = new System.Drawing.Point(561, 788);
+            this.btnXoa.Location = new System.Drawing.Point(759, 539);
             this.btnXoa.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.btnXoa.Name = "btnXoa";
             this.btnXoa.Size = new System.Drawing.Size(174, 72);
@@ -150,7 +150,7 @@
             // 
             this.btnCapNhat.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnCapNhat.ForeColor = System.Drawing.Color.Blue;
-            this.btnCapNhat.Location = new System.Drawing.Point(356, 788);
+            this.btnCapNhat.Location = new System.Drawing.Point(759, 457);
             this.btnCapNhat.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.btnCapNhat.Name = "btnCapNhat";
             this.btnCapNhat.Size = new System.Drawing.Size(174, 72);
@@ -163,7 +163,7 @@
             // 
             this.btnThem.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnThem.ForeColor = System.Drawing.Color.Green;
-            this.btnThem.Location = new System.Drawing.Point(561, 705);
+            this.btnThem.Location = new System.Drawing.Point(759, 375);
             this.btnThem.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.btnThem.Name = "btnThem";
             this.btnThem.Size = new System.Drawing.Size(174, 72);
@@ -176,7 +176,7 @@
             // 
             this.btnReload.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnReload.ForeColor = System.Drawing.Color.Fuchsia;
-            this.btnReload.Location = new System.Drawing.Point(356, 705);
+            this.btnReload.Location = new System.Drawing.Point(759, 293);
             this.btnReload.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.btnReload.Name = "btnReload";
             this.btnReload.Size = new System.Drawing.Size(174, 72);
@@ -295,7 +295,7 @@
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.Transparent;
             this.label1.ImageKey = "(none)";
-            this.label1.Location = new System.Drawing.Point(576, 9);
+            this.label1.Location = new System.Drawing.Point(298, 9);
             this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(399, 47);
@@ -349,7 +349,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::QLTVEntityFramwork.Properties.Resources._121;
-            this.ClientSize = new System.Drawing.Size(1488, 891);
+            this.ClientSize = new System.Drawing.Size(975, 712);
             this.Controls.Add(this.txtMaUser);
             this.Controls.Add(this.label10);
             this.Controls.Add(this.txtPassword);
@@ -376,7 +376,7 @@
             this.Controls.Add(this.label1);
             this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Name = "ManageUser";
-            this.Text = "ManageBorrower";
+            this.Text = "ManagerUser";
             this.Load += new System.EventHandler(this.ManageUser_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvDocGia)).EndInit();
             this.ResumeLayout(false);

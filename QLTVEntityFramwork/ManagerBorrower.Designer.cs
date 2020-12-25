@@ -264,6 +264,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackgroundImage = global::QLTVEntityFramwork.Properties.Resources._121;
             this.ClientSize = new System.Drawing.Size(1152, 666);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.txtTenDocGia);
