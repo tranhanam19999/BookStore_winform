@@ -19,7 +19,6 @@ namespace QLTVEntityFramwork
         {
             InitializeComponent();
             LoadData();
-            DisableComponent();
         }
 
         private void txtNgayHetHan_Click(object sender, EventArgs e)

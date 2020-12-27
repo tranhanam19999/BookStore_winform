@@ -1,0 +1,79 @@
+--- Xóa User đồng thời xóa thông tin liên quan đến Card và mượn sách -----
+go
+alter trigger Xoa_User on USERS
+instead of delete
+as
+begin
+	Declare @mauser int = (select MAUSER from deleted);
+	delete from MUONSACH where MUONSACH.MAUSER =@mauser;
+	delete from CARDS where CARDS.MAUSER = @mauser;	
+	delete from USERS where USERS.MAUSER = @mauser;
+end
+
+------------------------------------
+---Kiểm tra ngày trả phải là sau ngày mượn ----
+go
+CREATE trigger KT_Ngay_Muon on MUONSACH
+FOR INSERT
+AS
+IF((Select NGAYTRA From inserted)<getdate())
+BEGIN
+PRINT 'Ngày trả không thể nhỏ hơn ngày mượn !'
+ROLLBACK TRAN
+END
+---------------------------------------
+--Không cho phép cập nhật tên user đã tồn tại trước đó-----
+CREATE TRIGGER CHECK_UPDATE_USER ON USERS
+after insert, UPDATE AS
+DECLARE @USERNAME nvarchar(10) = (SELECT USERNAME FROM inserted)
+DECLARE @MAUSER int = (SELECT MAUSER FROM inserted)
+IF ((SELECT Count(*) FROM USERS WHERE USERNAME=@USERNAME)>1)
+BEGIN
+	PRINT 'TEN USER DA TON TAI'
+	ROLLBACK TRAN
+END
+-------------------------------------
+---Thêm sách mới phải có nhà xuất bản trước đó ----
+go
+Create TRIGGER Them_Sach ON SACH
+FOR INSERT, update as
+Begin
+	DECLARE @temp nchar(10) = (select MANXB from inserted)
+	if (@temp not in (select MANXB from NXB))
+	BEGIN 
+		Print 'Nhà xuất bản này không tồn tại'
+		ROLLBACK TRAN
+	END
+	ELSE
+		print N'Thành công'	
+END
+-----------------------------------------
+---Giảm số lượng sách sau khi mượn sách thành công ----
+go
+create TRIGGER update_after_muon_sach ON MUONSACH 
+AFTER INSERT AS 
+BEGIN
+	declare @masach nchar(20) = (select MASACH from inserted)
+	UPDATE SACH
+	SET TONGSOLUONG = TONGSOLUONG - 1
+		FROM SACH
+		WHERE @masach = SACH.MASACH	
+END
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

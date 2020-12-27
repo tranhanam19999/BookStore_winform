@@ -1,0 +1,17 @@
+-- View Info Publisher
+create view Publisher_Info as
+select TENNXB, SDT
+from dbo.NXB
+-- View Info Borrower
+create view Borrower_Info as
+select MAUSER,TEN, DIACHI, SDT
+from dbo.USERS
+-- View Authenticate user
+create view Authenticate_User as
+select USERNAME, MATKHAU
+from dbo.USERS
+-- View Info Book
+create view Book_Info as
+select TENSACH, VITRI, DANGDUOCMUON, TONGSOLUONG, SOLUONGSACHBIMAT, LINHVUC, GIA
+from dbo.SACH
+

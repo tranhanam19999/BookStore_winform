@@ -24,11 +24,12 @@ namespace QLTVEntityFramwork
             dgvMore.Columns.Add(colTacGia, "Tên Tác Giả");
             dgvMore.Columns.Add("HyperLink", "Thông Tin");
 
-            dgvMore.Rows.Add("To Hoai", "https://vi.wikipedia.org/wiki/T%C3%B4_Ho%C3%A0i");
-            dgvMore.Rows.Add("To Huu", "https://vi.wikipedia.org/wiki/T%E1%BB%91_H%E1%BB%AFu");
-            dgvMore.Rows.Add("Xuan Dieu", "https://vi.wikipedia.org/wiki/Xu%C3%A2n_Di%E1%BB%87u");
-            dgvMore.Rows.Add("Xuan Quynh", "https://vi.wikipedia.org/wiki/Xu%C3%A2n_Qu%E1%BB%B3nh");
-            dgvMore.Rows.Add("Che Lan Vien", "https://vi.wikipedia.org/wiki/Ch%E1%BA%BF_Lan_Vi%C3%AAn");
+            dgvMore.Rows.Add("Tran Cong Tu", "https://www.facebook.com/tctuvn");
+            dgvMore.Rows.Add("Le Van Vinh", "https://www.facebook.com/vinh.levan.1293");
+            dgvMore.Rows.Add("Dang Vu Dung", "https://www.facebook.com/dang.dungx.1");
+            dgvMore.Rows.Add("Mai Van Luong", "https://www.facebook.com/profile.php?id=100013756633996");
+            dgvMore.Rows.Add("Dang Vu Nam", "https://www.facebook.com/profile.php?id=100049089272777");
+            dgvMore.Rows.Add("Su Pham Ky Thuat", "https://www.facebook.com/fit.hcmute.edu.vn/");
             SetHyperLinkOnGrid();
             GetHyperLinkStyleForGridCell();
         }

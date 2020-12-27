@@ -62,7 +62,7 @@
     <Key>
       <PropertyRef Name="MAUSER" />
     </Key>
-    <Property Name="MAUSER" Type="Int32" Nullable="false" />
+    <Property Name="MAUSER" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
     <Property Name="USERNAME" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
     <Property Name="MATKHAU" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
     <Property Name="DIACHI" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
@@ -237,8 +237,8 @@
     </FunctionImport>
     <FunctionImport Name="borrower_getall" ReturnType="Collection(QLThuVienModel.borrower_getall_Result)" />
     <FunctionImport Name="borrower_insert">
-      <Parameter Name="mauser" Mode="In" Type="Int32" />
-      <Parameter Name="masach" Mode="In" Type="Int32" />
+      <Parameter Name="tendocgia" Mode="In" Type="String" />
+      <Parameter Name="tensach" Mode="In" Type="String" />
       <Parameter Name="NgayMuon" Mode="In" Type="String" />
       <Parameter Name="NgayTra" Mode="In" Type="String" />
       <Parameter Name="TinhTrang" Mode="In" Type="String" />
@@ -329,11 +329,11 @@
       <Parameter Name="diagramname" Mode="In" Type="String" />
       <Parameter Name="owner_id" Mode="In" Type="Int32" />
     </FunctionImport>
-    <FunctionImport Name="sp_helpdiagramdefinition" ReturnType="Collection(QLThuVienModel.sp_helpdiagramdefinition_Result)">
+    <FunctionImport Name="sp_helpdiagramdefinition">
       <Parameter Name="diagramname" Mode="In" Type="String" />
       <Parameter Name="owner_id" Mode="In" Type="Int32" />
     </FunctionImport>
-    <FunctionImport Name="sp_helpdiagrams" ReturnType="Collection(QLThuVienModel.sp_helpdiagrams_Result)">
+    <FunctionImport Name="sp_helpdiagrams">
       <Parameter Name="diagramname" Mode="In" Type="String" />
       <Parameter Name="owner_id" Mode="In" Type="Int32" />
     </FunctionImport>
@@ -406,16 +406,5 @@
     <Property Type="Int32" Name="DANGDUOCMUON" Nullable="true" />
     <Property Type="Int32" Name="SOLUONGSACHBIMAT" Nullable="true" />
     <Property Type="Int32" Name="TONGSOLUONG" Nullable="true" />
-  </ComplexType>
-  <ComplexType Name="sp_helpdiagramdefinition_Result">
-    <Property Type="Int32" Name="version" Nullable="true" />
-    <Property Type="Binary" Name="definition" Nullable="true" />
-  </ComplexType>
-  <ComplexType Name="sp_helpdiagrams_Result">
-    <Property Type="String" Name="Database" Nullable="true" MaxLength="128" />
-    <Property Type="String" Name="Name" Nullable="false" MaxLength="128" />
-    <Property Type="Int32" Name="ID" Nullable="false" />
-    <Property Type="String" Name="Owner" Nullable="true" MaxLength="128" />
-    <Property Type="Int32" Name="OwnerID" Nullable="false" />
   </ComplexType>
 </Schema>

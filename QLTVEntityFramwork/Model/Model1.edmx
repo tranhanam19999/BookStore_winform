@@ -72,7 +72,7 @@ warning 6002: The table/view 'QLThuVien.dbo.CARDS' does not have a primary key d
           <Key>
             <PropertyRef Name="MAUSER" />
           </Key>
-          <Property Name="MAUSER" Type="int" Nullable="false" />
+          <Property Name="MAUSER" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
           <Property Name="USERNAME" Type="varchar" MaxLength="50" Nullable="false" />
           <Property Name="MATKHAU" Type="varchar" MaxLength="50" />
           <Property Name="DIACHI" Type="varchar" MaxLength="50" />
@@ -211,8 +211,8 @@ warning 6002: The table/view 'QLThuVien.dbo.Publisher_Info' does not have a prim
         </Function>
         <Function Name="borrower_getall" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
         <Function Name="borrower_insert" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
-          <Parameter Name="mauser" Type="int" Mode="In" />
-          <Parameter Name="masach" Type="int" Mode="In" />
+          <Parameter Name="tendocgia" Type="varchar" Mode="In" />
+          <Parameter Name="tensach" Type="varchar" Mode="In" />
           <Parameter Name="NgayMuon" Type="varchar" Mode="In" />
           <Parameter Name="NgayTra" Type="varchar" Mode="In" />
           <Parameter Name="TinhTrang" Type="varchar" Mode="In" />
@@ -480,7 +480,7 @@ warning 6002: The table/view 'QLThuVien.dbo.Publisher_Info' does not have a prim
           <Key>
             <PropertyRef Name="MAUSER" />
           </Key>
-          <Property Name="MAUSER" Type="Int32" Nullable="false" />
+          <Property Name="MAUSER" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <Property Name="USERNAME" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
           <Property Name="MATKHAU" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
           <Property Name="DIACHI" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
@@ -655,8 +655,8 @@ warning 6002: The table/view 'QLThuVien.dbo.Publisher_Info' does not have a prim
           </FunctionImport>
           <FunctionImport Name="borrower_getall" ReturnType="Collection(QLThuVienModel.borrower_getall_Result)" />
           <FunctionImport Name="borrower_insert">
-            <Parameter Name="mauser" Mode="In" Type="Int32" />
-            <Parameter Name="masach" Mode="In" Type="Int32" />
+            <Parameter Name="tendocgia" Mode="In" Type="String" />
+            <Parameter Name="tensach" Mode="In" Type="String" />
             <Parameter Name="NgayMuon" Mode="In" Type="String" />
             <Parameter Name="NgayTra" Mode="In" Type="String" />
             <Parameter Name="TinhTrang" Mode="In" Type="String" />
@@ -747,11 +747,11 @@ warning 6002: The table/view 'QLThuVien.dbo.Publisher_Info' does not have a prim
             <Parameter Name="diagramname" Mode="In" Type="String" />
             <Parameter Name="owner_id" Mode="In" Type="Int32" />
           </FunctionImport>
-          <FunctionImport Name="sp_helpdiagramdefinition" ReturnType="Collection(QLThuVienModel.sp_helpdiagramdefinition_Result)">
+          <FunctionImport Name="sp_helpdiagramdefinition">
             <Parameter Name="diagramname" Mode="In" Type="String" />
             <Parameter Name="owner_id" Mode="In" Type="Int32" />
           </FunctionImport>
-          <FunctionImport Name="sp_helpdiagrams" ReturnType="Collection(QLThuVienModel.sp_helpdiagrams_Result)">
+          <FunctionImport Name="sp_helpdiagrams">
             <Parameter Name="diagramname" Mode="In" Type="String" />
             <Parameter Name="owner_id" Mode="In" Type="Int32" />
           </FunctionImport>
@@ -824,17 +824,6 @@ warning 6002: The table/view 'QLThuVien.dbo.Publisher_Info' does not have a prim
           <Property Type="Int32" Name="DANGDUOCMUON" Nullable="true" />
           <Property Type="Int32" Name="SOLUONGSACHBIMAT" Nullable="true" />
           <Property Type="Int32" Name="TONGSOLUONG" Nullable="true" />
-        </ComplexType>
-        <ComplexType Name="sp_helpdiagramdefinition_Result">
-          <Property Type="Int32" Name="version" Nullable="true" />
-          <Property Type="Binary" Name="definition" Nullable="true" />
-        </ComplexType>
-        <ComplexType Name="sp_helpdiagrams_Result">
-          <Property Type="String" Name="Database" Nullable="true" MaxLength="128" />
-          <Property Type="String" Name="Name" Nullable="false" MaxLength="128" />
-          <Property Type="Int32" Name="ID" Nullable="false" />
-          <Property Type="String" Name="Owner" Nullable="true" MaxLength="128" />
-          <Property Type="Int32" Name="OwnerID" Nullable="false" />
         </ComplexType>
       </Schema>
     </edmx:ConceptualModels>
@@ -1059,25 +1048,8 @@ warning 6002: The table/view 'QLThuVien.dbo.Publisher_Info' does not have a prim
           <FunctionImportMapping FunctionImportName="sp_Delete_Publisher" FunctionName="QLThuVienModel.Store.sp_Delete_Publisher" />
           <FunctionImportMapping FunctionImportName="sp_Delete_User" FunctionName="QLThuVienModel.Store.sp_Delete_User" />
           <FunctionImportMapping FunctionImportName="sp_dropdiagram" FunctionName="QLThuVienModel.Store.sp_dropdiagram" />
-          <FunctionImportMapping FunctionImportName="sp_helpdiagramdefinition" FunctionName="QLThuVienModel.Store.sp_helpdiagramdefinition">
-            <ResultMapping>
-              <ComplexTypeMapping TypeName="QLThuVienModel.sp_helpdiagramdefinition_Result">
-                <ScalarProperty Name="version" ColumnName="version" />
-                <ScalarProperty Name="definition" ColumnName="definition" />
-              </ComplexTypeMapping>
-            </ResultMapping>
-          </FunctionImportMapping>
-          <FunctionImportMapping FunctionImportName="sp_helpdiagrams" FunctionName="QLThuVienModel.Store.sp_helpdiagrams">
-            <ResultMapping>
-              <ComplexTypeMapping TypeName="QLThuVienModel.sp_helpdiagrams_Result">
-                <ScalarProperty Name="Database" ColumnName="Database" />
-                <ScalarProperty Name="Name" ColumnName="Name" />
-                <ScalarProperty Name="ID" ColumnName="ID" />
-                <ScalarProperty Name="Owner" ColumnName="Owner" />
-                <ScalarProperty Name="OwnerID" ColumnName="OwnerID" />
-              </ComplexTypeMapping>
-            </ResultMapping>
-          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="sp_helpdiagramdefinition" FunctionName="QLThuVienModel.Store.sp_helpdiagramdefinition" />
+          <FunctionImportMapping FunctionImportName="sp_helpdiagrams" FunctionName="QLThuVienModel.Store.sp_helpdiagrams" />
           <FunctionImportMapping FunctionImportName="sp_renamediagram" FunctionName="QLThuVienModel.Store.sp_renamediagram" />
           <FunctionImportMapping FunctionImportName="sp_Update_Book" FunctionName="QLThuVienModel.Store.sp_Update_Book" />
           <FunctionImportMapping FunctionImportName="sp_upgraddiagrams" FunctionName="QLThuVienModel.Store.sp_upgraddiagrams" />

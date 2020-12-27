@@ -178,7 +178,7 @@ namespace QLTVEntityFramwork
                 if (checkThem == true)
                 {
                     //int MaUser = int.Parse(txtMaUser.Text.ToString());
-                    
+
                     string tendocgia = txtTenDocGia.Text.ToString();
                     string tensach = txtTenSach.Text.ToString();
                     string ngaymuon = txtNgayMuon.Text.ToString();
@@ -186,7 +186,7 @@ namespace QLTVEntityFramwork
                     string tinhtrang = txtTinhTrang.Text.ToString();
                     MessageBox.Show(ngaymuon);
 
-                    //db.borrower_insert(tendocgia, tensach, ngaymuon, ngaytra, tinhtrang);
+                    db.borrower_insert(tendocgia, tensach, ngaymuon, ngaytra, tinhtrang);
                     LoadData();
                     MessageBox.Show("Da them xong");
                     btnLuu.Enabled = false;

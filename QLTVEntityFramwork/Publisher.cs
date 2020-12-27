@@ -38,9 +38,6 @@ namespace QLTVEntityFramwork
 
             btnLuu.Enabled = false;
             btnHuy.Enabled = false;
-            btnThem.Enabled = true;
-            btnXoa.Enabled = true;
-            btnCapNhat.Enabled = true;
             //using (var db = new Model1())
             //{
             //    db.Configuration.LazyLoadingEnabled = false;
@@ -198,8 +195,6 @@ namespace QLTVEntityFramwork
                         LoadData();
                         DisableComponent();
                         MessageBox.Show("Đã thêm xong !!!");
-                        Them = false;
-                        checkThem = false;
                     }
                     catch
                     {
@@ -207,15 +202,19 @@ namespace QLTVEntityFramwork
                     }
                 }
                 LoadData();
+                Them = false;
+                checkThem = false;
+                LoadData();
+                btnCapNhat.Enabled = true;
+                btnXoa.Enabled = true;
+
             }
             else if (CapNhat == true)
             {
                 try
                 {
                     db.Configuration.LazyLoadingEnabled = false;
-                    int tmp = int.Parse(txtNXB.Text);
-                    var s = db.NXBs.Where(x => x.MANXB == tmp).ToList().FirstOrDefault();
-                    
+                    var s = db.NXBs.Where(x => x.MANXB == 1).ToList().FirstOrDefault();
                     s.MANXB = int.Parse(txtNXB.Text);
                     s.TENNXB = txtTenNXB.Text;
                     s.SDT = txtSDT.Text;
@@ -228,7 +227,11 @@ namespace QLTVEntityFramwork
                 {
                     MessageBox.Show("Không cập nhật được. Lỗi rồi!");
                 }
-                
+                btnHuy.Enabled = false;
+                btnLuu.Enabled = false;
+                btnThem.Enabled = true;
+                btnXoa.Enabled = true;
+                btnCapNhat.Enabled = true;
                 //using (var db = new Model1())
                 //{
                 //    db.Configuration.LazyLoadingEnabled = false;
@@ -245,7 +248,6 @@ namespace QLTVEntityFramwork
                 //}
             }
             ClearData();
-            LoadData();
         }
 
         public void ClearData()

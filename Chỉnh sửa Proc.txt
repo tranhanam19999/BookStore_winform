@@ -1,0 +1,13 @@
+GO
+ALTER proc [dbo].[borrower_insert]
+@tendocgia varchar(50),	
+@tensach varchar(50),	
+@NgayMuon varchar(50),
+@NgayTra varchar(50),
+@TinhTrang varchar(50)
+as
+begin  
+	declare @mauser int= (select MAUSER from USERS where USERS.USERNAME = @tendocgia);
+	declare @masach int= (select MASACH from SACH where SACH.TENSACH = @tensach)
+    insert into MUONSACH(MAUSER,MASACH,NGAYMUON,NGAYTRA,TINHTRANG) VALUES(@mauser, @masach,@NgayMuon,@NgayTra,@TinhTrang)   
+end
