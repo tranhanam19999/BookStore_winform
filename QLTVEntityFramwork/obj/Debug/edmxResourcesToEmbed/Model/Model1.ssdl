@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<Schema Namespace="QLTVEntityFramwork.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+<Schema Namespace="QLThuVienModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
   <!--Errors Found During Generation:
-warning 6002: The table/view 'QLThuVien.dbo.CARDS' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+warning 6002: The table/view 'QLThuVienReal.dbo.CARDS' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
   <EntityType Name="CARDS">
     <Key>
       <PropertyRef Name="MACARD" />
@@ -76,7 +76,7 @@ warning 6002: The table/view 'QLThuVien.dbo.CARDS' does not have a primary key d
     <Property Name="TEN" Type="varchar" MaxLength="50" />
   </EntityType>
   <!--Errors Found During Generation:
-warning 6002: The table/view 'QLThuVien.dbo.Authenticate_User' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+warning 6002: The table/view 'QLThuVienReal.dbo.Authenticate_User' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
   <EntityType Name="Authenticate_User">
     <Key>
       <PropertyRef Name="USERNAME" />
@@ -85,7 +85,7 @@ warning 6002: The table/view 'QLThuVien.dbo.Authenticate_User' does not have a p
     <Property Name="MATKHAU" Type="varchar" MaxLength="50" />
   </EntityType>
   <!--Errors Found During Generation:
-warning 6002: The table/view 'QLThuVien.dbo.Book_Info' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+warning 6002: The table/view 'QLThuVienReal.dbo.Book_Info' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
   <EntityType Name="Book_Info">
     <Key>
       <PropertyRef Name="TENSACH" />
@@ -99,7 +99,7 @@ warning 6002: The table/view 'QLThuVien.dbo.Book_Info' does not have a primary k
     <Property Name="TONGSOLUONG" Type="int" />
   </EntityType>
   <!--Errors Found During Generation:
-warning 6002: The table/view 'QLThuVien.dbo.Borrower_Info' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+warning 6002: The table/view 'QLThuVienReal.dbo.Borrower_Info' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
   <EntityType Name="Borrower_Info">
     <Key>
       <PropertyRef Name="MAUSER" />
@@ -110,7 +110,7 @@ warning 6002: The table/view 'QLThuVien.dbo.Borrower_Info' does not have a prima
     <Property Name="SDT" Type="varchar" MaxLength="50" />
   </EntityType>
   <!--Errors Found During Generation:
-warning 6002: The table/view 'QLThuVien.dbo.Borrowing_Details' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+warning 6002: The table/view 'QLThuVienReal.dbo.Borrowing_Details' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
   <EntityType Name="Borrowing_Details">
     <Key>
       <PropertyRef Name="TenSach" />
@@ -122,7 +122,7 @@ warning 6002: The table/view 'QLThuVien.dbo.Borrowing_Details' does not have a p
     <Property Name="TINHTRANG" Type="varchar" MaxLength="50" />
   </EntityType>
   <!--Errors Found During Generation:
-warning 6002: The table/view 'QLThuVien.dbo.Publisher_Info' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+warning 6002: The table/view 'QLThuVienReal.dbo.Publisher_Info' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
   <EntityType Name="Publisher_Info">
     <Key>
       <PropertyRef Name="TENNXB" />
@@ -206,8 +206,8 @@ warning 6002: The table/view 'QLThuVien.dbo.Publisher_Info' does not have a prim
   </Function>
   <Function Name="borrower_getall" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
   <Function Name="borrower_insert" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
-    <Parameter Name="mauser" Type="int" Mode="In" />
-    <Parameter Name="masach" Type="int" Mode="In" />
+    <Parameter Name="tendocgia" Type="varchar" Mode="In" />
+    <Parameter Name="tensach" Type="varchar" Mode="In" />
     <Parameter Name="NgayMuon" Type="varchar" Mode="In" />
     <Parameter Name="NgayTra" Type="varchar" Mode="In" />
     <Parameter Name="TinhTrang" Type="varchar" Mode="In" />
@@ -331,7 +331,7 @@ warning 6002: The table/view 'QLThuVien.dbo.Publisher_Info' does not have a prim
     <Parameter Name="datestart" Type="varchar" Mode="In" />
     <Parameter Name="datefinish" Type="varchar" Mode="In" />
   </Function>
-  <EntityContainer Name="QLTVEntityFramworkStoreContainer">
+  <EntityContainer Name="QLThuVienModelStoreContainer">
     <EntitySet Name="MUONSACH" EntityType="Self.MUONSACH" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="NXB" EntityType="Self.NXB" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="SACH" EntityType="Self.SACH" Schema="dbo" store:Type="Tables" />

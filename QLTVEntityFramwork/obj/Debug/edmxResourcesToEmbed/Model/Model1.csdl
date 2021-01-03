@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<Schema Namespace="QLTVEntityFramwork" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+<Schema Namespace="QLThuVienModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
   <EntityType Name="MUONSACH">
     <Key>
       <PropertyRef Name="MAUSER" />
@@ -235,10 +235,10 @@
       <Parameter Name="NgayTra" Mode="In" Type="String" />
       <Parameter Name="TinhTrang" Mode="In" Type="String" />
     </FunctionImport>
-    <FunctionImport Name="borrower_getall" ReturnType="Collection(QLTVEntityFramwork.borrower_getall_Result)" />
+    <FunctionImport Name="borrower_getall" ReturnType="Collection(QLThuVienModel.borrower_getall_Result)" />
     <FunctionImport Name="borrower_insert">
-      <Parameter Name="mauser" Mode="In" Type="Int32" />
-      <Parameter Name="masach" Mode="In" Type="Int32" />
+      <Parameter Name="tendocgia" Mode="In" Type="String" />
+      <Parameter Name="tensach" Mode="In" Type="String" />
       <Parameter Name="NgayMuon" Mode="In" Type="String" />
       <Parameter Name="NgayTra" Mode="In" Type="String" />
       <Parameter Name="TinhTrang" Mode="In" Type="String" />
@@ -262,23 +262,23 @@
     <FunctionImport Name="Delete_User">
       <Parameter Name="mauser" Mode="In" Type="Int32" />
     </FunctionImport>
-    <FunctionImport Name="Get_Cards" ReturnType="Collection(QLTVEntityFramwork.Get_Cards_Result)" />
+    <FunctionImport Name="Get_Cards" ReturnType="Collection(QLThuVienModel.Get_Cards_Result)" />
     <FunctionImport Name="get_masach" ReturnType="Collection(Int32)">
       <Parameter Name="Tensach" Mode="In" Type="String" />
     </FunctionImport>
     <FunctionImport Name="get_mauser" ReturnType="Collection(Int32)">
       <Parameter Name="TenUser" Mode="In" Type="String" />
     </FunctionImport>
-    <FunctionImport Name="search_borrower" ReturnType="Collection(QLTVEntityFramwork.search_borrower_Result)">
+    <FunctionImport Name="search_borrower" ReturnType="Collection(QLThuVienModel.search_borrower_Result)">
       <Parameter Name="tendocgia" Mode="In" Type="String" />
     </FunctionImport>
-    <FunctionImport Name="Search_Cards" ReturnType="Collection(QLTVEntityFramwork.Search_Cards_Result)">
+    <FunctionImport Name="Search_Cards" ReturnType="Collection(QLThuVienModel.Search_Cards_Result)">
       <Parameter Name="macard" Mode="In" Type="Int32" />
     </FunctionImport>
-    <FunctionImport Name="SEARCH_TENSACH" ReturnType="Collection(QLTVEntityFramwork.SEARCH_TENSACH_Result)">
+    <FunctionImport Name="SEARCH_TENSACH" ReturnType="Collection(QLThuVienModel.SEARCH_TENSACH_Result)">
       <Parameter Name="TENSACH" Mode="In" Type="String" />
     </FunctionImport>
-    <FunctionImport Name="SEARCH_VITRI" ReturnType="Collection(QLTVEntityFramwork.SEARCH_VITRI_Result)">
+    <FunctionImport Name="SEARCH_VITRI" ReturnType="Collection(QLThuVienModel.SEARCH_VITRI_Result)">
       <Parameter Name="VITRI" Mode="In" Type="String" />
     </FunctionImport>
     <FunctionImport Name="sp_alterdiagram">
@@ -329,11 +329,11 @@
       <Parameter Name="diagramname" Mode="In" Type="String" />
       <Parameter Name="owner_id" Mode="In" Type="Int32" />
     </FunctionImport>
-    <FunctionImport Name="sp_helpdiagramdefinition">
+    <FunctionImport Name="sp_helpdiagramdefinition" ReturnType="Collection(QLThuVienModel.sp_helpdiagramdefinition_Result)">
       <Parameter Name="diagramname" Mode="In" Type="String" />
       <Parameter Name="owner_id" Mode="In" Type="Int32" />
     </FunctionImport>
-    <FunctionImport Name="sp_helpdiagrams">
+    <FunctionImport Name="sp_helpdiagrams" ReturnType="Collection(QLThuVienModel.sp_helpdiagrams_Result)">
       <Parameter Name="diagramname" Mode="In" Type="String" />
       <Parameter Name="owner_id" Mode="In" Type="Int32" />
     </FunctionImport>
@@ -406,5 +406,16 @@
     <Property Type="Int32" Name="DANGDUOCMUON" Nullable="true" />
     <Property Type="Int32" Name="SOLUONGSACHBIMAT" Nullable="true" />
     <Property Type="Int32" Name="TONGSOLUONG" Nullable="true" />
+  </ComplexType>
+  <ComplexType Name="sp_helpdiagramdefinition_Result">
+    <Property Type="Int32" Name="version" Nullable="true" />
+    <Property Type="Binary" Name="definition" Nullable="true" />
+  </ComplexType>
+  <ComplexType Name="sp_helpdiagrams_Result">
+    <Property Type="String" Name="Database" Nullable="true" MaxLength="128" />
+    <Property Type="String" Name="Name" Nullable="false" MaxLength="128" />
+    <Property Type="Int32" Name="ID" Nullable="false" />
+    <Property Type="String" Name="Owner" Nullable="true" MaxLength="128" />
+    <Property Type="Int32" Name="OwnerID" Nullable="false" />
   </ComplexType>
 </Schema>
