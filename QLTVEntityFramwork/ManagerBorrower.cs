@@ -19,6 +19,7 @@ namespace QLTVEntityFramwork
         public ManagerBorrower()
         {
             InitializeComponent();
+            DisableComponent();
             LoadData();
         }
         public void EnableComponent()
@@ -234,9 +235,10 @@ namespace QLTVEntityFramwork
 
         private void btnHuy_Click_1(object sender, EventArgs e)
         {
-            EnableComponent();
+            LoadData();
+            DisableComponent();
 
-            btnLuu.Enabled = true;
+            //btnLuu.Enabled = false;
             btnThem.Enabled = true;
             btnXoa.Enabled = true;
             btnCapNhat.Enabled = true;
@@ -285,6 +287,8 @@ namespace QLTVEntityFramwork
 
         void LoadData()
         {
+            btnLuu.Enabled = false;
+            btnHuy.Enabled = false;
             db.Configuration.LazyLoadingEnabled = false;
             var listUserBorrowing = db.Borrowing_Details.ToList();
             dgvMuonSach.DataSource = listUserBorrowing;

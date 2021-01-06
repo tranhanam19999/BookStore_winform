@@ -18,6 +18,7 @@ namespace QLTVEntityFramwork
         public ManagerCard()
         {
             InitializeComponent();
+            DisableComponent();
             LoadData();
         }
 
@@ -338,6 +339,10 @@ namespace QLTVEntityFramwork
         private void btnHuy_Click(object sender, EventArgs e)
         {
             LoadData();
+            DisableComponent();
+            btnThem.Enabled = true;
+            btnXoa.Enabled = true;
+            btnCapNhat.Enabled = true;
         }
 
         private void button1_Click_1(object sender, EventArgs e)
@@ -352,6 +357,8 @@ namespace QLTVEntityFramwork
 
         void LoadData()
         {
+            btnHuy.Enabled = false;
+            btnLuu.Enabled = false;
             db.Configuration.LazyLoadingEnabled = false;
 
             var listcard = db.Get_Cards();

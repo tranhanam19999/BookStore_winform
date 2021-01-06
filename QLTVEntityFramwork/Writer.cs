@@ -20,17 +20,17 @@ namespace QLTVEntityFramwork
             InitializeComponent();
 
             LoadData();
-            //DisableComponent();
+            DisableComponent();
         }
         public void DisableComponent()
         {
-            //txtTen.Enabled = false;
-            //btnHuy.Enabled = false;
+            txtTen.Enabled = false;
+            btnHuy.Enabled = false;
         }
         public void EnabledComponent()
         {
-        //    txtTen.Enabled = true;
-        //    btnHuy.Enabled = true;
+            txtTen.Enabled = true;
+            btnHuy.Enabled = true;
         }
         public void LoadData()
         {
@@ -40,7 +40,7 @@ namespace QLTVEntityFramwork
             dgvTacGia.AutoResizeColumns();
             dgvTacGia.Columns[1].AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
             dgvTacGia.AutoResizeRows();
-            
+
             var MaxMATG = dgvTacGia.Rows.Count;
             Max = MaxMATG;
             dgvTacGia.Columns[0].HeaderText = "Mã Tác Giả";
@@ -51,43 +51,40 @@ namespace QLTVEntityFramwork
 
         private void btnDangKy_Click(object sender, EventArgs e)
         {
-            //EnabledComponent();
-            //btnDangKy.Enabled = false;
-            //btnLoadData.Enabled = false;
+            EnabledComponent();
+            btnDangKy.Enabled = false;
+            btnLoadData.Enabled = false;
         }
 
         private void btnLoadData_Click(object sender, EventArgs e)
         {
-            //LoadData();
+            LoadData();
         }
 
         private void btnHuy_Click(object sender, EventArgs e)
         {
-            //DisableComponent();
-            //txtTen.Text = null;
-            //btnDangKy.Enabled = true;
-            //btnLoadData.Enabled = true;
+            DisableComponent();
+            txtTen.Text = null;
+            btnDangKy.Enabled = true;
+            btnLoadData.Enabled = true;
         }
 
         private void txtTen_KeyPress(object sender, KeyPressEventArgs e)
         {
-            //if (e.KeyChar == (char)13)
-            //{
-            //    using (var db = new Model1())
-            //    {
-            //        TACGIA tacgia = new TACGIA();
-            //        tacgia.TENTACGIA = txtTen.Text;
-            //        tacgia.MATACGIA = Max + 1;
+            if (e.KeyChar == (char)13)
+            {
+                TACGIA tacgia = new TACGIA();
+                tacgia.TENTACGIA = txtTen.Text;
+                tacgia.MATACGIA = Max + 1;
 
-            //        db.TACGIAs.Add(tacgia);
-            //        db.SaveChanges();
-            //    }
-            //    txtTen.Text = "";
-            //    DisableComponent();
-            //    LoadData();
-            //    btnDangKy.Enabled = true;
-            //    btnLoadData.Enabled = true;
-            //}
+                db.TACGIAs.Add(tacgia);
+                db.SaveChanges();
+                txtTen.Text = "";
+                DisableComponent();
+                LoadData();
+                btnDangKy.Enabled = true;
+                btnLoadData.Enabled = true;
+            }
         }
     }
 }

@@ -20,7 +20,7 @@ namespace QLTVEntityFramwork
         {
             InitializeComponent();
             LoadData();
-            
+
 
             btnHuy.Enabled = false;
             btnLuu.Enabled = false;
@@ -53,6 +53,12 @@ namespace QLTVEntityFramwork
         }
         public void LoadData()
         {
+
+            btnHuy.Enabled = false;
+            btnLuu.Enabled = false;
+            btnThem.Enabled = true;
+            btnXoa.Enabled = true;
+            btnCapNhat.Enabled = true;
             //User thi xai query nay
             var data = db.SACHes.ToList();
             //Neu la admin thi
@@ -96,7 +102,7 @@ namespace QLTVEntityFramwork
             txtTinhTrangMuon.Text = "";
             txtSoLuongBiMat.Text = "";
             txtTongSoLuong.Text = "";
-            
+
         }
         public void PutDataInComboBox()
         {
@@ -201,14 +207,15 @@ namespace QLTVEntityFramwork
                     MessageBox.Show("Không thêm được. Lỗi rồi!");
                 }
                 Them = false;
+                LoadData();
             }
             else if (CapNhat == true)
             {
                 try
                 {
                     db.Configuration.LazyLoadingEnabled = false;
-
-                    var s = db.SACHes.Where(x => x.MASACH == 1).ToList().FirstOrDefault();
+                    string tmp = (txtTenSach.Text);
+                    var s = db.SACHes.Where(x => x.TENSACH == tmp).ToList().FirstOrDefault();
                     s.MANXB = int.Parse(cbMaNXB.SelectedItem.ToString());
                     s.MATACGIA = int.Parse(cbMaTG.SelectedItem.ToString());
                     s.TENSACH = txtTenSach.Text;
@@ -229,13 +236,9 @@ namespace QLTVEntityFramwork
                 {
                     MessageBox.Show("Không cập nhật được. Lỗi rồi!");
                 }
-                btnHuy.Enabled = false;
-                btnLuu.Enabled = false;
-                btnThem.Enabled = true;
-                btnXoa.Enabled = true;
-                btnCapNhat.Enabled = true;
             }
             ClearClickedData();
+            LoadData();
 
 
             //if (!txtMaSach.Text.Trim().Equals(""))
